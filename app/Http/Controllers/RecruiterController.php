@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Recruiter;
+use App\Models\User;
+
+
+
 
 class RecruiterController extends Controller
 {
@@ -14,7 +18,7 @@ class RecruiterController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**

@@ -7,6 +7,13 @@
 
 @section('content')
 
+
+
+@foreach ($users as $user)
+    <h1>{{$user->role_id}}</h1>
+@endforeach
+
+
 {{-- 
 <x-app-layout>
     <x-slot name="header">

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\RecruiterController;
+use App\Models\User;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,5 +29,9 @@ Route::resource('recruiter', RecruiterController::class);
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
+
+    $users =User::all();
+    return view('dashboard', ['users'=>$users]);
 })->name('dashboard');
+
+
