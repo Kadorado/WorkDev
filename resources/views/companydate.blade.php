@@ -6,7 +6,7 @@
 
 @section('content')
 
-<form action="/dashboard" method="POST">
+<form action="{{ route('recruiter.store') }}" method="POST">
     @csrf
   <div class="mb-3">
     <label for="" class="form-label py-6">NameCompany</label>

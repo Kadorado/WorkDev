@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\RecruiterController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +19,9 @@ Route::get('/', [PageController::class, 'home'])->name('home');
 Route::get('/nosotros', [PageController::class, 'nosotros'])->name('nosotros');
 
 Route::get('/companydata', [PageController::class, 'companydata'])->name('companydata');
+
+
+Route::resource('recruiter', RecruiterController::class);
 
 
 

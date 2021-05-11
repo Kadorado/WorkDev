@@ -1,5 +1,6 @@
 <?php
 
+
 return [
 
     /*
@@ -222,7 +223,9 @@ return [
     | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Menu-Configuration
     |
     */
+
     
+
 
     'menu' => [
         [
@@ -445,3 +448,5 @@ return [
 
     'livewire' => false,
 ];
+
+
