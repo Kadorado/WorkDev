@@ -10,8 +10,13 @@ class PageController extends Controller
         return view("welcome");
     }
 
-    public function Nosotros(){
+    public function nosotros(){
         return view('nosotros');
     }
+
+    public function companydata(){
+        return view('companydate');
+    }
+
 
 }

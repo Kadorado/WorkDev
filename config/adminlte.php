@@ -222,6 +222,7 @@ return [
     | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Menu-Configuration
     |
     */
+    
 
     'menu' => [
         [
@@ -236,7 +237,7 @@ return [
         ],
         [
             'text'        => 'tus ofertas',
-            'url'         => 'admin/pages',
+            'url'         => 'user/profile',
             'icon'        => 'far fa-fw fa-file',
             'label'       => 4,
             'label_color' => 'success',
@@ -254,7 +255,7 @@ return [
         ],
         [
             'text' => 'Empresa',
-            'url'  => 'user/profile',
+            'url'  => 'companydata',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
