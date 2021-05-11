@@ -42,7 +42,7 @@
                     <a href="{{url('/')}}" class="ml-4 text-sm text-gray-700 no-underline hover:no-underline">Home</a>
                     </li>
                     <li class="mr-3">
-                    <a href="{{url('/Nosotros')}}" class="ml-4 text-sm text-gray-700 no-underline hover:no-underline">Nosotros</a>
+                    <a href="{{url('/nosotros')}}" class="ml-4 text-sm text-gray-700 no-underline hover:no-underline">Nosotros</a>
                     </li>
                     <li>
                       <a href="{{url('login')}}" class="ml-4 text-sm text-gray-700 no-underline hover:no-underline">
