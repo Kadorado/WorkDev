@@ -255,16 +255,19 @@ return [
             'text' => 'Vacantes',
             'url'  => 'dashboard',
             'icon' => 'fas fa-fw fa-user',
+            'can'  => 'companydata',
         ],
         [
             'text' => 'Empresa',
             'url'  => 'companydata',
             'icon' => 'fas fa-fw fa-user',
+            'can'  => 'companydata',
         ],
         [
             'text' => 'Nueva Vacante',
             'url'  => 'user/profile',
             'icon' => 'fas fa-fw fa-user',
+            'can'  => 'companydata',
         ],
 
         // [
