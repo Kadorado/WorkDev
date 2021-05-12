@@ -39,8 +39,10 @@ class RecruiterController extends Controller
      */
     public function store(Request $request)
     {
+
+        $data=$request->user();
         $datacompany = new Recruiter();
-        $datacompany->user_id =2;
+        $datacompany->user_id =$data['id'];
         $datacompany->NameCompany = $request->get('namecompany');
         $datacompany->DescriptionCompany = $request->get('descripcion');
         $datacompany->WebsiteCompany = $request->get('website');
