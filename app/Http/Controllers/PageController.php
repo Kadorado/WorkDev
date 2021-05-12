@@ -18,5 +18,9 @@ class PageController extends Controller
         return view('companydate');
     }
 
+    public function developerdata(){
+        return view('developerData');
+    }
+
 
 }
