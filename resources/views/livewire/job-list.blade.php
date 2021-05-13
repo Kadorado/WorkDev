@@ -1,4 +1,4 @@
-<div class="grid grid-cols-3 gap-4 mt-4">
+<div class="grid grid-cols-3 gap-5 mt-3">
     @foreach($jobs as $job)
     <div class="bg-white shadow-lg rounded-lg px-4 py-6 text-center">
         <a>
