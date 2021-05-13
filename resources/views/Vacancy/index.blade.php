@@ -48,10 +48,21 @@
                 <td>
                     {{$vacante->state}}
                 </td>
+                <td>
+                    <form action="" method="POST">
+                     <a href="" class="btn btn-info">Editar</a>         
+                         @csrf
+                         @method('DELETE')
+                     <button type="submit" class="btn btn-danger">Eliminar</button>
+                    </form>          
+                   </td>   
             </tr>
+
+
         @endforeach
 
     </tbody>
+
 
 </table>
 
