@@ -37,8 +37,7 @@ class DeveloperController extends Controller
      */
     public function store(Request $request)
     {
-        
-    
+ 
        //obtiene el archivo que se ha subido
         $file=$request->file('curriculum');
         //nombra el archivo con la fecha la hora y la extension
@@ -55,12 +54,13 @@ class DeveloperController extends Controller
         $dataDev->fullName = $request->get('fullName');
         $dataDev->experience = $request->get('experience');
         $dataDev->about_me = $request->get('about_me');
+        $dataDev->country = $request->get('country');
         $dataDev->githubProfile = $request->get('github');
         $dataDev->curriculum = $route;
     
         $dataDev->save();
 
-        return redirect()->route('developerdata');
+        return redirect()->route('developerdata',['developer'=>$dataDev]);
 
     }
 

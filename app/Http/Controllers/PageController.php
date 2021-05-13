@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Developer;
+
 
 use Illuminate\Http\Request;
 
@@ -18,8 +20,9 @@ class PageController extends Controller
         return view('companydate');
     }
 
-    public function developerdata(){
-        return view('developerData');
+    public function developerdata(Developer $developer){
+        return view('developerData', [
+            'developer' => $developer]);
     }
 
 

@@ -20,6 +20,7 @@ class CreateDevelopersTable extends Migration
             $table->integer('experience');
             $table->mediumText('about_me');
             $table->string('curriculum');
+            $table->string('country');
             $table->string('githubProfile');
             $table->timestamps();
 

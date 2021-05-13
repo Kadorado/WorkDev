@@ -20,6 +20,10 @@
     <input id="about_me" name="about_me" type="text" placeholder="cuentanos brevemente sobre ti" class="form-control" tabindex="3">
   </div>
   <div class="mb-3">
+    <label for="about_me" class="form-label">Perfil</label>
+    <input id="country" name="country" type="text" placeholder="pais" class="form-control" tabindex="3">
+  </div>
+  <div class="mb-3">
     <label for="curriculum" class="form-label">curriculum</label>
     <input id="curriculum" name="curriculum" type="file" accept="application/pdf", class="form-control" tabindex="3">
   </div>
@@ -31,7 +35,11 @@
   <button type="submit" class="btn btn-primary" tabindex="4">Guardar</button>
 </form>
 
-
+@if($developer)
+<p>{{$developer['fullName']}}</p>
+@else
+<p>NO hay desarrollador </p>
+@endif
 
 @stop
 
