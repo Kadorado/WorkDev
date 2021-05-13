@@ -9,6 +9,6 @@ class JobList extends Component
 {
     public function render()
     {
-        return view('livewire.job-list',[ 'jobs'=>Vacancy::latest()->with('recrutier')->take(8)->get()]);
+        return view('livewire.job-list',[ 'jobs'=>Vacancy::latest()->with('recrutier')->take(6)->get()]);
     }
 }
