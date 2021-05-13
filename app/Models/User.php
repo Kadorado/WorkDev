@@ -67,5 +67,13 @@ class User extends Authenticatable //implements MustVerifyEmail
         return $this->hasOne(Recruiter::class);
     }
 
+    public function adminlte_desc(){
+        return 'Reclutador/Empresa';
+    }
+
+    public function adminlte_profile_url(){
+        return 'Perfil';
+    }
+
 
 }
