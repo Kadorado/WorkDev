@@ -3,6 +3,10 @@
 
 
 @section('content')
+
+
+<livewire:job-list>
+    
 <!--Hero-->
 <div class="pt-0">
       <div class="container px-3 mx-auto mb-8 flex flex-wrap flex-col md:flex-row items-center">

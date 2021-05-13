@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\RecruiterController;
+use App\Http\Controllers\VacancyController;
 use App\Models\User;
 /*
 |--------------------------------------------------------------------------
@@ -25,13 +26,15 @@ Route::get('/companydata', [PageController::class, 'companydata'])->name('compan
 Route::resource('recruiter', RecruiterController::class);
 
 
+Route::resource('vacante', VacancyController::class);
+
 
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
-    $users =User::all();
-    return view('dashboard', ['users'=>$users]);
+    
+    return view('dashboard');
 })->name('dashboard');
 
 

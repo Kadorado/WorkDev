@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+
     <title>Cursos de programación web</title>
 
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <link rel="stylesheet" href="{{asset('css/home.css')}}">
     <style>
     .gradient {
     background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
     }
+
     </style>
+
 </head>
 
 <body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;"> 
@@ -146,6 +150,7 @@
       </div>
       <a href="https://www.freepik.com/free-photos-vectors/background" class="text-gray-500">Background vector created by freepik - www.freepik.com</a>
     </footer>
+  
     <script>
       var scrollpos = window.scrollY;
       var header = document.getElementById("header");

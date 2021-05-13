@@ -8,13 +8,7 @@
 @section('content')
 
 
-
-@foreach ($users as $user)
-    <h1>{{$user->role_id}}</h1>
-@endforeach
-
-
-{{-- 
+{{--
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">

@@ -265,7 +265,7 @@ return [
         ],
         [
             'text' => 'Nueva Vacante',
-            'url'  => 'user/profile',
+            'url'  => 'vacante',
             'icon' => 'fas fa-fw fa-user',
             'can'  => 'companydata',
         ],
