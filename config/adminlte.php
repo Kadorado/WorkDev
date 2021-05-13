@@ -238,24 +238,12 @@ return [
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
-        [
-            'text'        => 'tus ofertas',
-            'url'         => 'user/profile',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
+        
         ['header' => 'Configuracion de cuenta'],
         [
             'text' => 'perfil',
             'url'  => 'user/profile',
             'icon' => 'fas fa-fw fa-user',
-        ],  
-        [
-            'text' => 'Vacantes',
-            'url'  => 'dashboard',
-            'icon' => 'fas fa-users',
-            'can'  => 'companydata',
         ],
         [
             'text' => 'Empresa',
@@ -268,6 +256,12 @@ return [
             'url'  => 'vacante',
             'icon' => 'fas fa-plus',
             'can'  => 'companydata',
+        ],
+        [
+            'text' => 'Mis datos',
+            'url'  => 'developerdata',
+            'icon' => 'fas fa-fw fa-user',
+            'can'  => 'developerdata',
         ],
 
         // [
