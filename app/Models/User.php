@@ -71,9 +71,6 @@ class User extends Authenticatable //implements MustVerifyEmail
         return 'Reclutador/Empresa';
     }
 
-    public function adminlte_profile_url(){
-        return 'Perfil';
-    }
 
 
 }
