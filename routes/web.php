@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\RecruiterController;
 use App\Http\Controllers\VacancyController;
+use App\Http\Controllers\DeveloperController;
 use App\Models\User;
 /*
 |--------------------------------------------------------------------------
@@ -22,13 +23,15 @@ Route::get('/nosotros', [PageController::class, 'nosotros'])->name('nosotros');
 
 Route::get('/companydata', [PageController::class, 'companydata'])->name('companydata');
 
-
-Route::resource('recruiter', RecruiterController::class);
+Route::get('/developerdata', [PageController::class, 'developerdata'])->name('developerdata');
 
 
 Route::resource('vacante', VacancyController::class);
 
+Route::resource('recruiter', RecruiterController::class);
 
+//developer
+Route::resource('developer', DeveloperController::class);
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

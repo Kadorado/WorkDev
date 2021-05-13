@@ -24,6 +24,7 @@ class VacancyController extends Controller
         ->select('recruiters.id')
         ->get();
 
+
         $vacantes = DB::table('vacancies')
             ->join('recruiters', 'vacancies.recrutier_id', '=', 'recruiters.id')
             ->where('recrutier_id','=',$id_recrutier[0]->id)

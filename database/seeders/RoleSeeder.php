@@ -25,6 +25,8 @@ class RoleSeeder extends Seeder
         //Permission::create(['name'=>'companydata'])->assignRole($roleAdmin);
         //creación del permiso y asignación a varios roles
         Permission::create(['name'=>'companydata'])->syncRoles([$roleAdmin, $roleRec]);
+        Permission::create(['name'=>'developerdata'])->syncRoles([$roleAdmin, $roleDev]);
+
         
 
 

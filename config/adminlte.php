@@ -269,6 +269,12 @@ return [
             'icon' => 'fas fa-fw fa-user',
             'can'  => 'companydata',
         ],
+        [
+            'text' => 'Mis datos',
+            'url'  => 'developerdata',
+            'icon' => 'fas fa-fw fa-user',
+            'can'  => 'developerdata',
+        ],
 
         // [
         //     'text' => 'Cambiar password',
