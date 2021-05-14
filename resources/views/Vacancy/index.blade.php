@@ -9,7 +9,7 @@
 <h1>Nueva vacante</h1>
 <a href="vacante/create" class="btn btn-primary">Crear Vacante</a>
 
-<table class="table table-dark table-striped mt-4">
+<table class="table  table-striped mt-4">
     <thead>
 
         <tr>
