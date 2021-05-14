@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Recruiter;
 use App\Models\User;
 
-
+use Illuminate\Support\Facades\DB;
 
 
 class RecruiterController extends Controller
@@ -16,9 +16,18 @@ class RecruiterController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        
+
+        $data=$request->user();
+        $users = DB::table('users')
+            ->join('recruiters', 'users.id', '=', 'recruiters.user_id')
+            ->select('recruiters.*')
+            ->where('recruiters.user_id','=' ,$data['id'])
+            ->get();
+
+            
+            return view("Recruiter.companydate", ['users'=> $users]);
     }
 
     /**
@@ -50,7 +59,7 @@ class RecruiterController extends Controller
 
         $datacompany->save();
 
-        return redirect()->route('companydata');
+        return redirect('companydata');
     }
 
     /**
@@ -84,7 +93,14 @@ class RecruiterController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $update_users = Recruiter::find($id);
+        $update_users->NameCompany= $request->get('namecompany');
+        $update_users->DescriptionCompany= $request->get('descripcion');
+        $update_users->WebsiteCompany= $request->get('website');
+        $update_users->idCompany= $request->get('nitcompany');
+
+        $update_users->save();
+        return redirect('/companydata');
     }
 
     /**

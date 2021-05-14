@@ -17,9 +17,9 @@ class PageController extends Controller
         return view('nosotros');
     }
 
-    public function companydata(){
-        return view('companydate');
-    }
+    // public function companydata(){
+    //     return view('Recruiter.companydate');
+    // }
 
     public function developerdata(Developer $developer){
         return view('developerData', [

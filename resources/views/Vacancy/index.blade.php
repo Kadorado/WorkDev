@@ -6,6 +6,8 @@
 
 @section('content')
 
+@if ($vacantes !=="mensaje de error")
+
 <h1>Nueva vacante</h1>
 <a href="vacante/create" class="btn btn-primary">Crear Vacante</a>
 
@@ -62,10 +64,14 @@
         @endforeach
 
     </tbody>
-
-
 </table>
 
+
+@else
+<div class="text-center">
+    <h1>LLena tus datos antes de crear una vacante</h1>
+</div>
+@endif
 
 @stop
 

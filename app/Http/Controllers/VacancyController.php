@@ -18,19 +18,24 @@ class VacancyController extends Controller
     {
         $data=$request->user();
 
+
         $id_recrutier = DB::table('users')
         ->join('recruiters', 'users.id', '=', 'recruiters.user_id')
         ->where('recruiters.user_id','=',$data['id'])
         ->select('recruiters.id')
         ->get();
-
-
-        $vacantes = DB::table('vacancies')
+        if(!empty($id_recrutier[0]->id)){
+            $vacantes = DB::table('vacancies')
             ->join('recruiters', 'vacancies.recrutier_id', '=', 'recruiters.id')
             ->where('recrutier_id','=',$id_recrutier[0]->id)
             ->select('vacancies.*')
             ->get();
-        return view('Vacancy.index', ['vacantes' => $vacantes]);
+            return view('Vacancy.index', ['vacantes' => $vacantes]);
+        }
+        else{
+            $vacantes="mensaje de error";
+            return view('Vacancy.index', ['vacantes' => $vacantes]);
+        }
     }
 
     /**

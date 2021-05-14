@@ -26,11 +26,11 @@ Route::get('/', [PageController::class, 'home'])->name('home');
 
 Route::get('/nosotros', [PageController::class, 'nosotros'])->name('nosotros');
 
-Route::get('/companydata', [PageController::class, 'companydata'])->name('companydata');
+Route::resource('companydata', RecruiterController::class);
 
 Route::get('/developerdata', [PageController::class, 'developerdata'])->name('developerdata');
 
-Route::resource('recruiter', RecruiterController::class);
+// Route::resource('recruiter', RecruiterController::class);
 
 Route::resource('developer', DeveloperController::class);
 
