@@ -9,25 +9,26 @@
     
 <!--Hero-->
 <div class="pt-0">
-      <div class="container px-3 mx-auto mb-8 flex flex-wrap flex-col md:flex-row items-center">
+      <div class="container flex flex-col flex-wrap items-center px-3 mx-auto mb-8 md:flex-row">
         <!--Left Col-->
-        <div class="flex flex-col w-full min-h-screen md:w-2/5 justify-center items-start text-center md:text-left">
-          <p class="uppercase tracking-loose w-full">Ultimas ofertas</p>
+        <div class="flex flex-col items-start justify-center w-full min-h-screen text-center md:w-2/5 md:text-left">
+          <p class="w-full uppercase tracking-loose">Sobre nosotros</p>
           <h1 class="my-4 text-5xl font-bold leading-tight">
-            Programador Full stack
+          <!-- cambiar por el nombre de la empresa -->
+            Coders 
           </h1>
-          <p class="leading-normal text-2xl mb-8">
+          <p class="mb-8 text-2xl leading-normal">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos harum ea cupiditate consequatur modi odio facere nesciunt? Corrupti omnis aperiam labore nam, fugiat ut cumque, alias doloremque esse, consequuntur atque.
           </p>
           <a href="">
-            <button class="mx-auto lg:mx-0 hover:no-underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+            <button class="px-8 py-4 mx-auto my-6 font-bold text-gray-800 transition duration-300 ease-in-out transform bg-white rounded-full shadow-lg lg:mx-0 hover:no-underline focus:outline-none focus:shadow-outline hover:scale-105">
               Ver más
             </button>
           </a>
         </div>
         <!--Right Col-->
-        <div class="w-full md:w-3/6  py-16 text-center bg-white m-auto rounded-3xl shadow-lg ">
-          <img class="w-500 " src="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
+        <div class="w-full py-16 m-auto text-center bg-white shadow-lg md:w-3/6 rounded-3xl ">
+          <img class="object-cover w-full h-full" src="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
           
         </div>
       </div>
@@ -35,23 +36,23 @@
     
 
     
-    <section class="bg-white border-b py-8 my-8">
-      <div class="container max-w-5xl mx-auto m-8">
+    <section class="py-8 my-8 bg-white border-b">
+      <div class="container max-w-5xl m-8 mx-auto">
         <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
           ¿Buscas empleo?
         </h1>
         <div class="w-full mb-4">
-          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+          <div class="w-64 h-1 py-0 mx-auto my-0 rounded-t opacity-25 gradient"></div>
         </div>
         <div class="flex flex-wrap text-center">
-        <div class="w-full sm:w-1/2 p-6">
+        <div class="w-full p-6 sm:w-1/2">
             <!--ventajas para empresas-->
-            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
-              Contratar talento
+            <h3 class="mb-3 text-3xl font-bold leading-none text-gray-800">
+              Busca trabajo
             </h3>
             <!--una imagen de beneficios-->
-            <img class="rounded-3xl shadow-lg" src="https://images.pexels.com/photos/374016/pexels-photo-374016.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
-            <p class="text-gray-600 mb-8">
+            <img class="shadow-lg rounded-3xl" src="https://images.pexels.com/photos/374016/pexels-photo-374016.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+            <p class="mb-8 text-gray-600">
               <br />
               <br />
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
@@ -59,20 +60,20 @@
               <br />
             </p>
             <a href="{{url('register')}}">
-              <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+              <button class="px-8 py-4 mx-auto my-6 font-bold text-white transition duration-300 ease-in-out transform rounded-full shadow-lg lg:mx-0 hover:underline gradient focus:outline-none focus:shadow-outline hover:scale-105">
                   Has parte de nosotros
               </button>
             </a>
             
           </div>
-          <div class="w-full sm:w-1/2 p-6">
+          <div class="w-full p-6 sm:w-1/2">
             <!--ventajas para empresas-->
-            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+            <h3 class="mb-3 text-3xl font-bold leading-none text-gray-800">
               Contratar talento
             </h3>
             <!--una imagen de beneficios-->
-            <img class="rounded-3xl shadow-lg" src="https://images.pexels.com/photos/3760069/pexels-photo-3760069.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
-            <p class="text-gray-600 mb-8">
+            <img class="shadow-lg rounded-3xl" src="https://images.pexels.com/photos/3760069/pexels-photo-3760069.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+            <p class="mb-8 text-gray-600">
               <br />
               <br />
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
@@ -80,7 +81,7 @@
               <br />
             </p>
             <a href="{{url('register')}}">
-              <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+              <button class="px-8 py-4 mx-auto my-6 font-bold text-white transition duration-300 ease-in-out transform rounded-full shadow-lg lg:mx-0 hover:underline gradient focus:outline-none focus:shadow-outline hover:scale-105">
                   Inicia a contratar
               </button>
             </a>
@@ -89,65 +90,65 @@
         </div>
       </div>
     </section>
-    <section class="bg-white border-none py-8">
-      <div class="container mx-auto flex flex-wrap pt-4 pb-12">
+    <section class="py-8 bg-white border-none">
+      <div class="container flex flex-wrap pt-4 pb-12 mx-auto">
         <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
           Testimonios
         </h1>
         <div class="w-full mb-4">
-          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+          <div class="w-64 h-1 py-0 mx-auto my-0 rounded-t opacity-25 gradient"></div>
         </div>
-        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+        <div class="flex flex-col flex-grow flex-shrink w-full p-6 md:w-1/3">
+          <div class="flex-1 overflow-hidden bg-white rounded-t rounded-b-none shadow">
             <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-              <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+              <p class="w-full px-6 text-xs text-gray-600 md:text-sm">
                 Desarrollador Frontend
               </p>
-              <div class="w-full font-bold text-xl text-gray-800 px-6">
+              <div class="w-full px-6 text-xl font-bold text-gray-800">
                 Juliana Fajardo
               </div>
-              <img class="w-2/4 rounded-full shadow-lg mx-auto my-8" src="https://scontent.fbog15-1.fna.fbcdn.net/v/t1.6435-9/125563107_1288144128249985_2050419118621764369_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=174925&_nc_eui2=AeEwvFhX5wz_DUfsw522Lr1LawF7hhIJaLNrAXuGEglos2LVzdV2lIMlPegKnkvmGEacxyuCCPqhDCFoz92ExAzp&_nc_ohc=Irhxygevd6EAX_sq2V_&_nc_ht=scontent.fbog15-1.fna&oh=25f7c1fc0d76fd86e9588ff54d3da997&oe=60C21281" alt="Juliana fajardo">
+              <img class="w-2/4 mx-auto my-8 rounded-full shadow-lg" src="https://scontent.fbog15-1.fna.fbcdn.net/v/t1.6435-9/125563107_1288144128249985_2050419118621764369_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=174925&_nc_eui2=AeEwvFhX5wz_DUfsw522Lr1LawF7hhIJaLNrAXuGEglos2LVzdV2lIMlPegKnkvmGEacxyuCCPqhDCFoz92ExAzp&_nc_ohc=Irhxygevd6EAX_sq2V_&_nc_ht=scontent.fbog15-1.fna&oh=25f7c1fc0d76fd86e9588ff54d3da997&oe=60C21281" alt="Juliana fajardo">
               <br />
               <br />
-              <p class="text-gray-800 text-center px-6 my-5 mx-auto">
+              <p class="px-6 mx-auto my-5 text-center text-gray-800">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
               </p>
             </a>
           </div>
           
         </div>
-        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+        <div class="flex flex-col flex-grow flex-shrink w-full p-6 md:w-1/3">
+          <div class="flex-1 overflow-hidden bg-white rounded-t rounded-b-none shadow">
             <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-            <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+            <p class="w-full px-6 text-xs text-gray-600 md:text-sm">
                 Desarrollador Frontend
               </p>
-              <div class="w-full font-bold text-xl text-gray-800 px-6">
+              <div class="w-full px-6 text-xl font-bold text-gray-800">
                 Juliana Fajardo
               </div>
-              <img class="w-2/4 rounded-full shadow-lg mx-auto my-8" src="https://scontent.fbog15-1.fna.fbcdn.net/v/t1.6435-9/125563107_1288144128249985_2050419118621764369_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=174925&_nc_eui2=AeEwvFhX5wz_DUfsw522Lr1LawF7hhIJaLNrAXuGEglos2LVzdV2lIMlPegKnkvmGEacxyuCCPqhDCFoz92ExAzp&_nc_ohc=Irhxygevd6EAX_sq2V_&_nc_ht=scontent.fbog15-1.fna&oh=25f7c1fc0d76fd86e9588ff54d3da997&oe=60C21281" alt="Juliana fajardo">
+              <img class="w-2/4 mx-auto my-8 rounded-full shadow-lg" src="https://scontent.fbog15-1.fna.fbcdn.net/v/t1.6435-9/125563107_1288144128249985_2050419118621764369_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=174925&_nc_eui2=AeEwvFhX5wz_DUfsw522Lr1LawF7hhIJaLNrAXuGEglos2LVzdV2lIMlPegKnkvmGEacxyuCCPqhDCFoz92ExAzp&_nc_ohc=Irhxygevd6EAX_sq2V_&_nc_ht=scontent.fbog15-1.fna&oh=25f7c1fc0d76fd86e9588ff54d3da997&oe=60C21281" alt="Juliana fajardo">
               <br />
               <br />
-              <p class="text-gray-800 text-center px-6 my-5 mx-auto">
+              <p class="px-6 mx-auto my-5 text-center text-gray-800">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
               </p>
             </a>
           </div>
           
         </div>
-        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+        <div class="flex flex-col flex-grow flex-shrink w-full p-6 md:w-1/3">
+          <div class="flex-1 overflow-hidden bg-white rounded-t rounded-b-none shadow">
             <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-              <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+              <p class="w-full px-6 text-xs text-gray-600 md:text-sm">
                 Desarrollador Frontend
               </p>
-              <div class="w-full font-bold text-xl text-gray-800 px-6">
+              <div class="w-full px-6 text-xl font-bold text-gray-800">
                 Juliana Fajardo
               </div>
-              <img class="w-2/4 rounded-full shadow-lg mx-auto my-8" src="https://scontent.fbog15-1.fna.fbcdn.net/v/t1.6435-9/125563107_1288144128249985_2050419118621764369_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=174925&_nc_eui2=AeEwvFhX5wz_DUfsw522Lr1LawF7hhIJaLNrAXuGEglos2LVzdV2lIMlPegKnkvmGEacxyuCCPqhDCFoz92ExAzp&_nc_ohc=Irhxygevd6EAX_sq2V_&_nc_ht=scontent.fbog15-1.fna&oh=25f7c1fc0d76fd86e9588ff54d3da997&oe=60C21281" alt="Juliana fajardo">
+              <img class="w-2/4 mx-auto my-8 rounded-full shadow-lg" src="https://scontent.fbog15-1.fna.fbcdn.net/v/t1.6435-9/125563107_1288144128249985_2050419118621764369_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=174925&_nc_eui2=AeEwvFhX5wz_DUfsw522Lr1LawF7hhIJaLNrAXuGEglos2LVzdV2lIMlPegKnkvmGEacxyuCCPqhDCFoz92ExAzp&_nc_ohc=Irhxygevd6EAX_sq2V_&_nc_ht=scontent.fbog15-1.fna&oh=25f7c1fc0d76fd86e9588ff54d3da997&oe=60C21281" alt="Juliana fajardo">
               <br />
               <br />
-              <p class="text-gray-800 text-center px-6 my-5 mx-auto">
+              <p class="px-6 mx-auto my-5 text-center text-gray-800">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
               </p>
             </a>
@@ -156,87 +157,7 @@
         </div>
       </div>
     </section>
-    <!-- <section class="bg-gray-100 py-8">
-      <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
-        <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-          Pricing
-        </h1>
-        <div class="w-full mb-4">
-          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-        </div>
-        <div class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4">
-          <div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
-            <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
-              <div class="p-8 text-3xl font-bold text-center border-b-4">
-                Free
-              </div>
-              <ul class="w-full text-center text-sm">
-                <li class="border-b py-4">Thing</li>
-                <li class="border-b py-4">Thing</li>
-                <li class="border-b py-4">Thing</li>
-              </ul>
-            </div>
-            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-              <div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
-                £0
-                <span class="text-base">for one user</span>
-              </div>
-              <div class="flex items-center justify-center">
-                <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                  Sign Up
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg bg-white mt-4 sm:-mt-6 shadow-lg z-10">
-            <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-              <div class="w-full p-8 text-3xl font-bold text-center">Basic</div>
-              <div class="h-1 w-full gradient my-0 py-0 rounded-t"></div>
-              <ul class="w-full text-center text-base font-bold">
-                <li class="border-b py-4">Thing</li>
-                <li class="border-b py-4">Thing</li>
-                <li class="border-b py-4">Thing</li>
-                <li class="border-b py-4">Thing</li>
-              </ul>
-            </div>
-            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-              <div class="w-full pt-6 text-4xl font-bold text-center">
-                £x.99
-                <span class="text-base">/ per user</span>
-              </div>
-              <div class="flex items-center justify-center">
-                <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                  Sign Up
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
-            <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
-              <div class="p-8 text-3xl font-bold text-center border-b-4">
-                Pro
-              </div>
-              <ul class="w-full text-center text-sm">
-                <li class="border-b py-4">Thing</li>
-                <li class="border-b py-4">Thing</li>
-                <li class="border-b py-4">Thing</li>
-              </ul>
-            </div>
-            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-              <div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
-                £x.99
-                <span class="text-base">/ per user</span>
-              </div>
-              <div class="flex items-center justify-center">
-                <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                  Sign Up
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
+    <!-- Contacto -->
     <svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g transform="translate(-1.000000, -14.000000)" fill-rule="nonzero">
@@ -258,22 +179,65 @@
         </g>
       </g>
     </svg>
-    <section class="container mx-auto text-center py-6 mb-12">
-      <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
-        Contacto
-      </h1>
-      <div class="w-full mb-4">
-        <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
-      </div>
-      <div>
-        <h3 class="my-4 text-3xl leading-tight">
-          Main Hero Message to sell yourself!
-        </h3>
+    <section class="w-full max-w-2xl px-6 py-4 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
+        <h2 class="text-3xl font-semibold text-center text-gray-800 dark:text-white">Contacto</h2>
+        <div class="w-64 h-1 py-0 mx-auto my-0 rounded-t opacity-25 gradient"></div>
+        <p class="mt-3 text-center text-gray-600 dark:text-gray-400">Para cualquier tipo de solicitud, queja o reclamo escribenos</p>
         
-      </div>
-      <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-        Action!
-      </button>
+        <div class="grid grid-cols-1 gap-6 mt-6 sm:grid-cols-2 md:grid-cols-3">
+            <!-- agregar un link a google maps o quitar el href -->
+            <a href="#" class="flex flex-col items-center px-4 py-3 text-gray-700 rounded-md dark:text-gray-200 hover:bg-blue-200 dark:hover:bg-blue-500">
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                </svg>
+
+                <span class="mt-2">121 Street, NY</span>
+            </a>
+            <!-- agregar un link a whatsapp o quitar el href -->   
+            <a href="#" class="flex flex-col items-center px-4 py-3 text-gray-700 rounded-md dark:text-gray-200 hover:bg-blue-200 dark:hover:bg-blue-500">
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+
+                <span class="mt-2">+2499999666600</span>
+            </a>
+
+            <!-- agregar un link al correo o quitar el href --> 
+            <a href="#" class="flex flex-col items-center px-4 py-3 text-gray-700 rounded-md dark:text-gray-200 hover:bg-blue-200 dark:hover:bg-blue-500">
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+
+                <span class="mt-2">example@example.com</span>
+            </a>
+        </div>
+        
+        <div class="mt-6 ">
+            <div class="items-center -mx-2 md:flex">
+                <div class="w-full mx-2">
+                    <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Nombre</label>
+
+                    <input class="block w-full mt-1 border-red-300 rounded-md shadow-sm focus:border-red-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" placeholder="Eje. Paola">
+                </div>
+
+                <div class="w-full mx-2 mt-4 md:mt-0">
+                    <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">E-mail</label>
+
+                    <input class="block w-full mt-1 border-red-300 rounded-md shadow-sm focus:border-red-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="email" placeholder="Eje. Paola@gmail.com">
+                </div>
+            </div>
+
+            <div class="w-full mt-4">
+                <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Mensaje</label>
+
+                <textarea class="block w-full mt-1 border-red-300 rounded-md shadow-sm focus:border-red-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="Ingresa tú mensaje"></textarea>
+            </div>
+
+            <div class="flex justify-center mt-6">
+                <button class="px-4 py-2 text-white transition-colors duration-200 transform bg-red-300 rounded-md hover:bg-yellow-500 focus:outline-none focus:bg-gray-600">enviar</button>
+            </div>
+        </div>
     </section>
 
 @endsection
