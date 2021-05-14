@@ -1,7 +1,7 @@
 <div class="grid grid-cols-3 gap-5 mt-3">
     @foreach($jobs as $job)
     <div class="bg-white shadow-lg rounded-lg px-4 py-6 text-center">
-        <a>
+        <a href="{{route('vacancy' , $job->Title)  }}">
             <img  class ="rounded-md mb-2">
             <h2 class="text-lg text-gray-600 truncate uppercase">{{$job->Title}}</h2>
             <h3 class="text-lg text-gray-600">{{$job->Location}}</h3>

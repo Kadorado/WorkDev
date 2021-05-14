@@ -17,6 +17,11 @@ use App\Models\User;
 |
 */
 
+
+Route::get('/vacantes/{vacancy:Title}', [PageController::class, 'vacancy'])->name('vacancy');
+
+Route::resource('vacante', VacancyController::class);
+
 Route::get('/', [PageController::class, 'home'])->name('home');
 
 Route::get('/nosotros', [PageController::class, 'nosotros'])->name('nosotros');
@@ -25,12 +30,8 @@ Route::get('/companydata', [PageController::class, 'companydata'])->name('compan
 
 Route::get('/developerdata', [PageController::class, 'developerdata'])->name('developerdata');
 
-
-Route::resource('vacante', VacancyController::class);
-
 Route::resource('recruiter', RecruiterController::class);
 
-//developer
 Route::resource('developer', DeveloperController::class);
 
 

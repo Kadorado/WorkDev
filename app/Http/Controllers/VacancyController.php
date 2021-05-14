@@ -93,7 +93,10 @@ class VacancyController extends Controller
      */
     public function edit($id)
     {
-        //
+        $vacante= Vacancy::find($id);
+
+        return view('Vacancy.edit')->with('vacante', $vacante);
+
     }
 
     /**
@@ -105,7 +108,17 @@ class VacancyController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $update_vacancy = Vacancy::find($id);
+        $update_vacancy->Title= $request->get('title');
+        $update_vacancy->ExperienceRequire= $request->get('experience');
+        $update_vacancy->Salary= $request->get('salary');
+        $update_vacancy->Location= $request->get('location');
+        $update_vacancy->currency= $request->get('currency');
+        $update_vacancy->DescriptionVacancy= $request->get('descriptionjob');
+        $update_vacancy->state= $request->get('state');
+
+        $update_vacancy->save();
+        return redirect('/vacante');
     }
 
     /**
@@ -116,6 +129,9 @@ class VacancyController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $vacancy = Vacancy::find($id);
+        $vacancy->delete();
+
+        return redirect('/vacante');
     }
 }

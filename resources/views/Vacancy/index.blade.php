@@ -49,13 +49,13 @@
                     {{$vacante->state}}
                 </td>
                 <td>
-                    <form action="" method="POST">
-                     <a href="" class="btn btn-info">Editar</a>         
-                         @csrf
-                         @method('DELETE')
-                     <button type="submit" class="btn btn-danger">Eliminar</button>
-                    </form>          
-                   </td>   
+                    <form action="{{ route('vacante.destroy',$vacante->id) }}" method="POST">
+                        <a href="/vacante/{{$vacante->id}}/edit" class="btn btn-info">Editar</a>         
+                            @csrf
+                            @method('DELETE')
+                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                    </form>
+                   </td>
             </tr>
 
 
