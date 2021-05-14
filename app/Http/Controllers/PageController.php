@@ -22,12 +22,16 @@ class PageController extends Controller
     }
 
     public function developerdata(Developer $developer){
-        return view('developerData', [
+        return view('developer.developerData', [
             'developer' => $developer]);
     }
 
     public function vacancy(Vacancy $vacancy){
         return view("vacancy", compact('vacancy'));
     }
+
+    // public function skills(){
+    //     return view('developer.skills');
+    // }
 
 }

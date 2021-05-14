@@ -14,10 +14,28 @@ class CreateSkillsTable extends Migration
     public function up()
     {
         Schema::create('skills', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->timestamps();
             $table->string('skillName');
 
+        });
+        
+        Schema::create('developer_skill',function (Blueprint $table){
+
+            $table->unsignedBigInteger('skill_id');
+            $table->unsignedBigInteger('developer_id');
+            
+            $table->timestamps();
+
+            $table->foreign('skill_id')
+                ->references('id')
+                ->on('skills')
+                ->onDelete('cascade');
+            
+            $table->foreign('developer_id')
+                ->references('user_id')
+                ->on('developers')
+                ->onDelete('cascade');
         });
     }
 

@@ -35,8 +35,8 @@
   <button type="submit" class="btn btn-primary" tabindex="4">Guardar</button>
 </form>
 
-@if($developer)
-<p>{{$developer['fullName']}}</p>
+@if($developer ?? '')
+<p>{{$developer ?? ''['fullName']}}</p>
 @else
 <p>NO hay desarrollador </p>
 @endif

@@ -12,4 +12,9 @@ class Developer extends Model
     {
         return $this->belongsTo(User::class);
     }
+    //skills
+    public function skills()
+    {
+        return $this->belongsToMany(Skill::class);
+    }
 }

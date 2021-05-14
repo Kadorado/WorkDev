@@ -4,6 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\Skill;
+use App\Models\Developer;
+
+
 class SkillsSeeder extends Seeder
 {
     /**
@@ -31,7 +34,6 @@ class SkillsSeeder extends Seeder
             Skill::create([
                 'skillName' => $skill,
             ]);
-
         }
         //creacion de los skills que van precargados en la base de datos
 
