@@ -6,10 +6,11 @@
 
 @section('content')
 
-<form action="{{ route('recruiter.store') }}" method="POST">
+
+<form class="w-full max-w-lg" action="{{ route('recruiter.store') }}" method="POST">
     @csrf
-  <div class="mb-3">
-    <label for="" class="form-label py-6">NameCompany</label>
+  <div class="flex flex-wrap -mx-3 mb-6">
+    <label for="" class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">NameCompany</label>
     <input id="namecompany" name="namecompany" type="text" class="form-control" tabindex="1">    
   </div>
   <div class="mb-3">

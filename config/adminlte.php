@@ -31,7 +31,7 @@ return [
     |
     */
 
-    'use_ico_only' => true,
+    'use_ico_only' => false,
     'use_full_favicon' => false,
 
     /*
@@ -46,12 +46,12 @@ return [
     |   
     */
 
-    'logo' => '<b>Coders</b>',
-    'logo_img' => 'vendor/adminlte/dist/img/office.png',
+    'logo' => '',
+    'logo_img' => 'vendor/adminlte/dist/img/edificio.png',
     //'logo_img_class' => '',
     //'logo_img_xl' => null,
     //'logo_img_xl_class' => 'brand-image-xs',
-    //'logo_img_alt' => 'AdminLTE',
+    'logo_img_alt' => 'coders',
 
     /*
     |--------------------------------------------------------------------------
@@ -122,7 +122,7 @@ return [
     */
 
     'classes_body' => '',
-    'classes_brand' => 'bg-orange',
+    'classes_brand' => 'bg-blue',
     'classes_brand_text' => 'text-white',
     'classes_content_wrapper' => 'bg-white',
     'classes_content_header' => 'bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 ...',
@@ -145,8 +145,8 @@ return [
     |
     */
 
-    'sidebar_mini' => true,
-    'sidebar_collapse' => false,
+    'sidebar_mini' => false,
+    'sidebar_collapse' => true,
     'sidebar_collapse_auto_size' => false,
     'sidebar_collapse_remember' => false,
     'sidebar_collapse_remember_no_transition' => true,
@@ -168,8 +168,8 @@ return [
     */
 
     'right_sidebar' => false,
-    'right_sidebar_icon' => 'fas fa-cogs',
-    'right_sidebar_theme' => 'dark',
+    'right_sidebar_icon' => 'fas fa-home',
+    'right_sidebar_theme' => 'ligth',
     'right_sidebar_slide' => true,
     'right_sidebar_push' => true,
     'right_sidebar_scrollbar_theme' => 'os-theme-light',
@@ -241,9 +241,15 @@ return [
         
         ['header' => 'Configuracion de cuenta'],
         [
+            'text' => 'Mi tablero',
+            'url'  => 'board',
+            'icon' => 'fas fa-home',
+            
+        ],
+        [
             'text' => 'perfil',
             'url'  => 'user/profile',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-user-edit',
         ],
         [
             'text' => 'Empresa',

@@ -34,6 +34,9 @@ Route::resource('recruiter', RecruiterController::class);
 
 Route::resource('developer', DeveloperController::class);
 
+Route::get('/board', [RecruiterController::class, 'board'])->name('board');
+
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 

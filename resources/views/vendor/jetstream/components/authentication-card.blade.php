@@ -1,5 +1,5 @@
 <!--Plantilla base del login-->
-<div class="flex flex-row flex-wrap items-center min-h-screen pt-6 sm:justify-center sm:pt-0 ">
+<div >
     <div>
         {{ $logo }}
     </div>
