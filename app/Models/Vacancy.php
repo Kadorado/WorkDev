@@ -10,6 +10,6 @@ class Vacancy extends Model
     use HasFactory;
 
     public function recrutier(){
-        return $this->belongsTo(Vacancy::class);
+        return $this->belongsTo(Recruiter::class);
     }
 }

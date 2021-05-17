@@ -5,6 +5,9 @@
 @section('content')
 
 
+
+
+
 {{-- organizar esto que quede mejor --}}
 
 <div class="relative w-full max-w-6xl p-10 mx-auto text-gray-800 bg-white rounded shadow-xl lg:p-20 md:text-left">
@@ -20,7 +23,16 @@
     <!-- imagen principal -->
     <div class="w-full px-10 mb-10 md:w-1/2 md:mb-0">
       <div class="relative">
-        <img src="https://tailwindcss.com/img/card-top.jpg" class="relative z-10 w-full" alt="">
+       @if ($vacancy->recrutier->user->profile_photo_path !== NULL)
+                @php
+                    $path_photo_2 = "storage/".$vacancy->recrutier->user->profile_photo_path;
+                @endphp
+            @else
+                @php
+                    $path_photo_2 = 'favicons/favicon.png'
+                @endphp
+            @endif
+        <img src="{{ asset($path_photo_2) }}" class="relative z-10 w-full" alt="photo logo">
 
       </div>
     </div>
@@ -44,7 +56,8 @@
         <p class="flex-1 text-2xl">{{$vacancy->Location}}</p>
       </div>
       <!-- info empresa -->
-      <h2 class="mb-5 text-2xl font-bold uppercase ">Empresa:</h2>
+      <h2 class="mb-5 text-2xl font-bold uppercase ">Empresa: {{$vacancy->recrutier->NameCompany}}
+      </h2>
       <div class="flex">
         <img src="https://gestionpyme.com/wp-content/uploads/2015/09/shutterstock_227788621.jpg" alt="logo de la empresa" class="flex-none object-cover w-16 h-16 m-4 rounded-full ">
         <div class="items-center flex-1 m-auto">
@@ -59,7 +72,7 @@
       <div class="flex">
         <h2 class="flex-1 mb-5 text-2xl font-bold uppercase">Salario:</h2>
         <div class="flex-1 inline-block mr-5 align-bottom">
-          <span class="text-2xl leading-none align-baseline">$</span>
+          <span class="text-2xl leading-none align-baseline"></span>
           <span class="text-5xl font-bold leading-none align-baseline">{{$vacancy->Salary}}</span>
           <span class="text-2xl leading-none align-baseline">{{$vacancy->currency}}</span>
         </div>

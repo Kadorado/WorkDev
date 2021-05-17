@@ -8,15 +8,25 @@
     @foreach($jobs as $job)
         <a href="{{route('vacancy' , $job->Title)  }}">
         <div class="max-w-xs my-2 overflow-hidden bg-white rounded shadow-lg bg-opacity-20">
-            <img class="w-full" src="https://tailwindcss.com/img/card-top.jpg" alt="Sunset in the mountains">
+            @if ($job->profile_photo_path !== NULL)
+                @php
+                    $path_photo = "storage/".$job->profile_photo_path;
+                @endphp
+            @else
+                @php
+                    $path_photo = 'favicons/favicon.png'
+                @endphp
+            @endif
+
+            <img class="w-full" src="{{ asset($path_photo) }}" alt="Sunset in the mountains">
             <div class="px-6 py-2">
                 <div class="mb-2 text-xl font-bold">{{$job->Title}}</div>
+                <div class="mb-2 text-xl font-bold">{{$job->NameCompany}}</div>
             </div>
             <div class="px-6 py-4">
                 <span class="inline-block px-3 py-1 mr-2 text-sm font-semibold rounded-full bg-grey-lighter text-grey-darker">Localización: {{$job->Location}}</span>
                 <span class="inline-block px-3 py-1 mr-2 text-sm font-semibold rounded-full bg-grey-lighter text-grey-darker">Salario: {{$job->Salary}}</span>
                 <span class="inline-block px-3 py-1 text-sm font-semibold rounded-full bg-grey-lighter text-grey-darker">Moneda: {{$job->currency}}</span>
-                
             </div>
         </div>
         </a>
