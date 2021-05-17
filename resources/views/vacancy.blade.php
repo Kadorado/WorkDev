@@ -65,7 +65,7 @@
         </div>
       </div>
       <div class="mt-6 ">
-        <button class="px-20 py-3 mx-20 font-semibold text-white bg-yellow-300 rounded-full opacity-75 hover:opacity-90 hover:text-yellow-900"><i class="mr-2 -ml-2 mdi mdi-cart"></i> Aplicar</button>
+       <a href="{{route("register")}}"><button class="px-20 py-3 mx-20 font-semibold text-white bg-yellow-300 rounded-full opacity-75 hover:opacity-90 hover:text-yellow-900"><i class="mr-2 -ml-2 mdi mdi-cart"></i> Aplicar</button></a> 
       </div>
     </div>
 
