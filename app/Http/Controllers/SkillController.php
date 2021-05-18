@@ -52,7 +52,7 @@ class SkillController extends Controller
     public function store(Request $request)
     {
         //obtiene el string con las habilidades seleccionadas y lo convierte en una lista
-        if(isset($userSkills)){
+        if($request->get('userSkills')!= null){
         $userSkills = explode(',',$request->get('userSkills'));
         //guarda cada uno de los skills en la base de datos
         $userId = Auth::id();
@@ -70,26 +70,26 @@ class SkillController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+
+        $skills = DB::table('skills')
+            ->select('skills.skillName', 'skills.id')
+            ->get();
+                    ;
+        return view('developer.editSkill', ['skills' => $skills]);
        
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit($id)
     {
-        
-        $skills = DB::table('skills')
-            ->select('skills.skillName', 'skills.id')
-            ->get();
-                    ;
-        return view('developer.editSkill', ['skills' => $skills]);
+        //
     }
 
     /**

@@ -32,7 +32,7 @@
                 </div>
             </td>
             <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
-                <form action="{{ route('skills.destroy', $userSkill->skill_id) }}" method="POST">
+                <form action="{{route('skills.destroy', $userSkill->skill_id)}}" method="POST">
                     @csrf
                     @method('DELETE')
                     <button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded">
@@ -49,12 +49,10 @@
 </table>
 
 @endif
-<form action="#" method="POST">
-        <button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded">
-            editar
-        </button>
-    </a>
-</form>
+<a href="skills/show">Editar</a>
+
+
+
 
 
 
