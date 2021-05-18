@@ -73,10 +73,24 @@ class SkillController extends Controller
     public function show()
     {
 
+       /* select skillName, id 
+        from workdev.skills
+        where id
+        not in(
+        SELECT skill_id FROM developer_skill where developer_id=1
+        )
+
         $skills = DB::table('skills')
             ->select('skills.skillName', 'skills.id')
             ->get();
-                    ;
+                    */
+
+
+        $skills = Skill::whereNotIn('id', function ($query) {
+            $query->select('skill_id')
+                ->from('developer_skill')
+                ->where('developer_id','=',Auth::id());
+        })->get();
         return view('developer.editSkill', ['skills' => $skills]);
        
     }
