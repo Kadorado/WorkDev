@@ -16,12 +16,17 @@ class SkillController extends Controller
      */
     public function index()
     {
+        //obtiene el id del usuario actual
+        $userId = Auth::id();
+        //obtiene las habilidades del usuario actual
+        $userSkills = DB::table('skills')
+        ->join('developer_skill', 'skills.id','=','developer_skill.skill_id')
+        ->where('developer_skill.developer_id', '=', $userId)
+        ->select('skills.skillName', 'developer_skill.skill_id')
+        ->get();
 
-        $skills = DB::table('skills')
-            ->select('skills.skillName', 'skills.id')
-            ->get();
-
-        return view('developer.skills', ['skills' => $skills]);
+        return view('developer.skills', [
+            'userSkills' => $userSkills]);
        
         //return view('developer.skills');
 
@@ -47,13 +52,15 @@ class SkillController extends Controller
     public function store(Request $request)
     {
         //obtiene el string con las habilidades seleccionadas y lo convierte en una lista
+        if($request->get('userSkills')!= null){
         $userSkills = explode(',',$request->get('userSkills'));
+        //guarda cada uno de los skills en la base de datos
         $userId = Auth::id();
         foreach($userSkills as $skill){    
             $skill = Skill::find($skill);
             $skill-> developers()->attach($userId);
-        }
-
+        }}
+        return redirect()->action([SkillController::class, 'index']);
  
     }
 
@@ -63,18 +70,14 @@ class SkillController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
-        //obtiene el id del usuario actual
-        $id = Auth::id();
-        $userSkills = DB::table('skills')
-                ->join('developer_skill', 'skills.id','=','developer_skill.id')
-                ->where('developer_skill.user_id', '=', $id)
-                ->select('skills.skillName')
-                ->get()
-                    ;
-                return view('developer.skills', ['Userskills' => $userSkills]);
+        $skills = Skill::whereNotIn('id', function ($query) {
+            $query->select('skill_id')
+                ->from('developer_skill')
+                ->where('developer_id','=',Auth::id());
+        })->get();
+        return view('developer.editSkill', ['skills' => $skills]);
        
     }
 
@@ -109,6 +112,11 @@ class SkillController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('developer_skill')
+            ->where('skill_id', '=', $id)
+            ->where('developer_id','=',Auth::id() )
+            ->delete();
+
+        return redirect()->action([SkillController::class, 'index']);
     }
 }
