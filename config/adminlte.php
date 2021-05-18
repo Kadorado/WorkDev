@@ -260,13 +260,13 @@ return [
         [
             'text' => 'Mis datos',
             'url'  => 'developerdata',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-fw fa-align-left',
             'can'  => 'developerdata',
         ],
         [
             'text' => 'Mis Habilidades',
             'url'  => 'skills',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-fw fa-briefcase',
             'can'  => 'developerdata',
         ],
 
