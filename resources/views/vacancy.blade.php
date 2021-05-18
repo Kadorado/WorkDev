@@ -32,7 +32,7 @@
                     $path_photo_2 = 'favicons/favicon.png'
                 @endphp
             @endif
-        <img src="{{ asset($path_photo_2) }}" class="relative z-10 w-full" alt="photo logo">
+        <img src="{{ asset($path_photo_2) }}" class="relative z-10 object-cover m-auto w-96 h-96" alt="logo de la empresa">
 
       </div>
     </div>
