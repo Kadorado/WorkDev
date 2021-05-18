@@ -269,6 +269,12 @@ return [
             'icon' => 'fas fa-fw fa-user',
             'can'  => 'developerdata',
         ],
+        [
+            'text' => 'Mis Habilidades',
+            'url'  => 'skills',
+            'icon' => 'fas fa-fw fa-user',
+            'can'  => 'developerdata',
+        ],
 
         // [
         //     'text' => 'Cambiar password',

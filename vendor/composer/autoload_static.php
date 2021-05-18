@@ -609,6 +609,7 @@ class ComposerStaticInit44d2bb37d74fc17b0d6d7e5a9fbcfa73
         'App\\Models\\Recruiter' => __DIR__ . '/../..' . '/app/Models/Recruiter.php',
         'App\\Models\\Role' => __DIR__ . '/../..' . '/app/Models/Role.php',
         'App\\Models\\Tecnology' => __DIR__ . '/../..' . '/app/Models/Tecnology.php',
+        'App\\Models\\Skill' => __DIR__ . '/../..' . '/app/Models/Skill.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Models\\Vacancy' => __DIR__ . '/../..' . '/app/Models/Vacancy.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',

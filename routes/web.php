@@ -5,6 +5,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\RecruiterController;
 use App\Http\Controllers\VacancyController;
 use App\Http\Controllers\DeveloperController;
+use App\Http\Controllers\SkillController;
 use App\Models\User;
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,12 @@ Route::resource('companydata', RecruiterController::class);
 Route::get('/developerdata', [PageController::class, 'developerdata'])->name('developerdata');
 
 // Route::resource('recruiter', RecruiterController::class);
+//Route::get('/skills', [PageController::class, 'skills'])->name('skills');
+
+
+Route::resource('skills', SkillController::class);
+
+Route::resource('recruiter', RecruiterController::class);
 
 Route::resource('developer', DeveloperController::class);
 

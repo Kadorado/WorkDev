@@ -33,6 +33,7 @@ return array(
     'App\\Models\\Recruiter' => $baseDir . '/app/Models/Recruiter.php',
     'App\\Models\\Role' => $baseDir . '/app/Models/Role.php',
     'App\\Models\\Tecnology' => $baseDir . '/app/Models/Tecnology.php',
+    'App\\Models\\Skill' => $baseDir . '/app/Models/Skill.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Models\\Vacancy' => $baseDir . '/app/Models/Vacancy.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
