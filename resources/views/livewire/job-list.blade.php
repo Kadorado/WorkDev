@@ -18,7 +18,7 @@
                 @endphp
             @endif
 
-            <img class="w-full" src="{{ asset($path_photo) }}" alt="Sunset in the mountains">
+            <img class="object-cover h-80 w-80" src="{{ asset($path_photo) }}" alt="Foto de la empresa">
             <div class="px-6 py-2">
                 <div class="mb-2 text-xl font-bold">{{$job->Title}}</div>
                 <div class="mb-2 text-xl font-bold">{{$job->NameCompany}}</div>
