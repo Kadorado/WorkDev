@@ -1,12 +1,13 @@
 
+{{-- perfil tradicional --}}
 
 <x-jet-form-section submit="updateProfileInformation">
     <x-slot name="title">
-        {{ __('Informacion de perfil') }}
+        <h1>{{ __('Informacion de perfil') }}</h1>
     </x-slot>
 
     <x-slot name="description">
-        {{ __('Actualice la información de perfil y la dirección de correo electrónico de su cuenta.') }}
+        <h2>{{ __('Actualice la información de perfil y la dirección de correo electrónico de su cuenta.') }}</h2>
     </x-slot>
 
     <x-slot name="form">
@@ -31,15 +32,15 @@
                 <!-- Current Profile Photo -->
                 <div class="mt-2" x-show="! photoPreview">
                     @if (Auth::user()->profile_photo_path)
-                    <img class="h-8 w-8 rounded-full object-cover" src="/storage/{{ Auth::user()->profile_photo_path }}" alt="{{ Auth::user()->name }}" />
+                    <img class="object-cover w-8 h-8 " src="/storage/{{ Auth::user()->profile_photo_path }}" alt="{{ Auth::user()->name }}" />
                     @else
-                    <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
+                    <img class="object-cover w-8 h-8 rounded-full" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
                     @endif    
                 </div>
 
                 <!-- New Profile Photo Preview -->
                 <div class="mt-2" x-show="photoPreview">
-                    <span class="block rounded-full w-20 h-20"
+                    <span class="block w-20 h-20 rounded-full"
                           x-bind:style="'background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url(\'' + photoPreview + '\');'">
                     </span>
                 </div>
@@ -61,14 +62,14 @@
         <!-- Name -->
         <div class="col-span-6 sm:col-span-4">
             <x-jet-label for="name" value="{{ __('Nombre') }}" />
-            <x-jet-input id="name" type="text" class="mt-1 block w-full" wire:model.defer="state.name" autocomplete="name" />
+            <x-jet-input id="name" type="text" class="block w-full mt-1" wire:model.defer="state.name" autocomplete="name" />
             <x-jet-input-error for="name" class="mt-2" />
         </div>
 
         <!-- Email -->
         <div class="col-span-6 sm:col-span-4">
             <x-jet-label for="email" value="{{ __('Email') }}" />
-            <x-jet-input id="email" type="email" class="mt-1 block w-full" wire:model.defer="state.email" />
+            <x-jet-input id="email" type="email" class="block w-full mt-1" wire:model.defer="state.email" />
             <x-jet-input-error for="email" class="mt-2" />
         </div>
     </x-slot>
