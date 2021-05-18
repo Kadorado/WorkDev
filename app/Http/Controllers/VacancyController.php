@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 
 use Illuminate\Http\Request;
 use App\Models\Vacancy;
+use App\Models\Tecnology;
 
 class VacancyController extends Controller
 {
@@ -45,7 +47,10 @@ class VacancyController extends Controller
      */
     public function create()
     {
-        return view('Vacancy.create');
+        $tecnologies = DB::table('tecnologies')
+        ->select('tecnologies.tecno', 'tecnologies.id')
+        ->get();
+        return view('Vacancy.create', ['tecnologies'=>$tecnologies]);
     }
 
     /**
@@ -76,9 +81,23 @@ class VacancyController extends Controller
         $new_vacancy->state= $request->get('state');
 
         $new_vacancy->save();
+        $userTecno = explode(',',$request->get('userTecno'));
+
+        $vacancy_id =  Vacancy::select("id")->latest()->first();
+
+        $this->tecnologies($userTecno, $vacancy_id);
+
         return redirect('/vacante');
     }
 
+
+    public function tecnologies($userTecno, $vacancy_id){
+               // tecnologies require
+               foreach($userTecno as $tecno){
+                   $tecno = Tecnology::find($tecno);
+                   $tecno-> vacancy()->attach($vacancy_id);
+               }
+    }
     /**
      * Display the specified resource.
      *

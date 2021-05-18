@@ -13,14 +13,14 @@ class CreateTecnoVacancyTable extends Migration
      */
     public function up()
     {
-        Schema::create('tecno_vacancy', function (Blueprint $table) {
+        Schema::create('tecnology_vacancy', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('tecno_id')->unsigned();
+            $table->bigInteger('tecnology_id')->unsigned();
             $table->bigInteger('vacancy_id')->unsigned();
 
             $table->timestamps();
 
-            $table->foreign('tecno_id')->references('id')->on("tecnologies")
+            $table->foreign('tecnology_id')->references('id')->on("tecnologies")
             ->onDelete('cascade')
             ->onUpdate('cascade');
 
