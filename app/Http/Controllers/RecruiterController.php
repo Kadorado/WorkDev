@@ -113,4 +113,9 @@ class RecruiterController extends Controller
     {
         //
     }
+
+    public function board()
+    {
+        return view ('board');
+    }
 }
