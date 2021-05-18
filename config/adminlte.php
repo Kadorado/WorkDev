@@ -242,7 +242,7 @@ return [
         ['header' => 'Configuracion de cuenta'],
         [
             'text' => 'Mi tablero',
-            'url'  => 'board',
+            'url'  => 'dashboard',
             'icon' => 'fas fa-home',
             
         ],
