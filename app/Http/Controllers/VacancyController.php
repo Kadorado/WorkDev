@@ -105,7 +105,7 @@ class VacancyController extends Controller
     public function Deletetecnologies($userTecno, $vacancy_id){
         // tecnologies require
         foreach($userTecno as $tecno){
-            $tecno = Tecnology::find($tecno);
+            $tecno = Tecnology::find($tecno->id);
             $tecno-> vacancy()->detach($vacancy_id);
         }
     }
@@ -138,7 +138,7 @@ class VacancyController extends Controller
             $userTecno = DB::table('tecnologies')
              ->join('tecnology_vacancy', 'tecnologies.id','=','tecnology_vacancy.tecnology_id')
              ->where('tecnology_vacancy.vacancy_id', '=', $id)
-                ->select('tecnologies.tecno')
+                ->select('tecnologies.tecno', 'tecnologies.id')
                 ->get();
 
 
@@ -165,12 +165,27 @@ class VacancyController extends Controller
         $update_vacancy->state= $request->get('state');
         $update_vacancy->save();
 
-        $userTecno = explode(',',$request->get('userTecno_up'));
-        $this->Addtecnologies($userTecno, $id);
+
+        $userTecno = DB::table('tecnologies')
+        ->join('tecnology_vacancy', 'tecnologies.id','=','tecnology_vacancy.tecnology_id')
+        ->where('tecnology_vacancy.vacancy_id', '=', $id)
+           ->select('tecnologies.id')
+           ->get();
+
+
+        $this->Deletetecnologies($userTecno, $id);
+
+        $userTecnoUp = explode(',',$request->get('userTecno_up'));
+        
+        $this->Addtecnologies($userTecnoUp, $id);
 
         return redirect('/vacante');
     }
 
+
+    public function UserTecnologies(){
+
+    }
     /**
      * Remove the specified resource from storage.
      *
