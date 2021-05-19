@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSkillsTable extends Migration
+class CreateEducationTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,24 +12,25 @@ class CreateSkillsTable extends Migration
      * @return void
      */
     public function up()
-    {//crea tabla skills
-        Schema::create('skills', function (Blueprint $table) {
-            $table->bigIncrements('id');
+    {
+        //creates education table
+        Schema::create('education', function (Blueprint $table) {
+            $table->id();
             $table->timestamps();
-            $table->string('skillName');
+            $table->string('nameEducation');
+            $table->string('level');
 
         });
-        //crea tabla intermedia desarrollador tiene habilidades
-        Schema::create('developer_skill',function (Blueprint $table){
-
-            $table->unsignedBigInteger('skill_id');
+        //crea tabla intermedia entre desarrollador y educacion
+        Schema::create('developer_education', function(Blueprint $table){
+            $table->unsignedBigInteger('education_id');
             $table->unsignedBigInteger('developer_id');
             
             $table->timestamps();
 
-            $table->foreign('skill_id')
+            $table->foreign('education_id')
                 ->references('id')
-                ->on('skills')
+                ->on('education')
                 ->onDelete('cascade');
             
             $table->foreign('developer_id')
@@ -46,6 +47,6 @@ class CreateSkillsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('skills');
+        Schema::dropIfExists('education');
     }
 }
