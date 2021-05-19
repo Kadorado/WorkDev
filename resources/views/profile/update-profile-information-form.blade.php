@@ -40,9 +40,9 @@ background-blend-mode: multiply;
                     <!-- Current Profile Photo -->
                     <div class="mt-2" x-show="! photoPreview">
                         @if (Auth::user()->profile_photo_path)
-                        <img class="object-cover mx-auto antialiased rounded-lg shadow-lg w-60 h-60" src="/storage/{{ Auth::user()->profile_photo_path }}" alt="{{ Auth::user()->name }}" />
+                        <img class="object-cover antialiased rounded-lg shadow-lg w-60 h-60" src="/storage/{{ Auth::user()->profile_photo_path }}" alt="{{ Auth::user()->name }}" />
                         @else
-                        <img class="object-cover mx-auto antialiased rounded-lg shadow-lg w-60 h-60" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
+                        <img class="object-cover antialiased rounded-lg shadow-lg w-60 h-60" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
                         @endif    
                     </div>
 
