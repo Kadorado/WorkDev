@@ -36,9 +36,9 @@
     
 
     
-    <section class="py-8 my-8 bg-white border-b">
+    <section class="py-8 my-8 bg-white border-b rounded-2xl">
       <div class="container max-w-5xl m-8 mx-auto">
-        <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+        <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800 ">
           ¿Buscas empleo?
         </h1>
         <div class="w-full mb-4">
@@ -105,32 +105,31 @@
                 Desarrollador Frontend
               </p>
               <div class="w-full px-6 text-xl font-bold text-gray-800">
-                Juliana Fajardo
+                Kevin Dorado
               </div>
-              <img class="w-2/4 mx-auto my-8 rounded-full shadow-lg" src="https://scontent.fbog15-1.fna.fbcdn.net/v/t1.6435-9/125563107_1288144128249985_2050419118621764369_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=174925&_nc_eui2=AeEwvFhX5wz_DUfsw522Lr1LawF7hhIJaLNrAXuGEglos2LVzdV2lIMlPegKnkvmGEacxyuCCPqhDCFoz92ExAzp&_nc_ohc=Irhxygevd6EAX_sq2V_&_nc_ht=scontent.fbog15-1.fna&oh=25f7c1fc0d76fd86e9588ff54d3da997&oe=60C21281" alt="Juliana fajardo">
+              <img class="w-2/4 mx-auto my-8 rounded-full shadow-lg" src="https://media-exp1.licdn.com/dms/image/C4E03AQHNAqLlEx9evA/profile-displayphoto-shrink_800_800/0/1612294688099?e=1626912000&v=beta&t=YXCiDZ1iN81HF9-QW8S3tUXEXMYeTvbcpqssZ_AM3hY" alt="Juliana fajardo">
               <br />
               <br />
               <p class="px-6 mx-auto my-5 text-center text-gray-800">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+                Esta plataforma me ayudo a acercarme a las posibilidades de empleo que estaba buscando  ,agilizando el proceso de selección
               </p>
             </a>
-          </div>
-          
-        </div>
+          </div> 
+        </div >
         <div class="flex flex-col flex-grow flex-shrink w-full p-6 md:w-1/3">
           <div class="flex-1 overflow-hidden bg-white rounded-t rounded-b-none shadow">
             <a href="#" class="flex flex-wrap no-underline hover:no-underline">
             <p class="w-full px-6 text-xs text-gray-600 md:text-sm">
-                Desarrollador Frontend
+                Desarrollador FullStack
               </p>
               <div class="w-full px-6 text-xl font-bold text-gray-800">
-                Juliana Fajardo
+                Maria Fajardo
               </div>
               <img class="w-2/4 mx-auto my-8 rounded-full shadow-lg" src="https://scontent.fbog15-1.fna.fbcdn.net/v/t1.6435-9/125563107_1288144128249985_2050419118621764369_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=174925&_nc_eui2=AeEwvFhX5wz_DUfsw522Lr1LawF7hhIJaLNrAXuGEglos2LVzdV2lIMlPegKnkvmGEacxyuCCPqhDCFoz92ExAzp&_nc_ohc=Irhxygevd6EAX_sq2V_&_nc_ht=scontent.fbog15-1.fna&oh=25f7c1fc0d76fd86e9588ff54d3da997&oe=60C21281" alt="Juliana fajardo">
               <br />
               <br />
               <p class="px-6 mx-auto my-5 text-center text-gray-800">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+                Despues de aplicar en multiples plataformas de empleo workdev me brindo una forma facil y agil de aplicar a las vacantes que se ajustaban a mi perfil profesional.
               </p>
             </a>
           </div>
@@ -140,12 +139,12 @@
           <div class="flex-1 overflow-hidden bg-white rounded-t rounded-b-none shadow">
             <a href="#" class="flex flex-wrap no-underline hover:no-underline">
               <p class="w-full px-6 text-xs text-gray-600 md:text-sm">
-                Desarrollador Frontend
+                Desarrolladora de software
               </p>
               <div class="w-full px-6 text-xl font-bold text-gray-800">
-                Juliana Fajardo
+                Paola roa
               </div>
-              <img class="w-2/4 mx-auto my-8 rounded-full shadow-lg" src="https://scontent.fbog15-1.fna.fbcdn.net/v/t1.6435-9/125563107_1288144128249985_2050419118621764369_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=174925&_nc_eui2=AeEwvFhX5wz_DUfsw522Lr1LawF7hhIJaLNrAXuGEglos2LVzdV2lIMlPegKnkvmGEacxyuCCPqhDCFoz92ExAzp&_nc_ohc=Irhxygevd6EAX_sq2V_&_nc_ht=scontent.fbog15-1.fna&oh=25f7c1fc0d76fd86e9588ff54d3da997&oe=60C21281" alt="Juliana fajardo">
+              <img class="w-2/4 mx-auto my-8 rounded-full shadow-lg" src="https://media-exp1.licdn.com/dms/image/C4E03AQEg2-Fs4-3o3Q/profile-displayphoto-shrink_800_800/0/1604375333655?e=1626912000&v=beta&t=bYcLc34bH8fKV7fmpOxVz2p7moJJoeJ4xcgJ7jEl_dU" alt="Juliana fajardo">
               <br />
               <br />
               <p class="px-6 mx-auto my-5 text-center text-gray-800">
@@ -155,6 +154,21 @@
           </div>
           
         </div>
+      </div>
+    </section>
+
+
+     
+    {{-- Empresas --}}
+    <section>
+      <div class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800 ">
+        <h1>
+          Empresas que confían en nosotros
+        </h1>
+        <p class="py-4 my-8">
+            Tu próximo empleo podría estar aca.
+        </p>
+        <img  class="hero container max-w-screen-lg mx-auto pb-10 flex rounded-2xl" src="https://i.ibb.co/K2bkFWK/ejemplo.png" alt="">
       </div>
     </section>
     <!-- Contacto -->
