@@ -59,7 +59,7 @@
                     </p>
                 </div>
                 <div class="w-full sm:w-1/2 p-6">
-                    <img src="{{asset("favicons/hero-1.png")}}" alt="">
+                    <img src="{{asset("favicons/hero-2.png")}}" alt="">
                 </div>
             </div>
             <div class="flex flex-wrap flex-col-reverse sm:flex-row">
