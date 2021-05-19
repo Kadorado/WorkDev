@@ -32,6 +32,9 @@ class VacancyController extends Controller
             ->where('recrutier_id','=',$id_recrutier[0]->id)
             ->select('vacancies.*')
             ->get();
+
+
+
             return view('Vacancy.index', ['vacantes' => $vacantes]);
         }
         else{
@@ -85,18 +88,26 @@ class VacancyController extends Controller
 
         $vacancy_id =  Vacancy::select("id")->latest()->first();
 
-        $this->tecnologies($userTecno, $vacancy_id);
+        $this->Addtecnologies($userTecno, $vacancy_id);
 
         return redirect('/vacante');
     }
 
 
-    public function tecnologies($userTecno, $vacancy_id){
+    public function Addtecnologies($userTecno, $vacancy_id){
                // tecnologies require
                foreach($userTecno as $tecno){
                    $tecno = Tecnology::find($tecno);
                    $tecno-> vacancy()->attach($vacancy_id);
                }
+    }
+
+    public function Deletetecnologies($userTecno, $vacancy_id){
+        // tecnologies require
+        foreach($userTecno as $tecno){
+            $tecno = Tecnology::find($tecno);
+            $tecno-> vacancy()->detach($vacancy_id);
+        }
     }
     /**
      * Display the specified resource.
@@ -117,9 +128,21 @@ class VacancyController extends Controller
      */
     public function edit($id)
     {
+
+        $tecnologies = DB::table('tecnologies')
+        ->select('tecnologies.tecno', 'tecnologies.id')
+        ->get();
+
         $vacante= Vacancy::find($id);
 
-        return view('Vacancy.edit')->with('vacante', $vacante);
+            $userTecno = DB::table('tecnologies')
+             ->join('tecnology_vacancy', 'tecnologies.id','=','tecnology_vacancy.tecnology_id')
+             ->where('tecnology_vacancy.vacancy_id', '=', $id)
+                ->select('tecnologies.tecno')
+                ->get();
+
+
+        return view('Vacancy.edit',['vacante'=>$vacante, 'userTecno'=>$userTecno , 'tecnologies'=>$tecnologies]);
 
     }
 
@@ -140,8 +163,11 @@ class VacancyController extends Controller
         $update_vacancy->currency= $request->get('currency');
         $update_vacancy->DescriptionVacancy= $request->get('descriptionjob');
         $update_vacancy->state= $request->get('state');
-
         $update_vacancy->save();
+
+        $userTecno = explode(',',$request->get('userTecno_up'));
+        $this->Addtecnologies($userTecno, $id);
+
         return redirect('/vacante');
     }
 

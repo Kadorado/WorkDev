@@ -40,8 +40,6 @@
         <label for="" class="form-label">Descripcion de la vacante</label>
         <input type="text" name="descriptionjob" id="title"  type="number" class="form-control" tabindex="1"  >
     </div> 
-
-
         <div >
             <label for="" class="form-label">Tecnologias requeridas</label>
 

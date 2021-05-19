@@ -12,4 +12,5 @@ class Vacancy extends Model
     public function recrutier(){
         return $this->belongsTo(Recruiter::class);
     }
+
 }
