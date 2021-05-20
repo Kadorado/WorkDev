@@ -275,6 +275,12 @@ return [
             'icon' => 'fas fa-fw fa-briefcase',
             'can'  => 'developerdata',
         ],
+        [
+            'text' => 'Mi Educación',
+            'url'  => 'education',
+            'icon' => 'fas fa-fw fa-graduation-cap',
+            'can'  => 'developerdata',
+        ],
 
         // [
         //     'text' => 'Cambiar password',
