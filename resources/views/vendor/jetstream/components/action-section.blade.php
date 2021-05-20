@@ -1,6 +1,6 @@
 {{-- desde que navegador esta concetado --}}
 
-<div class="bg-red-700 md:grid md:grid-cols-2 md:gap-6" {{ $attributes }}>
+<div class=" md:grid md:grid-cols-2 md:gap-6" {{ $attributes }}>
     <x-jet-section-title>
         <x-slot name="title">{{ $title }} </x-slot>
         <x-slot name="description">{{ $description }}</x-slot>
