@@ -6,6 +6,7 @@ use App\Http\Controllers\RecruiterController;
 use App\Http\Controllers\VacancyController;
 use App\Http\Controllers\DeveloperController;
 use App\Http\Controllers\SkillController;
+use App\Http\Controllers\EducationController;
 use App\Models\User;
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +41,8 @@ Route::resource('skills', SkillController::class);
 Route::resource('recruiter', RecruiterController::class);
 
 Route::resource('developer', DeveloperController::class);
+
+Route::resource('education', EducationController::class);
 
 Route::get('/board', [RecruiterController::class, 'board'])->name('board');
 
