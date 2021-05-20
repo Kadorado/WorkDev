@@ -4,7 +4,7 @@
 @section('content')
 <style>
     .gradient {
-        background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+        background: linear-gradient(90deg, #59B48B 0%, #347157 100%);
     }
 </style>
 </head>
