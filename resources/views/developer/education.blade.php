@@ -9,12 +9,12 @@
 <script nomodule src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.min.js" defer></script>
 
 
-@if($userSkills === "mensaje de error")
+@if($userEducation === "mensaje de error")
 <h2>por favor primero completa tus datos</h2>
 <a href="/developerdata">Completar perfil</a>
-@elseif(count($userSkills)== 0 )
-<h1>no hay habilidades registradas</h1>
-<a href="skills/show">registrar</a>
+@elseif(count($userEducation)== 0 )
+<h1>no haz registrado tu formación acádemica</h1>
+<a href="education/edit">registrar</a>
 @else
 <table class="min-w-full">
     <thead>
@@ -25,12 +25,12 @@
         </tr>
     </thead>
     <tbody class="bg-white">
-        @foreach ($userSkills as $userSkill)
+        @foreach ($userEducation as $userEdu)
         <tr>
             <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
                 <div class="flex items-center">
                     <div>
-                        <div class="text-sm leading-5 text-gray-800">{{ $userSkill->skillName }}</div>
+                        <div class="text-sm leading-5 text-gray-800">{{ $userEdu->skillName }}</div>
                     </div>
                 </div>
             </td>
@@ -50,17 +50,9 @@
 @endforeach
     </tbody>
 </table>
-<a href="skills/show">Editar</a>
+<a href="education/edit">Editar</a>
 
 @endif
-
-
-
-
-
-
-
-
 
 @stop
 
