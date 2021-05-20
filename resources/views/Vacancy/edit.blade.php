@@ -43,7 +43,7 @@
     <div class="mb-3">
         <label for="" class="form-label">estado</label>
         <input type="text" name="state" id="title"  type="texto" class="form-control" tabindex="1"  value="{{$vacante->state}}">
-    </div> 
+    </div>
 
     <label for="">Tecnologia</label>
     <div>
@@ -99,7 +99,7 @@
                             <input placeholder="Select a option"
                                 class="bg-transparent p-1 px-2 appearance-none outline-none h-full w-full text-gray-800"
                                 x-bind:value="selectedValues()"
-                                name="userTecno_up" id="userTecno_up"
+                                name="userTecno_up" id="userTecno_up" required
                             >
                         </div>
                     </div>

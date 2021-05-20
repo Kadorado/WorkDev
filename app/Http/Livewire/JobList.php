@@ -15,7 +15,12 @@ class JobList extends Component
         ->join('recruiters', 'users.id', '=', 'recruiters.user_id')
         ->join('vacancies', 'recruiters.id', '=', 'vacancies.recrutier_id')
         ->select('users.*', 'recruiters.*','vacancies.*')
-        ->get()]);
+        ->get(),
+
+        'tecno'=>  DB::table('tecnologies')
+        ->join('tecnology_vacancy', 'tecnologies.id','=','tecnology_vacancy.tecnology_id')
+           ->select('tecnologies.tecno', 'tecnologies.id')
+           ->get()]);
     }
 }
 

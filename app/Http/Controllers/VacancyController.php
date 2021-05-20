@@ -33,8 +33,6 @@ class VacancyController extends Controller
             ->select('vacancies.*')
             ->get();
 
-
-
             return view('Vacancy.index', ['vacantes' => $vacantes]);
         }
         else{
@@ -174,9 +172,7 @@ class VacancyController extends Controller
 
 
         $this->Deletetecnologies($userTecno, $id);
-
         $userTecnoUp = explode(',',$request->get('userTecno_up'));
-        
         $this->Addtecnologies($userTecnoUp, $id);
 
         return redirect('/vacante');

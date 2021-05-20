@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 use App\Models\Developer;
 use App\Models\Vacancy;
-
+use App\Models\Tecnology;
+use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Request;
 
@@ -27,7 +28,15 @@ class PageController extends Controller
     }
 
     public function vacancy(Vacancy $vacancy){
-        return view("vacancy", compact('vacancy'));
+
+        $userTecno = DB::table('tecnologies')
+        ->join('tecnology_vacancy', 'tecnologies.id','=','tecnology_vacancy.tecnology_id')
+        ->where('tecnology_vacancy.vacancy_id', '=', $vacancy->id)
+           ->select('tecnologies.tecno')
+           ->get();
+
+
+        return view("vacancy", ['vacancy'=>$vacancy , 'userTecno'=>$userTecno]);
     }
 
     // public function skills(){

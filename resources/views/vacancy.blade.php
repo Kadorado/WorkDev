@@ -7,7 +7,6 @@
 
 
 
-
 {{-- organizar esto que quede mejor --}}
 
 <div class="relative w-full max-w-6xl p-10 mx-auto text-gray-800 bg-white rounded shadow-xl lg:p-20 md:text-left">
@@ -63,6 +62,14 @@
         <div class="items-center flex-1 m-auto">
           <p class="leading-none text-gray-900 "> Informacion de la empresa de nosotros</p>
           <p class="text-gray-600 ">{{$vacancy->created_at->diffForHumans()}}</p>
+
+
+          {{-- call vacancy --}}
+          @foreach ($userTecno as $tec )
+          <h2>{{$tec->tecno}}</h2>
+          @endforeach
+
+
         </div>
       </div>
     </div>

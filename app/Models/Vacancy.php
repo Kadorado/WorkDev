@@ -13,4 +13,8 @@ class Vacancy extends Model
         return $this->belongsTo(Recruiter::class);
     }
 
+    public function tecno(){
+        return $this->hasMany(Tecnology::class);
+    }
+
 }
