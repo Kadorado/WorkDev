@@ -21,14 +21,16 @@
         <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
             <!--Left Col-->
             <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-                <p class="uppercase tracking-loose w-full">WorkDEV</p>
-                
-@if (Auth::user()->hasRole('Developer'))
-<h1>¡Hola Desarrollador!</h1>
-<p class="leading-normal text-2xl mb-8">
-	Bienvenido a la mejor plataforma para aplicar a propuestas laborales del mundo del desarrollo
-</p>
-
+				<p class="uppercase tracking-loose w-full">WorkDEV</p>
+             
+		@if (Auth::user()->hasRole('Developer'))
+		
+		
+			<h1>¡Hola Desarrollador!</h1>
+				<p class="leading-normal text-2xl mb-8">
+				Bienvenido a la mejor plataforma para aplicar a propuestas laborales del mundo del desarrollo
+			</p>
+		
 </div>
 
 </div>
@@ -54,11 +56,12 @@
 		<br />
 
 @elseif (Auth::user()->hasRole('Recruiter'))
-<h1>¡Hola Empresa!</h1>
-<p class="leading-normal text-2xl mb-8">
-	Bienvenido a la mejor plataforma para ofertar  vacantes laborales del mundo del desarrollo
-</p>
-
+	
+			<h1>¡Hola Empresa!</h1>
+				<p class="leading-normal text-2xl mb-8">
+					Bienvenido a la mejor plataforma para ofertar  vacantes laborales del mundo del desarrollo	
+				</p>
+	
 </div>
 
 </div>
