@@ -7,6 +7,7 @@ use App\Http\Controllers\VacancyController;
 use App\Http\Controllers\DeveloperController;
 use App\Http\Controllers\SkillController;
 use App\Http\Controllers\EducationController;
+use App\Http\Controllers\JobDevController;
 use App\Models\User;
 /*
 |--------------------------------------------------------------------------
@@ -26,14 +27,13 @@ Route::resource('vacante', VacancyController::class);
 
 Route::get('/', [PageController::class, 'home'])->name('home');
 
+Route::resource('/ofertas', JobDevController::class);
+
 Route::get('/nosotros', [PageController::class, 'nosotros'])->name('nosotros');
 
 Route::resource('companydata', RecruiterController::class);
 
 Route::get('/developerdata', [PageController::class, 'developerdata'])->name('developerdata');
-
-// Route::resource('recruiter', RecruiterController::class);
-//Route::get('/skills', [PageController::class, 'skills'])->name('skills');
 
 
 Route::resource('skills', SkillController::class);

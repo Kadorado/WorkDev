@@ -281,6 +281,12 @@ return [
             'icon' => 'fas fa-fw fa-graduation-cap',
             'can'  => 'developerdata',
         ],
+        [
+            'text' => 'Empleos',
+            'url'  => 'ofertas',
+            'icon' => 'fas fa-fw fa-graduation-cap',
+            'can'  => 'developerdata',
+        ],
 
         // [
         //     'text' => 'Cambiar password',
