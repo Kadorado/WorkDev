@@ -13,45 +13,46 @@
     @csrf
     @method('PUT')
   <div class="relative w-full mb-3 text-xl">
-    <small class="p-2 text-white">* Nombre compañia</small>    
-    <input id="namecompany" name="namecompany" type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="MisterSAS" tabindex="1" value ="{{$users[0]->NameCompany}}">    
+    <small class="text-center p-2 text-white">* Nombre compañia</small>    
+    <input id="namecompany" name="namecompany" type="text" class="form-control" id="grid-first-name" type="text" placeholder="MisterSAS" tabindex="1" value ="{{$users[0]->NameCompany}}">    
   </div>
 
-  <div class="mb-3">
-    <label for="" class="form-label">Description</label>
-    <input id="descripcion" name="descripcion" type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Somos una empresa que busca" tabindex="2" value ="{{$users[0]->DescriptionCompany}}">
+  <div class="relative w-full mb-3 text-xl">
+    <small class="p-2 text-white">* Descripción</small>
+    <input id="descripcion" name="descripcion" type="text" class="form-control" type="text" placeholder="Somos una empresa que busca" tabindex="2" value ="{{$users[0]->DescriptionCompany}}">
   </div>
 
-  <div class="mb-3">
-    <label for="" class="form-label">Website</label>
-    <input id="website" name="website" type="url" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="www.mistersas.com" tabindex="3" value ="{{$users[0]->WebsiteCompany}}">
+  <div class="relative w-full mb-3 text-xl">
+    <small class="p-2 text-white">* Website</small>
+    <input id="website" name="website" type="url" class="form-control" id="grid-first-name" type="text" placeholder="www.mistersas.com" tabindex="3" value ="{{$users[0]->WebsiteCompany}}">
   </div>
 
-  <div class="mb-3">
-    <label for="" class="form-label">NitCompany</label>
-    <input id="nitcompany" name="nitcompany" type="text"  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="NIT OR ID" tabindex="3" value ="{{$users[0]->idCompany}}">
+  <div class="relative w-full mb-3 text-xl">
+    <small class="p-2 text-white">* NIT</small>
+    <input id="nitcompany" name="nitcompany" type="text"  class="form-control" id="grid-first-name" type="text" placeholder="NIT OR ID" tabindex="3" value ="{{$users[0]->idCompany}}">
   </div>
 
   <button type="submit" class="btn btn-primary" tabindex="4">Actualizar</button>
 </form>
 
 @else
+<h1 class="text-center">Completar Datos de la Empresa</h1>
   <form action="{{ route('companydata.store') }}" method="POST">
       @csrf
       <div class="relative w-full mb-3 text-xl">
-        <small class="p-2 text-white">* Nombre compañia</small>    
+        <small class= "text-center p-2 text-white">* Nombre compañia</small>    
       <input id="namecompany" name="namecompany" type="text" class="form-control" tabindex="1">    
     </div>
-    <div class="mb-3">
-      <label for="" class="form-label">Description</label>
+    <div class="relative w-full mb-3 text-xl">
+      <small class="p-2 text-white">* Descripción</small>
       <input id="descripcion" name="descripcion" type="text" class="form-control" tabindex="2">
     </div>
-    <div class="mb-3">
-      <label for="" class="form-label">Website</label>
+    <div class="relative w-full mb-3 text-xl">
+      <small class="p-2 text-white">* Website</small>
       <input id="website" name="website" type="url" class="form-control" tabindex="3">
     </div>
-    <div class="mb-3">
-      <label for="" class="form-label">NitCompany</label>
+    <div class="relative w-full mb-3 text-xl">
+      <small class="p-2 text-white">* NIT</small>
       <input id="nitcompany" name="nitcompany" type="text"  class="form-control" tabindex="3">
     </div>
     <a href="/dashboard" class="btn btn-secondary" tabindex="5">Cancelar</a>
