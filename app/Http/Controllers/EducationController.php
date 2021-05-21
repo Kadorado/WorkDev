@@ -47,7 +47,7 @@ class EducationController extends Controller
         $level =array(
             "Sin estudios",
             "Bachiller",
-            "Técnico/Tecnologo",
+            "Técnico ó Tecnologo",
             "Carrera tecnológica",
             "Profesional",
             "Especialización",
@@ -110,16 +110,17 @@ class EducationController extends Controller
             ->where('education.nameEducation','=',$career)
             ->where('education.level',"=",$level)
             ->select('education.id')
-            ->get();
-
+            ->get()
+            ;
+        var_dump($request->get('career'));
         //insert into workdev.developer_education (education_id, developer_id) values(1,1);
         DB::table('developer_education')->insert([
-            'education_id' => 4,
-            'developer_id' => $userId,
-        ]);
+             'education_id' => $educationId[0]->id,
+             'developer_id' => $userId,
+         ]);
  
-        //return view('developer.education');
-        return redirect()->action([EducationController::class, 'index']);
+       //  return view('developer.education');
+         return redirect()->action([EducationController::class, 'index']); 
     }
 
     /**
@@ -161,7 +162,7 @@ class EducationController extends Controller
         $level =array(
             "Sin estudios",
             "Bachiller",
-            "Técnico/Tecnologo",
+            "Técnico ó Tecnologo",
             "Carrera tecnológica",
             "Profesional",
             "Especialización",

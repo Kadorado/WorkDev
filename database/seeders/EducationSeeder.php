@@ -46,7 +46,7 @@ class EducationSeeder extends Seeder
         $levels = array(
             "Sin estudios",
             "Bachiller",
-            "Técnico/Tecnologo",
+            "Técnico ó Tecnologo",
             "Carrera tecnológica",
             "Profesional",
             "Especialización",

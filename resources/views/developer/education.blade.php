@@ -19,13 +19,13 @@
     @csrf
     <select id="career" name="career" required>
         @foreach ($education as $edu)
-            <option value={{ $edu }}>{{ $edu}}</option>
+            <option value="{{ $edu }}">{{ $edu}}</option>
         @endforeach
         
     </select>
     <select id="level" name="level" required>
         @foreach ($level as $lev)
-            <option value={{ $lev }}>{{ $lev }}</option>
+            <option value="{{ $lev }}">{{ $lev }}</option>
         @endforeach    
     </select>
     <input type="submit" value="guardar">
@@ -77,15 +77,15 @@
 {{-- form añadir educacion --}}
 <form action="{{ route('education.store') }}" method="POST">
     @csrf
-    <select id="level" name="level" required>
+    <select id="career" name="career" required>
         @foreach ($education as $edu)
-            <option value={{ $edu }}>{{ $edu }}</option>
+            <option value="{{ $edu }}">{{ $edu }}</option>
         @endforeach    
     </select>
 
     <select id="level" name="level" required>
         @foreach ($level as $lev)
-            <option value={{ $lev }}>{{ $lev }}</option>
+            <option value="{{ $lev }}">{{ $lev }}</option>
         @endforeach    
     </select>
     <button class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="submit">Guardar</button>
