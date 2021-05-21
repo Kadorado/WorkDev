@@ -15,6 +15,22 @@
 @elseif(count($userEducation)== 0 )
 <h1>no haz registrado tu formación acádemica</h1>
 <a href="education/edit">registrar</a>
+<form action="education/store" method="POST"> 
+    @csrf
+    @method('PUT')
+    <select id="career" name="career" required>
+        @foreach ($education as $edu)
+            <option value={{ $edu }}>{{ $edu}}</option>
+        @endforeach
+        
+    </select>
+    <select id="level" name="level" required>
+        @foreach ($level as $lev)
+            <option value={{ $lev }}>{{ $lev }}</option>
+        @endforeach    
+    </select>
+    <input type="submit" value="guardar">
+</form>
 @else
 <table class="min-w-full">
     <thead>
@@ -46,8 +62,25 @@
                 
             </td>
               </tr>
+
+              <form action="education/store" method="POST">
+                <select id="career" name="career" required>
+                    @csrf
+                    @foreach ($education as $edu)
+                        <option value={{ $edu }}>{{ $edu}}</option>
+                    @endforeach
+                    
+                </select>
+                <select id="level" name="level" required>
+                    @foreach ($level as $lev)
+                        <option value={{ $lev }}>{{ $lev }}</option>
+                    @endforeach    
+                </select>
+                <input type="submit" value="guardar">
+            </form>
     
-@endforeach
+
+              @endforeach
     </tbody>
 </table>
 <a href="education/edit">Editar</a>

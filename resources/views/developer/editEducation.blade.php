@@ -17,21 +17,19 @@
 <a href="education/edit">registrar</a>
 @else
 
-<form action="">
-    <select>
-
+<form action="education/store" method="POST">
+    <select id="career" name="career" required>
         @foreach ($education as $edu)
             <option value={{ $edu }}>{{ $edu}}</option>
         @endforeach
         
     </select>
-    <select>
-
+    <select id="level" name="level" required>
         @foreach ($level as $lev)
             <option value={{ $lev }}>{{ $lev }}</option>
-        @endforeach
-        
+        @endforeach    
     </select>
+    <input type="submit" value="guardar">
 </form>
 
 
