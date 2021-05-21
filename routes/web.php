@@ -23,6 +23,8 @@ use App\Models\User;
 
 Route::get('/vacantes/{vacancy:Title}', [PageController::class, 'vacancy'])->name('vacancy');
 
+// Route::get('/jobsdetails/{jobdetail:Title}', [JobDevController::class, 'oferta'])->name('oferta');
+
 Route::resource('vacante', VacancyController::class);
 
 Route::get('/', [PageController::class, 'home'])->name('home');

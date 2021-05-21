@@ -16,7 +16,12 @@ class JobDevController extends Controller
      */
     public function index()
     {
-        $jobsDevs = DB::table('vacancies')->get();
+        $jobsDevs =DB::table('users')
+        ->join('recruiters', 'users.id', '=', 'recruiters.user_id')
+        ->join('vacancies', 'recruiters.id', '=', 'vacancies.recrutier_id')
+        ->where('state','=',1)
+        ->select('users.*', 'recruiters.*','vacancies.*')
+        ->get();
         return view("jobDev.index", ['jobsDevs'=>$jobsDevs]);
     }
 
@@ -25,9 +30,9 @@ class JobDevController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function oferta(Vacancy $vacancy)
     {
-        //
+        return view("jobDev.details", ['vacancy'=>$vacancy]);
     }
 
     /**
