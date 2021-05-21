@@ -28,6 +28,8 @@ class CreateEducationTable extends Migration
             
             $table->timestamps();
 
+            $table->primary(['education_id', 'developer_id']);
+
             $table->foreign('education_id')
                 ->references('id')
                 ->on('education')

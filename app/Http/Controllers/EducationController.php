@@ -105,22 +105,31 @@ class EducationController extends Controller
         $userId = Auth::id();
         $career = $request->get('career');
         $level = $request->get('level');
-
+        //get
         $educationId = DB::table('education')
             ->where('education.nameEducation','=',$career)
             ->where('education.level',"=",$level)
             ->select('education.id')
             ->get()
             ;
-        var_dump($request->get('career'));
-        //insert into workdev.developer_education (education_id, developer_id) values(1,1);
-        DB::table('developer_education')->insert([
-             'education_id' => $educationId[0]->id,
-             'developer_id' => $userId,
-         ]);
- 
-       //  return view('developer.education');
-         return redirect()->action([EducationController::class, 'index']); 
+        //inserts the data in table
+        $msg = NULL;
+        try{
+            DB::table('developer_education')->insert([
+                'education_id' => $educationId[0]->id,
+                'developer_id' => $userId,
+            ]);
+        }
+        catch(Exception $e){
+            throw $e;   
+            $msg = "no puedes agregar dos veces la misma carrera";
+        }
+        finally{
+            return redirect()->action([EducationController::class, 'index']); 
+        }
+
+
+         
     }
 
     /**

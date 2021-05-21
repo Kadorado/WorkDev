@@ -9,6 +9,7 @@
 <script nomodule src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.min.js" defer></script>
 
 
+
 @if($userEducation === "mensaje de error")
 <h2>por favor primero completa tus datos</h2>
 <a href="/developerdata">Completar perfil</a>
