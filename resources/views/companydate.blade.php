@@ -6,6 +6,10 @@
 
 @section('content')
 
+<div class="min-h-screen bg-gray-200 flex justify-center items-center">
+  <div class="max-w-2xl bg-white border-2 border-gray-300 p-5 rounded-md tracking-wide shadow-lg">
+     <div id="header" class="flex">
+
 
 <form class="w-full max-w-lg" action="{{ route('recruiter.store') }}" method="POST">
     @csrf
@@ -28,6 +32,11 @@
   <a href="/dashboard" class="btn btn-secondary" tabindex="5">Cancelar</a>
   <button type="submit" class="btn btn-primary" tabindex="4">Guardar</button>
 </form>
+
+</div>
+</div>
+</div>
+
 
 @stop
 

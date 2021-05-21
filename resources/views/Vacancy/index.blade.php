@@ -32,51 +32,51 @@
     <div class="min-h-screen bg-gray-200 flex justify-center items-center">
     <div class="max-w-2xl bg-white border-2 border-gray-300 p-5 rounded-md tracking-wide shadow-lg">
        <div id="header" class="flex">
-                                <div class="min-h-screen flex items-center justify-center px-4">
+                                <div class="min-h-screen min-w-screen bg-gray-100 flex items-center justify-center">
                                     <div class="max-w-4xl  bg-white w-full rounded-lg shadow-xl">
                                         <div>
                                             <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
-                                                <p class="text-gray-600">
+                                                <p class="text-center font-mono text-xl text-gray-600">
                                                     Titulo
                                                 </p>
-                                                <p>
-                                                    {{$vacante->Title}}
+                                                <p class="text-center leading-relaxed">
+                                                    {{$vacante->Title}} 
                                                 </p>
                                             </div>
                                             <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
-                                                <p class="text-gray-600">
+                                                <p class="font-mono text-xl text-gray-600">
                                                     Experiencia
                                                 </p>
-                                                <p>
+                                                <p class="text-center leading-relaxed">
                                                     {{$vacante->ExperienceRequire}}
                                                 </p>
                                             </div>
                                             <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
-                                                <p class="text-gray-600">
+                                                <p class="font-mono text-xl text-gray-600">
                                                     Lugar 
                                                 </p>
-                                                <p>
+                                                <p class="text-center leading-relaxed">
                                                     {{$vacante->Location}}
                                                 </p>
                                             </div>
                                             <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
-                                                <p class="text-gray-600">
+                                                <p class="font-mono text-xl text-gray-600">
                                                     Salario
                                                 </p>
-                                                <p>
+                                                <p class="text-center leading-relaxed">
                                                     {{$vacante->Salary}}
                                                 </p>
                                             </div>
                                             <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
-                                                <p class="text-gray-600">
+                                                <p class="font-mono text-xl text-gray-600">
                                                     Descripcion
                                                 </p>
-                                                <p>
+                                                <p class="text-center leading-relaxed">
                                                     {{$vacante->DescriptionVacancy}}
                                                 </p>
                                             </div>
                                             <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4">
-                                                <p class="text-gray-600">
+                                                <p class="font-mono text-xl text-gray-600">
                                                     Acciones
                                                 </p>
                                                 <div class="space-y-2">

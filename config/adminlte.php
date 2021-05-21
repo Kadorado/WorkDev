@@ -15,8 +15,8 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
-    'title_prefix' => '',
+    'title' => '',
+    'title_prefix' => 'WorkDEV | ',
     'title_postfix' => '',
 
     /*
@@ -31,7 +31,7 @@ return [
     |
     */
 
-    'use_ico_only' => false,
+    'use_ico_only' => true,
     'use_full_favicon' => false,
 
     /*
@@ -46,12 +46,12 @@ return [
     |   
     */
 
-    'logo' => '',
+    'logo' => 'WorkDEV',
     'logo_img' => 'vendor/adminlte/dist/img/edificio.png',
-    //'logo_img_class' => '',
-    //'logo_img_xl' => null,
-    //'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'coders',
+    //'logo_img_class' => 'Brand-Image Img-circle elevation-3',
+    'logo_img_xl' => null,
+    'logo_img_xl_class' => 'brand-image-xs',
+    'logo_img_alt' => 'WorkDEV',
 
     /*
     |--------------------------------------------------------------------------
@@ -66,8 +66,8 @@ return [
     */
 
     'usermenu_enabled' => true,
-    'usermenu_header' => false,
-    'usermenu_header_class' => 'bg-white',
+    'usermenu_header' => true,
+    'usermenu_header_class' => 'bg-green',
     'usermenu_image' => false,
     'usermenu_desc' => true,
     'usermenu_profile_url' => false,
@@ -122,12 +122,12 @@ return [
     */
 
     'classes_body' => '',
-    'classes_brand' => 'bg-blue',
+    'classes_brand' => 'bg-green',
     'classes_brand_text' => 'text-white',
-    'classes_content_wrapper' => 'bg-white',
-    'classes_content_header' => 'bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 ...',
+    'classes_content_wrapper' => 'bg-green',
+    'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-white-primary elevation-4',
+    'classes_sidebar' => 'sidebar-white-info elevation-4',
     'classes_sidebar_nav' => '',
     'classes_topnav' => 'navbar-white navbar-light',
     'classes_topnav_nav' => 'navbar-expand',
@@ -145,7 +145,7 @@ return [
     |
     */
 
-    'sidebar_mini' => false,
+    'sidebar_mini' => true,
     'sidebar_collapse' => false,
     'sidebar_collapse_auto_size' => false,
     'sidebar_collapse_remember' => false,
@@ -154,6 +154,8 @@ return [
     'sidebar_scrollbar_auto_hide' => 'l',
     'sidebar_nav_accordion' => true,
     'sidebar_nav_animation_speed' => 300,
+    'sidebar_slide'=> true,
+    'sidebar_push' => false,
     
     /*
     |--------------------------------------------------------------------------
