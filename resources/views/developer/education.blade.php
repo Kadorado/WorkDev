@@ -15,9 +15,8 @@
 @elseif(count($userEducation)== 0 )
 <h1>no haz registrado tu formación acádemica</h1>
 <a href="education/edit">registrar</a>
-<form action="education/store" method="POST"> 
+<form action={{route('education.store')}} method="POST"> 
     @csrf
-    @method('PUT')
     <select id="career" name="career" required>
         @foreach ($education as $edu)
             <option value={{ $edu }}>{{ $edu}}</option>
@@ -35,7 +34,8 @@
 <table class="min-w-full">
     <thead>
         <tr>
-            <th class="px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-blue-500 tracking-wider">Skill</th>
+            <th class="px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-blue-500 tracking-wider">Carrera</th>
+            <th class="px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-blue-500 tracking-wider">Nivel</th>
             <th class="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-blue-500 tracking-wider">Eliminar</th>
   
         </tr>
@@ -46,12 +46,21 @@
             <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
                 <div class="flex items-center">
                     <div>
-                        <div class="text-sm leading-5 text-gray-800">{{ $userEdu->skillName }}</div>
+                        <div class="text-sm leading-5 text-gray-800">{{ $userEdu->nameEducation }}</div>
                     </div>
                 </div>
             </td>
+
             <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
-                <form action="{{route('skills.destroy', $userSkill->skill_id)}}" method="POST">
+                <div class="flex items-center">
+                    <div>
+                        <div class="text-sm leading-5 text-gray-800">{{ $userEdu->level }}</div>
+                    </div>
+                </div>
+            </td>
+            
+            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
+                <form action="{{route('education.destroy', $userEdu->education_id)}}" method="POST">
                     @csrf
                     @method('DELETE')
                     <button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded">
@@ -61,29 +70,26 @@
             </form>
                 
             </td>
-              </tr>
-
-              <form action="education/store" method="POST">
-                <select id="career" name="career" required>
-                    @csrf
-                    @foreach ($education as $edu)
-                        <option value={{ $edu }}>{{ $edu}}</option>
-                    @endforeach
-                    
-                </select>
-                <select id="level" name="level" required>
-                    @foreach ($level as $lev)
-                        <option value={{ $lev }}>{{ $lev }}</option>
-                    @endforeach    
-                </select>
-                <input type="submit" value="guardar">
-            </form>
-    
-
+              </tr>  
               @endforeach
     </tbody>
 </table>
-<a href="education/edit">Editar</a>
+{{-- form añadir educacion --}}
+<form action="{{ route('education.store') }}" method="POST">
+    @csrf
+    <select id="level" name="level" required>
+        @foreach ($education as $edu)
+            <option value={{ $edu }}>{{ $edu }}</option>
+        @endforeach    
+    </select>
+
+    <select id="level" name="level" required>
+        @foreach ($level as $lev)
+            <option value={{ $lev }}>{{ $lev }}</option>
+        @endforeach    
+    </select>
+    <button class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="submit">Guardar</button>
+</form>
 
 @endif
 

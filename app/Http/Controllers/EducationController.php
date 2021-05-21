@@ -102,6 +102,23 @@ class EducationController extends Controller
      */
     public function store(Request $request)
     {
+        $userId = Auth::id();
+        $career = $request->get('career');
+        $level = $request->get('level');
+
+        $educationId = DB::table('education')
+            ->where('education.nameEducation','=',$career)
+            ->where('education.level',"=",$level)
+            ->select('education.id')
+            ->get();
+
+        //insert into workdev.developer_education (education_id, developer_id) values(1,1);
+        DB::table('developer_education')->insert([
+            'education_id' => 4,
+            'developer_id' => $userId,
+        ]);
+ 
+        //return view('developer.education');
         return redirect()->action([EducationController::class, 'index']);
     }
 
@@ -152,7 +169,7 @@ class EducationController extends Controller
             "Doctorado"
         ) ;
 
-        return view('developer.editEducation',[
+        return view('developer.education',[
             'education' => $education,
             'level' => $level,
         ]);
@@ -169,7 +186,7 @@ class EducationController extends Controller
         //obtiene los campos de la tabla education
         $education = DB::table('education')->get();
 
-        return view('developer.editEducation',[
+        return view('developer.education',[
             'education' => $education
         ]);
     }
@@ -194,6 +211,11 @@ class EducationController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('developer_education')
+            ->where('education_id', '=', $id)
+            ->where('developer_id','=',Auth::id() )
+            ->delete();
+
+        return redirect()->action([EducationController::class, 'index']);
     }
 }
