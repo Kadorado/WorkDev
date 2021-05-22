@@ -5,9 +5,9 @@
 
 @section('content')
 
-<h1>Hola</h1>
+<h1>hola soy details</h1>
 
-@stop
+@stop   
 
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">

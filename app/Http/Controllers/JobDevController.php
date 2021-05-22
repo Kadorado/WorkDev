@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
+use App\Models\Developer;
 use App\Models\Vacancy;
+use App\Models\Tecnology;
 use Illuminate\Support\Facades\DB;
 
 
@@ -30,8 +30,9 @@ class JobDevController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function oferta(Vacancy $vacancy)
-    {
+    public function jobdetail(Vacancy $vacancy)
+    { 
+        
         return view("jobDev.details", ['vacancy'=>$vacancy]);
     }
 

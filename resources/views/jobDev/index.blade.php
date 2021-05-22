@@ -8,7 +8,7 @@
 
 
 @foreach ($jobsDevs as $jobDev )
-{{-- <a href="{{route('jobdetail', $jobDev->Title )}}"> --}}
+<a href="{{route('jobdetail' , $jobDev->Title )}}">
 <section class="min-h-screen flex items-center justify-center px-4 mb-4 bg-white">
     <div class="max-w-xl w-full rounded-lg shadow-lg p-4 flex md:flex-row flex-col">
         <div class="flex-1">

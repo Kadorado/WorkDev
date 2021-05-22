@@ -6,7 +6,7 @@ use App\Models\Vacancy;
 use App\Models\Tecnology;
 use Illuminate\Support\Facades\DB;
 
-use Illuminate\Http\Request;
+
 
 class PageController extends Controller
 {
