@@ -9,33 +9,48 @@
 <script nomodule src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.min.js" defer></script>
 
 
-@if($userSkills === "mensaje de error")
+
+@if($userTecno === "mensaje de error")
 <h2>por favor primero completa tus datos</h2>
 <a href="/developerdata">Completar perfil</a>
-@elseif(count($userSkills)== 0 )
-<h1>no hay habilidades registradas</h1>
-<a href="skills/show">registrar</a>
+@elseif(count($userTecno)== 0 )
+<h1>no haz registrado tus tecnologias</h1>
+<form action={{route('tecnologies.store')}} method="POST"> 
+    @csrf
+    <select id="tech" name="tech" required>
+        @foreach ($tecnologies as $tecno)
+            <option value="{{ $tecno->id }}">{{ $tecno->tecno }}</option>
+        @endforeach
+        
+    </select>
+
+    <input type="submit" value="guardar">
+</form>
+
 @else
+
 <table class="min-w-full">
     <thead>
         <tr>
-            <th class="px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-blue-500 tracking-wider">Skill</th>
+            <th class="px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-blue-500 tracking-wider">Tecnologia</th>
             <th class="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-blue-500 tracking-wider">Eliminar</th>
   
         </tr>
     </thead>
     <tbody class="bg-white">
-        @foreach ($userSkills as $userSkill)
+        @foreach ($userTecno as $tec)
         <tr>
             <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
                 <div class="flex items-center">
                     <div>
-                        <div class="text-sm leading-5 text-gray-800">{{ $userSkill->skillName }}</div>
+                        <div class="text-sm leading-5 text-gray-800">{{ $tec->tecno }}</div>
                     </div>
                 </div>
             </td>
+
+            
             <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
-                <form action="{{route('skills.destroy', $userSkill->skill_id)}}" method="POST">
+                <form action="{{route ('tecnologies.destroy', $tec->tecnology_id )}}" method="POST">
                     @csrf
                     @method('DELETE')
                     <button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded">
@@ -45,22 +60,24 @@
             </form>
                 
             </td>
-              </tr>
-    
-@endforeach
+              </tr>  
+              @endforeach
     </tbody>
 </table>
-<a href="skills/show">Editar</a>
+{{-- form añadir educacion --}}
+<form action={{route('tecnologies.store')}} method="POST"> 
+    @csrf
+    <select id="tech" name="tech" required>
+        @foreach ($tecnologies as $tecno)
+            <option value="{{ $tecno->id }}">{{ $tecno->tecno }}</option>
+        @endforeach
+        
+    </select>
+
+    <input type="submit" value="guardar">
+</form>
 
 @endif
-
-
-
-
-
-
-
-
 
 @stop
 

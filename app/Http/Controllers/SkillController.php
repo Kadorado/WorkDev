@@ -18,20 +18,30 @@ class SkillController extends Controller
     {
         //obtiene el id del usuario actual
         $userId = Auth::id();
-        //obtiene las habilidades del usuario actual
-        $userSkills = DB::table('skills')
-        ->join('developer_skill', 'skills.id','=','developer_skill.skill_id')
-        ->where('developer_skill.developer_id', '=', $userId)
-        ->select('skills.skillName', 'developer_skill.skill_id')
+        //verifica si el usuario ya tiene sus datos llenos
+        $id_developer = DB::table('users')
+        ->join('developers', 'users.id', '=', 'developers.user_id')
+        ->where('developers.user_id','=',$userId)
+        ->select('developers.id')
         ->get();
+        if(!empty($id_developer[0]->id)){
+                    //obtiene las habilidades del usuario actual
+            $userSkills = DB::table('skills')
+                ->join('developer_skill', 'skills.id','=','developer_skill.skill_id')
+                ->where('developer_skill.developer_id', '=', $userId)
+                ->select('skills.skillName', 'developer_skill.skill_id')
+                ->get();
+                return view('developer.skills', [
+                    'userSkills' => $userSkills]);
+                }
+        else{
+            $userSkills="mensaje de error";
+                return view('developer.skills', [
+                'userSkills' => $userSkills]);
+            };
+        }
 
-        return view('developer.skills', [
-            'userSkills' => $userSkills]);
-       
-        //return view('developer.skills');
-
-
-    }
+    
 
     /**
      * Show the form for creating a new resource.

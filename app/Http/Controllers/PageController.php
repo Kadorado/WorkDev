@@ -37,8 +37,5 @@ class PageController extends Controller
         return view("vacancy", ['vacancy'=>$vacancy , 'userTecno'=>$userTecno]);
     }
 
-    // public function skills(){
-    //     return view('developer.skills');
-    // }
 
 }

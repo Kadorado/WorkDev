@@ -31,7 +31,7 @@ $carreras = array(
 $nivel = array(
     "Sin estudios",
     "Bachiller",
-    "Técnico/Tecnologo",
+    "Técnico ó Tecnologo",
     "Carrera tecnológica",
     "Profesional",
     "Especialización",

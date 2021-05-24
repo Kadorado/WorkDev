@@ -13,4 +13,8 @@ class Tecnology extends Model
     {
         return $this->belongsToMany(Vacancy::class);
     }
+    public function developer()
+    {
+        return $this->belongsToMany(Developer::class);
+    }
 }

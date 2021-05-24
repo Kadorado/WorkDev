@@ -287,6 +287,12 @@ return [
             'text' => 'Empleos',
             'url'  => 'ofertas',
             'icon' => 'fas fa-fw fa-graduation-cap',
+
+        ],
+        [    
+            'text' => 'Tecnologias',
+            'url'  => 'tecnologies',
+            'icon' => 'fas fa-fw fa-award',
             'can'  => 'developerdata',
         ],
 
