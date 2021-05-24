@@ -5,29 +5,29 @@
 
 @section('content')
 
-<h2 class="text-center text-xl text-red-500">Crear Vacante</h2>
+<h2 class="text-center text-xl text-white">Crear Vacante</h2>
 
 
 <form action="/vacante" method="POST" autocomplete=”off”>
     @csrf
     <div class="relative w-full mb-3 text-xl">
-        <small class="p-2 text-red-500">* Titulo</small>
+        <small class="p-2 text-white">* Titulo</small>
         <input type="text" name="title" id="title" tabindex="1"  class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" placeholder="Titulo de la vacante" style="transition: all 0.15s ease 0s;" required/>
     </div>
     <div class="relative w-full mb-3 text-xl">
-        <small class="p-2 text-red-500">* Experiencia requerida</small>
+        <small class="p-2 text-white">* Experiencia requerida</small>
         <input  name="experience" id="title"  type="number" tabindex="1" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" placeholder="Experiencia requerida en meses" style="transition: all 0.15s ease 0s;" required/>
     </div>
     <div class="relative w-full mb-3 text-xl">
-        <small class="p-2 text-red-500">* Salario</small>
+        <small class="p-2 text-white">* Salario</small>
         <input  name="salary" id="title"  type="number" tabindex="1" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" placeholder="eje.200.000" style="transition: all 0.15s ease 0s;" required />
     </div>
     <div class="relative w-full mb-3 text-xl">
-        <small class="p-2 text-red-500">* Lugar</small>
+        <small class="p-2 text-white">* Lugar</small>
         <input   type="text" name="location" id="title"  tabindex="1" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" placeholder="eje.Colombia" style="transition: all 0.15s ease 0s;" required/>
     </div>
     <div>
-        <small class="p-2 text-red-500 text-xl">* Moneda</small>
+        <small class="p-2 text-white text-xl">* Moneda</small>
         <div class="flex flex-col w-full h-64 mx-auto md:w-1/2">
             <select name="currency" class="flex w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring">
                 <div class="w-full bg-red-400 border-b border-gray-100 rounded-t cursor-pointer hover:bg-teal-100">
@@ -39,11 +39,11 @@
         </div>
     </div>
     <div class="relative w-full mb-3 text-xl">
-        <small class="p-2 text-red-500">* Descripcion de la vacante</small>
+        <small class="p-2 text-white">* Descripcion de la vacante</small>
         <textarea name="descriptionjob" id="title" placeholder="eje.Desarrollador" cols="30" rows="10" tabindex="1" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" required></textarea>
     </div>
     <div >
-        <small class="p-2 text-red-500 text-xl">* Tecnologias requeridas</small>
+        <small class="p-2 text-white text-xl">* Tecnologias requeridas</small>
       <style>
           [x-cloak] {
               display: none;
@@ -139,7 +139,7 @@
   
     {{-- estado --}}
     <div>
-        <small class="p-2 text-red-500 text-xl">* Estado</small>
+        <small class="p-2 text-white text-xl">* Estado</small>
         <div class="flex flex-col w-full h-64 mx-auto md:w-1/2">
             <select  name="state" class="flex w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring">
                 <div class="w-full bg-red-400 border-b border-gray-100 rounded-t cursor-pointer hover:bg-teal-100">
@@ -151,7 +151,7 @@
     </div>
 
     <div class="mt-4 text-center mb-32">
-        <button type="submit" class="justify-center w-32 p-3 text-white bg-green-600 rounded-lg shadow outline-none focus:bg-green-700 hover:bg-green-500">Guardar</button>
+        <button type="submit" class="justify-center w-32 p-3 text-green bg-white rounded-lg shadow outline-none focus:bg-green-700 hover:bg-green-500">Guardar</button>
     </div>
 </form>
 
