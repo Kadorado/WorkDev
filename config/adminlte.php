@@ -67,7 +67,7 @@ return [
 
     'usermenu_enabled' => true,
     'usermenu_header' => true,
-    'usermenu_header_class' => 'bg-green',
+    'usermenu_header_class' => 'bg-white',
     'usermenu_image' => false,
     'usermenu_desc' => true,
     'usermenu_profile_url' => false,
@@ -122,9 +122,9 @@ return [
     */
 
     'classes_body' => '',
-    'classes_brand' => 'bg-green',
+    'classes_brand' => 'bg-white',
     'classes_brand_text' => 'text-white',
-    'classes_content_wrapper' => 'bg-green',
+    'classes_content_wrapper' => 'bg-white',
     'classes_content_header' => '',
     'classes_content' => '',
     'classes_sidebar' => 'sidebar-white-info elevation-4',
@@ -258,6 +258,7 @@ return [
             'url'  => 'companydata',
             'icon' => 'fas fa-building',
             'can'  => 'companydata',
+            'fontsize'=>'50px'
         ],
         [
             'text' => 'Nueva Vacante',
@@ -287,6 +288,7 @@ return [
             'text' => 'Empleos',
             'url'  => 'ofertas',
             'icon' => 'fas fa-fw fa-graduation-cap',
+            'can'  => 'developerdata',
 
         ],
         [    

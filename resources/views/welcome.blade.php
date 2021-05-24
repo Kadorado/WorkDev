@@ -11,14 +11,14 @@
 <div class="pt-0">
       <div class="container flex flex-col flex-wrap items-center px-3 mx-auto mb-8 md:flex-row">
         <!--Left Col-->
-        <div class="flex flex-col items-start justify-center w-full min-h-screen text-center md:w-2/5 md:text-left">
+        <div class="flex flex-col items-start justify-center w-full min-h-screen text-center md:w-2/5 md:text-left ml-6">
           <p class="w-full uppercase tracking-loose">Sobre nosotros</p>
           <h1 class="my-4 text-5xl font-bold leading-tight">
           <!-- cambiar por el nombre de la empresa -->
             Coders 
           </h1>
           <p class="mb-8 text-2xl leading-normal">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos harum ea cupiditate consequatur modi odio facere nesciunt? Corrupti omnis aperiam labore nam, fugiat ut cumque, alias doloremque esse, consequuntur atque.
+           Somos una empresa colombiana que buscan conectar a los programadores de software con las empresas lideres del sector
           </p>
           <a href="">
             <button class="px-8 py-4 mx-auto my-6 font-bold text-gray-800 transition duration-300 ease-in-out transform bg-white rounded-full shadow-lg lg:mx-0 hover:no-underline focus:outline-none focus:shadow-outline hover:scale-105">
@@ -38,7 +38,7 @@
     
     <section class="py-8 my-8 bg-white border-b rounded-2xl">
       <div class="container max-w-5xl m-8 mx-auto">
-        <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800 ">
+        <h1 class="w-full my-2 text-3xl font-bold leading-tight text-center text-gray-800 ">
           ¿Buscas empleo?
         </h1>
         <div class="w-full mb-4">
@@ -47,15 +47,15 @@
         <div class="flex flex-wrap text-center">
         <div class="w-full p-6 sm:w-1/2">
             <!--ventajas para empresas-->
-            <h3 class="mb-3 text-3xl font-bold leading-none text-gray-800">
-              Busca trabajo
+            <h3 class="mb-3 text-2xl font-bold leading-none text-gray-800">
+              encuentra tu oportunidad
             </h3>
             <!--una imagen de beneficios-->
             <img class="shadow-lg rounded-3xl" src="https://images.pexels.com/photos/374016/pexels-photo-374016.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
             <p class="mb-8 text-gray-600">
               <br />
               <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+              Si eres un desarrollador entusiasta y crees tener todas las habilidades necesarias, registrate y aplica 
               <br />
               <br />
             </p>
@@ -68,7 +68,7 @@
           </div>
           <div class="w-full p-6 sm:w-1/2">
             <!--ventajas para empresas-->
-            <h3 class="mb-3 text-3xl font-bold leading-none text-gray-800">
+            <h3 class="mb-3 text-2xl font-bold leading-none text-gray-800">
               Contratar talento
             </h3>
             <!--una imagen de beneficios-->
@@ -76,7 +76,7 @@
             <p class="mb-8 text-gray-600">
               <br />
               <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+             Si eres una compañia de marca mundial y requieres talento , registrate con nosotros para tener al mejor equipo de TI.
               <br />
               <br />
             </p>
@@ -92,7 +92,7 @@
     </section>
     <section class="py-8 bg-white border-none">
       <div class="container flex flex-wrap pt-4 pb-12 mx-auto">
-        <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+        <h1 class="w-full my-2 text-3xl font-bold leading-tight text-center text-gray-800">
           Testimonios
         </h1>
         <div class="w-full mb-4">
@@ -161,11 +161,11 @@
      
     {{-- Empresas --}}
     <section>
-      <div class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800 ">
+      <div class="w-full my-2 text-3xl font-bold leading-tight text-center text-gray-800 ">
         <h1>
           Empresas que confían en nosotros
         </h1>
-        <p class="py-4 my-8">
+        <p class="py-2 my-4">
             Tu próximo empleo podría estar aca.
         </p>
         <img  class="hero container max-w-screen-lg mx-auto pb-10 flex rounded-2xl" src="https://i.ibb.co/K2bkFWK/ejemplo.png" alt="">
@@ -205,7 +205,7 @@
                     <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
                 </svg>
 
-                <span class="mt-2">121 Street, NY</span>
+                <span class="mt-2">121 Bogota D.C, Colombia</span>
             </a>
             <!-- agregar un link a whatsapp o quitar el href -->   
             <a href="#" class="flex flex-col items-center px-4 py-3 text-gray-700 rounded-md dark:text-gray-200 hover:bg-blue-200 dark:hover:bg-blue-500">
@@ -223,7 +223,7 @@
                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                 </svg>
 
-                <span class="mt-2">example@example.com</span>
+                <span class="mt-2">ejemplo@ejemplo.com</span>
             </a>
         </div>
         
@@ -232,24 +232,24 @@
                 <div class="w-full mx-2">
                     <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Nombre</label>
 
-                    <input class="block w-full mt-1 border-red-300 rounded-md shadow-sm focus:border-red-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" placeholder="Eje. Paola">
+                    <input class="block w-full mt-1 border-blue-300 rounded-md shadow-sm focus:border-blue-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" placeholder="Eje. Paola">
                 </div>
 
                 <div class="w-full mx-2 mt-4 md:mt-0">
                     <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">E-mail</label>
 
-                    <input class="block w-full mt-1 border-red-300 rounded-md shadow-sm focus:border-red-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="email" placeholder="Eje. Paola@gmail.com">
+                    <input class="block w-full mt-1 border-blue-300 rounded-md shadow-sm focus:border-blue-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="email" placeholder="Eje. Paola@gmail.com">
                 </div>
             </div>
 
             <div class="w-full mt-4">
                 <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Mensaje</label>
 
-                <textarea class="block w-full mt-1 border-red-300 rounded-md shadow-sm focus:border-red-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="Ingresa tú mensaje"></textarea>
+                <textarea class="block w-full mt-1 border-blue-300 rounded-md shadow-sm focus:border-blue-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="Ingresa tú mensaje"></textarea>
             </div>
 
             <div class="flex justify-center mt-6">
-                <button class="px-4 py-2 text-white transition-colors duration-200 transform bg-red-300 rounded-md hover:bg-yellow-500 focus:outline-none focus:bg-gray-600">enviar</button>
+                <button class="px-4 py-2 text-white transition-colors duration-200 transform bg-blue-300 rounded-md hover:bg-yellow-500 focus:outline-none focus:bg-gray-600">enviar</button>
             </div>
         </div>
     </section>

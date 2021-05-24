@@ -1,5 +1,5 @@
 <div class="w-full p-3 bg-blue-200 rounded-lg shadow-lg" style="
-background-image: url('https://images.unsplash.com/photo-1578836537282-3171d77f8632?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+background-image: url(https://i.ibb.co/0YrmBsv/Signing-contract-Official-document-agreement-deal-commitment-Businessmen-cartoon-characters-shaking.jpg);
 background-repeat: no-repat;
 background-size: cover;
 background-blend-mode: multiply;

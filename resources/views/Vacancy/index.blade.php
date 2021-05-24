@@ -21,9 +21,7 @@
     <div class="items-center	">
         <a href="vacante/create" class="btn btn-primary">Crear Vacante</a>
     </div>
-    <p class="text-sm text-gray-500">
-        Personal details and application. 
-    </p>
+  
 </div>
 
 

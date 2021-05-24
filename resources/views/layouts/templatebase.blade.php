@@ -40,32 +40,30 @@
                 </button> 
             </div>
             <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
-                <ul class="list-reset lg:flex justify-end flex-1 items-center">
+                <ul class="list-reset lg:flex justify-end flex-1 items-center mr-6">
                     <li class="mr-3">
-                    <a href="{{url('/')}}" class="ml-4 text-xl text-gray-700 no-underline hover:no-underline">Inicio</a>
+                    <a href="{{url('/')}}" class="ml-4 text-l text-gray-700 no-underline hover:no-underline">Inicio</a>
                     </li>
                     <li class="mr-3">
-                    <a href="{{url('/nosotros')}}" class="ml-4 text-xl text-gray-700 no-underline hover:no-underline">Nosotros</a>
+                    <a href="{{url('/nosotros')}}" class="ml-4 text-l text-gray-700 no-underline hover:no-underline">Nosotros</a>
                     </li>
                     <li>
-                      <a href="{{url('login')}}" class="ml-4 text-sm text-gray-700 no-underline hover:no-underline">
-                        <button id="navAction" class="mx-auto lg:mx-0 hover:no-underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">Ingresa
+                      <a href="{{url('login')}}" class="ml-4 text-l text-gray-700 no-underline hover:no-underline">
+                        <button id="navAction" class="mx-auto lg:mx-0 hover:no-underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-2 px-4 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">Ingresa
                         </button>
                       </a>
                     </li>
                     <li>
                       <a href="{{url('register')}}" class="ml-4 text-sm text-gray-700 no-underline hover:no-underline">
-                        <button id="navAction" class="mx-auto lg:mx-0 hover:no-underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">Regístrate
+                        <button id="navAction" class="mx-auto lg:mx-0 hover:no-underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-2 px-4 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">Regístrate
                         </button>
                       </a>
-                      
                     </li>
                 </ul>
-                
             </div>
         </div>
         <hr class="border-b border-gray-100 opacity-25 my-0 py-0  " />
-        </nav>    
+        </nav>
         @endif
     </header>
 
@@ -76,39 +74,13 @@
         </div>
     </main>
 
-    <footer class="py-4 text-center bg-white">
+    <footer class="py-1 text-center bg-white">
       <div class="container mx-auto px-8">
         <div class="w-full flex flex-col md:flex-row py-6">
-          <div class="flex-1 mb-6 text-black">
-           
-          </div>
+
+
           <div class="flex-1">
-            <p class="uppercase text-gray-500 md:mb-6">Links</p>
-            <ul class="list-reset mb-6">
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">FAQ</a>
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Help</a>
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Support</a>
-              </li>
-            </ul>
-          </div>
-          <div class="flex-1">
-            <p class="uppercase text-gray-500 md:mb-6">Legal</p>
-            <ul class="list-reset mb-6">
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Terms</a>
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Privacy</a>
-              </li>
-            </ul>
-          </div>
-          <div class="flex-1">
-            <p class="uppercase text-gray-500 md:mb-6">Social</p>
+            <p class="uppercase text-gray-500 md:mb-6">Nos puedes encontrar</p>
             <ul class="list-reset mb-6">
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
                 <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Facebook</a>
@@ -121,20 +93,7 @@
               </li>
             </ul>
           </div>
-          <div class="flex-1">
-            <p class="uppercase text-gray-500 md:mb-6">Company</p>
-            <ul class="list-reset mb-6">
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Official Blog</a>
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">About Us</a>
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Contact</a>
-              </li>
-            </ul>
-          </div>
+    
         </div>
       </div>
     </footer>

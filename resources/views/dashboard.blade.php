@@ -6,17 +6,12 @@
 
 
 @section('content')
-<style>
-    .gradient {
-        background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
-    }
-</style>
 </head>
 
 <body  class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
     
     
-    <!--Hero--><p class=" text-center uppercase tracking-loose w-full">WorkDEV</p>
+    
     <div class="pt-24">
         <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
             <!--Left Col-->
@@ -148,30 +143,7 @@
 </div>
 
 <!-- Calendar Icon -->
-<div class="min-w-32 bg-white min-h-48 p-3 mb-4 font-medium">
-	<div class="w-32 flex-none rounded-t lg:rounded-t-none lg:rounded-l text-center shadow-lg ">
-	  <div class="block rounded-t overflow-hidden  text-center ">
-		<div class="bg-blue text-white py-1">
-		  March
-		</div>
-		<div class="pt-1 border-l border-r border-white bg-white">
-		  <span class="text-5xl font-bold leading-tight">
-			17
-		  </span>
-		</div>
-		<div class="border-l border-r border-b rounded-b-lg text-center border-white bg-white -pt-2 -mb-1">
-		  <span class="text-sm">
-			Sunday
-		  </span>
-		</div>
-		<div class="pb-2 border-l border-r border-b rounded-b-lg text-center border-white bg-white">
-		  <span class="text-xs leading-normal">
-			8:00 am to 5:00 pm
-		  </span>
-		</div>
-	  </div>
-	</div>
-  </div>
+
 
 @stop
 
