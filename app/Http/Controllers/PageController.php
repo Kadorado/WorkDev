@@ -30,8 +30,5 @@ class PageController extends Controller
         return view("vacancy", compact('vacancy'));
     }
 
-    // public function skills(){
-    //     return view('developer.skills');
-    // }
 
 }
