@@ -6,7 +6,7 @@
 
 
 <livewire:job-list>
-    
+
 <!--Hero-->
 <div class="pt-0">
       <div class="container flex flex-col flex-wrap items-center px-3 mx-auto mb-8 md:flex-row">

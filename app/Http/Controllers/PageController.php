@@ -34,8 +34,6 @@ class PageController extends Controller
         ->where('tecnology_vacancy.vacancy_id', '=', $vacancy->id)
            ->select('tecnologies.tecno')
            ->get();
-
-
         return view("vacancy", ['vacancy'=>$vacancy , 'userTecno'=>$userTecno]);
     }
 
