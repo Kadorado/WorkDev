@@ -7,7 +7,7 @@
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
     @foreach($jobs as $job)
         <a href="{{route('vacancy' , $job->Title )}}">
-        <div class="max-w-xs my-2 overflow-hidden bg-white rounded shadow-lg bg-opacity-20">
+        <div class="h-full max-w-xs my-2 overflow-hidden bg-white rounded shadow-lg bg-opacity-20">
             @if ($job->profile_photo_path !== NULL)
                 @php
                     $path_photo = "storage/".$job->profile_photo_path;

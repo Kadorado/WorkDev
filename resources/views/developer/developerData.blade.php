@@ -5,96 +5,66 @@
 
 @section('content')
 
-<section class="w-full max-w-2xl px-6 py-4 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
-  <h2 class="text-3xl font-semibold text-center text-gray-800 dark:text-white">Get in touch</h2>
-  <p class="mt-3 text-center text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-  
-  <div class="grid grid-cols-1 gap-6 mt-6 sm:grid-cols-2 md:grid-cols-3">
-      <a href="#" class="flex flex-col items-center px-4 py-3 text-gray-700 rounded-md dark:text-gray-200 hover:bg-blue-200 dark:hover:bg-blue-500">
-          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
-          </svg>
+<h2 class="text-xl text-center text-red-500">Datos</h2></h2>
 
-          <span class="mt-2">121 Street, NY</span>
-      </a>
-
-      <a href="#" class="flex flex-col items-center px-4 py-3 text-gray-700 rounded-md dark:text-gray-200 hover:bg-blue-200 dark:hover:bg-blue-500">
-          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-          </svg>
-
-          <span class="mt-2">+2499999666600</span>
-      </a>
-
-      <a href="#" class="flex flex-col items-center px-4 py-3 text-gray-700 rounded-md dark:text-gray-200 hover:bg-blue-200 dark:hover:bg-blue-500">
-          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-          </svg>
-
-          <span class="mt-2">example@example.com</span>
-      </a>
-  </div>
-  
-  <div class="mt-6 ">
-      <div class="items-center -mx-2 md:flex">
-          <div class="w-full mx-2">
-              <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Name</label>
-
-              <input class="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" type="text">
-          </div>
-
-          <div class="w-full mx-2 mt-4 md:mt-0">
-              <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">E-mail</label>
-
-              <input class="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" type="email">
-          </div>
-      </div>
-
-      <div class="w-full mt-4">
-          <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Message</label>
-
-          <textarea class="block w-full h-40 px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"></textarea>
-      </div>
-
-      <div class="flex justify-center mt-6">
-          <button class="px-4 py-2 text-white transition-colors duration-200 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">Send Message</button>
-      </div>
-  </div>
-</section>
-
-
-
-
-<form action="{{ route('developer.store') }}" method="POST" enctype="multipart/form-data">
+<form action="{{ route('developer.store') }}" method="POST" enctype="multipart/form-data" autocomplete=”off”>
     @csrf
-  <div class="mb-3">
-    <label for="fullName" class="py-6 form-label">Nombre Completo</label>
-    <input id="fullName" name="fullName" type="text" class="form-control" tabindex="1">    
+  <div class="relative w-full py-4 mb-3 text-lg">
+    <label for="fullName" class="p-2 text-red-500">Nombre Completo</label>
+    <input id="fullName" name="fullName" type="text" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" placeholder="Nombre Completo" style="transition: all 0.15s ease 0s;" required tabindex="1">    
+    <small class="p-2 text-red-500">* Obligatorio</small>
   </div>
-  <div class="mb-3">
-    <label for="experience" class="form-label">Experiencia en meses</label>
-    <input id="experience" name="experience" type="number" class="form-control" tabindex="2">
+  <div class="relative w-full py-4 mb-3 text-lg">
+    <label for="experience" class="p-2 text-red-500">Experiencia en meses</label>
+    <input id="experience" name="experience" type="number" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" placeholder="Experiencia en meses" style="transition: all 0.15s ease 0s;" required tabindex="2">
+    <small class="p-2 text-red-500">* Obligatorio</small>
   </div>
-  <div class="mb-3">
-    <label for="about_me" class="form-label">Perfil</label>
-    <input id="about_me" name="about_me" type="text" placeholder="cuentanos brevemente sobre ti" class="form-control" tabindex="3">
+  <div class="relative w-full py-4 mb-3 text-lg">
+    <label for="about_me" class="p-2 text-red-500">Acerca de mí</label>
+    <textarea id="about_me" name="about_me" cols="30" rows="10" placeholder="cuentanos brevemente sobre ti" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" placeholder="Titulo de la vacante" required tabindex="3"></textarea>
+    <small class="p-2 text-red-500">* Obligatorio</small>
   </div>
-  <div class="mb-3">
-    <label for="about_me" class="form-label">Perfil</label>
-    <input id="country" name="country" type="text" placeholder="pais" class="form-control" tabindex="3">
+  <div class="relative w-full py-4 mb-3 text-lg">
+    <label for="about_me" class="p-2 text-red-500">Pais</label>
+    <input id="country" name="country" type="text" placeholder="pais" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" placeholder="Titulo de la vacante" style="transition: all 0.15s ease 0s;" required tabindex="3">
+    <small class="p-2 text-red-500">* Obligatorio</small>
   </div>
-  <div class="mb-3">
-    <label for="curriculum" class="form-label">curriculum</label>
-    <input id="curriculum" name="curriculum" type="file" accept="application/pdf", class="form-control" tabindex="3">
+  <div class="relative w-full py-4 mb-3 text-lg">
+   <label for="curriculum" class="p-2 text-red-500">curriculum</label>
+     {{-- <input id="curriculum" name="curriculum" type="file" accept="application/pdf", class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" placeholder="Titulo de la vacante" style="transition: all 0.15s ease 0s;" required tabindex="3"> --}}
+    <div class="flex items-center justify-center w-full h-auto bg-grey-lighter">
+      <label class="flex flex-col items-center w-full px-4 py-6 tracking-wide uppercase bg-white border rounded-lg shadow-lg cursor-pointer text-blue border-blue hover:bg-blue hover:text-white">
+        <svg class="w-8 h-8" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
+        </svg>
+        <span class="mt-2 text-base leading-normal">Seleccione un archivo</span>
+        <input id="curriculum" name="curriculum" type="file" accept="application/pdf" class="hidden" required/>
+    </label>
+    </div>
+
+    <small class="p-2 text-red-500">* Obligatorio</small>
   </div>
-  <div class="mb-3">
-    <label for="github" class="form-label">Perfil de github</label>
-    <input id="github" name="github" type="url" class="form-control" tabindex="3">
+  <div class="relative w-full py-4 mb-3 text-lg">
+    <label for="github" class="p-2 text-red-500">Perfil de github</label>
+    <input id="github" name="github" type="url" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" placeholder="Link al Perfil de Github" style="transition: all 0.15s ease 0s;" required tabindex="3">
+    <small class="p-2 text-red-500">* Obligatorio</small>
   </div>
-  <a href="/dashboard" class="btn btn-secondary" tabindex="5">Cancelar</a>
-  <button type="submit" class="btn btn-primary" tabindex="4">Guardar</button>
+
+  {{-- <div class="relative w-full py-4 mb-3 text-lg">
+    <label for="github" class="p-2 text-red-500">Portafolio personal</label>
+    <input id="github" name="github" type="url" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" placeholder="Link al Portafolio personal" style="transition: all 0.15s ease 0s;" required tabindex="3">
+    <small class="p-2 text-red-500">* Obligatorio</small>
+  </div> --}}
+  
+  <div class="mt-4 mb-32 text-center">
+    <a href="/dashboard" tabindex="5">
+      <button class="justify-center w-32 p-3 mx-6 text-white bg-red-600 rounded-lg shadow outline-none focus:bg-red-700 hover:bg-red-500">Cancelar</button>
+    </a>
+    <button type="submit" class="justify-center w-32 p-3 mx-6 text-white bg-green-600 rounded-lg shadow outline-none focus:bg-green-700 hover:bg-green-500" tabindex="4">Guardar</button>
+  </div>
 </form>
+
+
 
 @if($developer ?? '')
 <p>{{$developer ?? ''['fullName']}}</p>
@@ -106,7 +76,9 @@
 
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
+    <link href="https://unpkg.com/tailwindcss@1.3.4/dist/tailwind.min.css" rel="stylesheet">
 @stop
+
 
 @section('js')
     <script> console.log('Hi!'); </script>

@@ -5,30 +5,34 @@
 
 @section('content')
 
-<h2 class="text-center text-xl text-white">Crear Vacante</h2>
+<h2 class="text-xl text-center text-red-500">Crear Vacante</h2>
 
 
 <form action="/vacante" method="POST" autocomplete=”off”>
     @csrf
-    <div class="relative w-full mb-3 text-xl">
-        <small class="p-2 text-white">* Titulo</small>
+    <div class="relative w-full mb-3">
+        <label for="" class="p-2 text-red-500">Titulo</label>
         <input type="text" name="title" id="title" tabindex="1"  class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" placeholder="Titulo de la vacante" style="transition: all 0.15s ease 0s;" required/>
+        <small class="p-2 text-red-500">* Obligatorio</small>
     </div>
-    <div class="relative w-full mb-3 text-xl">
-        <small class="p-2 text-white">* Experiencia requerida</small>
+    <div class="relative w-full mb-3">
+        <label for="" class="p-2 text-red-500">Experiencia requerida</label>
         <input  name="experience" id="title"  type="number" tabindex="1" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" placeholder="Experiencia requerida en meses" style="transition: all 0.15s ease 0s;" required/>
+        <small class="p-2 text-red-500">* Obligatorio</small>
     </div>
-    <div class="relative w-full mb-3 text-xl">
-        <small class="p-2 text-white">* Salario</small>
+    <div class="relative w-full mb-3">
+        <label for="" class="p-2 text-red-500">Salario</label>
         <input  name="salary" id="title"  type="number" tabindex="1" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" placeholder="eje.200.000" style="transition: all 0.15s ease 0s;" required />
+        <small class="p-2 text-red-500">* Obligatorio</small>
     </div>
-    <div class="relative w-full mb-3 text-xl">
-        <small class="p-2 text-white">* Lugar</small>
+    <div class="relative w-full mb-3">
+        <label for="" class="p-2 text-red-500">Lugar</label>
         <input   type="text" name="location" id="title"  tabindex="1" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" placeholder="eje.Colombia" style="transition: all 0.15s ease 0s;" required/>
+        <small class="p-2 text-red-500">* Obligatorio</small>
     </div>
     <div>
-        <small class="p-2 text-white text-xl">* Moneda</small>
-        <div class="flex flex-col w-full h-64 mx-auto md:w-1/2">
+        <label for="" class="p-2 text-red-500">Moneda</label>
+        <div class="flex flex-col w-full h-auto mx-auto md:w-1/2">
             <select name="currency" class="flex w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring">
                 <div class="w-full bg-red-400 border-b border-gray-100 rounded-t cursor-pointer hover:bg-teal-100">
                     <option value="USD" class="relative flex items-center w-full p-2 pl-2 border-l-2 border-transparent">USD</option>
@@ -37,13 +41,15 @@
                 </div>
             </select>
         </div>
+        <small class="p-2 text-red-500">* Obligatorio</small>
     </div>
-    <div class="relative w-full mb-3 text-xl">
-        <small class="p-2 text-white">* Descripcion de la vacante</small>
+    <div class="relative w-full mb-3">
+        <label for="" class="p-2 text-red-500">Descripcion de la vacante</label>
         <textarea name="descriptionjob" id="title" placeholder="eje.Desarrollador" cols="30" rows="10" tabindex="1" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" required></textarea>
+        <small class="p-2 text-red-500">* Obligatorio</small>
     </div>
     <div >
-        <small class="p-2 text-white text-xl">* Tecnologias requeridas</small>
+        <label for="" class="p-2 text-red-500">Experiencia requerida</label>
       <style>
           [x-cloak] {
               display: none;
@@ -54,7 +60,7 @@
           <option value={{ $tecno->id}}>{{ $tecno->tecno}}</option>
           @endforeach
       </select>
-      <div x-data="dropdown()" x-init="loadOptions()" class="flex flex-col w-full h-64 mx-auto md:w-1/2">
+      <div x-data="dropdown()" x-init="loadOptions()" class="flex flex-col w-full h-auto mx-auto md:w-1/2">
         <input name="values" type="hidden" x-bind:value="selectedValues()">
         <div class="relative inline-block w-full">
             <div class="relative flex flex-col items-center">
@@ -136,11 +142,12 @@
         
         </div>
     </div>
+    <small class="p-2 text-red-500">* Obligatorio</small>
   
     {{-- estado --}}
     <div>
-        <small class="p-2 text-white text-xl">* Estado</small>
-        <div class="flex flex-col w-full h-64 mx-auto md:w-1/2">
+        <label for="" class="p-2 text-red-500">Experiencia requerida</label>
+        <div class="flex flex-col w-full h-auto mx-auto md:w-1/2">
             <select  name="state" class="flex w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring">
                 <div class="w-full bg-red-400 border-b border-gray-100 rounded-t cursor-pointer hover:bg-teal-100">
                     <option value="0" class="relative flex items-center w-full p-2 pl-2 border-l-2 border-transparent">Abierto</option>
@@ -148,10 +155,11 @@
                 </div>
             </select>
         </div>
+        <small class="p-2 text-red-500">* Obligatorio</small>
     </div>
 
-    <div class="mt-4 text-center mb-32">
-        <button type="submit" class="justify-center w-32 p-3 text-green bg-white rounded-lg shadow outline-none focus:bg-green-700 hover:bg-green-500">Guardar</button>
+    <div class="mt-4 mb-32 text-center">
+        <button type="submit" class="justify-center w-32 p-3 text-white bg-green-600 rounded-lg shadow outline-none focus:bg-green-700 hover:bg-green-500">Guardar</button>
     </div>
 </form>
 
