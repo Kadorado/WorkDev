@@ -47,7 +47,7 @@
                                                 <p class="font-mono text-xl text-gray-600">
                                                     Experiencia
                                                 </p>
-                                                <p class="text-center leading-relaxed">
+                                                <p class="leading-relaxed">
                                                     {{$vacante->ExperienceRequire}}
                                                 </p>
                                             </div>
@@ -55,7 +55,7 @@
                                                 <p class="font-mono text-xl text-gray-600">
                                                     Lugar 
                                                 </p>
-                                                <p class="text-center leading-relaxed">
+                                                <p class="leading-relaxed">
                                                     {{$vacante->Location}}
                                                 </p>
                                             </div>
@@ -63,7 +63,7 @@
                                                 <p class="font-mono text-xl text-gray-600">
                                                     Salario
                                                 </p>
-                                                <p class="text-center leading-relaxed">
+                                                <p class="leading-relaxed">
                                                     {{$vacante->Salary}}
                                                 </p>
                                             </div>
@@ -71,7 +71,7 @@
                                                 <p class="font-mono text-xl text-gray-600">
                                                     Descripcion
                                                 </p>
-                                                <p class="text-center leading-relaxed">
+                                                <p class="leading-relaxed">
                                                     {{$vacante->DescriptionVacancy}}
                                                 </p>
                                             </div>

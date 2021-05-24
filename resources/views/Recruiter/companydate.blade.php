@@ -3,6 +3,7 @@
 
 @section('title', 'Dashboard')
 
+@section('plugins.Sweetalert2', true)
 
 @section('content')
 
@@ -14,7 +15,7 @@
     @method('PUT')
   <div class="relative w-full mb-3 text-xl">
     <small class="text-center p-2 text-white">* Nombre compañia</small>    
-    <input id="namecompany" name="namecompany" type="text" class="form-control" id="grid-first-name" type="text" placeholder="MisterSAS" tabindex="1" value ="{{$users[0]->NameCompany}}">    
+    <input id="namecompany" name="namecompany" type="text" class="form-control"¢ id="grid-first-name" type="text" placeholder="MisterSAS" tabindex="1" value ="{{$users[0]->NameCompany}}">    
   </div>
 
   <div class="relative w-full mb-3 text-xl">
@@ -67,8 +68,17 @@
     <link rel="stylesheet" href="/css/admin_custom.css">
 @stop
 
+
 @section('js')
-    <script> console.log('Hi!'); </script>
+
+<script>
+Swal.fire(
+  'Good job!',
+  'You clicked the button!',
+  'success'
+)
+
+</script>
 @stop
 
 
