@@ -47,7 +47,7 @@ return [
     */
 
     'logo' => 'WorkDEV',
-    'logo_img' => 'vendor/adminlte/dist/img/edificio.png',
+    'logo_img' => 'vendor/adminlte/dist/img/logo.jpg',
     //'logo_img_class' => 'Brand-Image Img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -287,7 +287,7 @@ return [
         [
             'text' => 'Empleos',
             'url'  => 'ofertas',
-            'icon' => 'fas fa-fw fa-graduation-cap',
+            'icon' => 'fas fa-search',
             'can'  => 'developerdata',
 
         ],
@@ -298,65 +298,7 @@ return [
             'can'  => 'developerdata',
         ],
 
-        // [
-        //     'text' => 'Cambiar password',
-        //     'url'  => 'admin/settings',
-        //     'icon' => 'fas fa-fw fa-lock',
-        // ],
-        // [
-        //     'text'    => 'multilevel',
-        //     'icon'    => 'fas fa-fw fa-share',
-        //     'submenu' => [
-        //         [
-        //             'text' => 'level_one',
-        //             'url'  => '#',
-        //         ],
-        //         [
-        //             'text'    => 'level_one',
-        //             'url'     => '#',
-        //             'submenu' => [
-        //                 [
-        //                     'text' => 'level_two',
-        //                     'url'  => '#',
-        //                 ],
-        //                 [
-        //                     'text'    => 'level_two',
-        //                     'url'     => '#',
-        //                     'submenu' => [
-        //                         [
-        //                             'text' => 'level_three',
-        //                             'url'  => '#',
-        //                         ],
-        //                         [
-        //                             'text' => 'level_three',
-        //                             'url'  => '#',
-        //                         ],
-        //                     ],
-        //                 ],
-        //             ],
-        //         ],
-        //         [
-        //             'text' => 'level_one',
-        //             'url'  => '#',
-        //         ],
-        //     ],
-        // ],
-        // ['header' => 'labels'],
-        // [
-        //     'text'       => 'important',
-        //     'icon_color' => 'red',
-        //     'url'        => '#',
-        // ],
-        // [
-        //     'text'       => 'warning',
-        //     'icon_color' => 'yellow',
-        //     'url'        => '#',
-        // ],
-        // [
-        //     'text'       => 'information',
-        //     'icon_color' => 'cyan',
-        //     'url'        => '#',
-        // ],
+       
     ],
 
     /*

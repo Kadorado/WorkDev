@@ -20,6 +20,7 @@ class JobDevController extends Controller
         ->join('recruiters', 'users.id', '=', 'recruiters.user_id')
         ->join('vacancies', 'recruiters.id', '=', 'vacancies.recrutier_id')
         ->where('state','=',1)
+        ->orderBy('vacancies.created_at', 'DESC')
         ->select('users.*', 'recruiters.*','vacancies.*')
         ->get();
         return view("jobDev.index", ['jobsDevs'=>$jobsDevs]);

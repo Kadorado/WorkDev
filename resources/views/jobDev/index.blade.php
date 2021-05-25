@@ -9,15 +9,9 @@
 
 @foreach ($jobsDevs as $jobDev )
 <a href="{{route('jobdetail' , array($jobDev->Title, $jobDev->id))}}">
-<section class="min-h-screen flex items-center justify-center px-4 mb-4 bg-white">
-    <div class="max-w-xl w-full rounded-lg shadow-lg p-4 flex md:flex-row flex-col">
-        <div class="flex-1">
-            <h3 class="font-semibold text-lg tracking-wide">{{$jobDev->Title}}</h3>
-            <h3 class="font-semibold text-lg tracking-wide">{{$jobDev->NameCompany}}</h3>
-            <p class="text-gray-500 my-1">
-                {{$jobDev->ExperienceRequire}}
-            </p>
-
+    <div class="lg:flex shadow rounded-lg border  border-gray-400 mb-2">
+        <div class="bg-blue-600 rounded-lg lg:w-2/12 py-1 block h-full shadow-inner">
+          <div class="text-center tracking-wide">
             @if ($jobDev->profile_photo_path !== NULL)
             @php
                 $path_photo_2 = "storage/".$jobDev->profile_photo_path;
@@ -28,11 +22,27 @@
             @endphp
             @endif
             <img src="{{ asset($path_photo_2) }}" class="relative z-10 object-cover m-auto w-96 h-96" alt="logo de la empresa">
+          </div>
         </div>
-    </div>
-</section>
-@endforeach
+        <div class="w-full  lg:w-11/12 xl:w-full px-1 bg-white py-5 lg:px-2 lg:py-2 tracking-wide">
+          <div class="flex flex-row lg:justify-start justify-center">
+            <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
+              <i class="far fa-clock"></i> {{ \Carbon\Carbon::parse($jobDev->created_at)->diffForHumans() }}
+            </div>
+            <div class="text-gray-700 font-bold font-medium text-sm text-center lg:text-left px-2">
+              Compañia : {{ $jobDev->NameCompany}}
+            </div>
+          </div>
+          <div class=" uppercase font-semibold text-gray-800 text-l text-center lg:text-left px-2">
+           {{$jobDev->Title}}
+          </div>
+          <div class="text-gray-600 font-medium text-sm pt-1 text-center lg:text-left px-2 uppercase">
+            {{$jobDev->Salary}} {{$jobDev->currency}}, {{$jobDev->Location}}
+          </div>
+        </div>
+      </div>
 
+@endforeach
 
 
 
@@ -41,6 +51,8 @@
 
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
+    <link href="https://unpkg.com/tailwindcss@1.3.4/dist/tailwind.min.css" rel="stylesheet">
+
 @stop
 
 @section('js')

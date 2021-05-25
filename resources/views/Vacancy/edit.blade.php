@@ -59,13 +59,13 @@
 
     <div class="relative w-full mb-3 text-xl">
         <small class="p-2 text-blue-500">* Descripcion de la vacante</small>
-        <textarea name="descriptionjob" id="title" value="{{$vacante->DescriptionVacancy}}" cols="30" rows="10" tabindex="1" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" required ></textarea>
+        <textarea name="descriptionjob" id="title"  cols="30" rows="10" tabindex="1" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" required >{{$vacante->DescriptionVacancy}}</textarea>
     </div>
     
     <div>
         <small class="p-2 text-xl text-blue-500">* Estado</small>
         <div class="flex flex-col w-full h-64 mx-auto md:w-1/2">
-            <select name="currency"   class="flex w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring">
+            <select name="state"   class="flex w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring">
                 <div class="w-full bg-blue-400 border-b border-gray-100 rounded-t cursor-pointer hover:bg-teal-100">
                     @if ($vacante->state == 0)
                     <option value="0" class="relative flex items-center w-full p-2 pl-2 border-l-2 border-transparent" required>Abierto</option>
@@ -81,7 +81,7 @@
         
 
 
-    <small class="p-2 text-xl text-blue-300">* Lenguajes de programación:</small>
+    <small class="p-2 text-xl text-blue-300">*Tecnologías Requeridas para la vacante:</small>
     <div>
         <small class="p-2 text-xl text-blue-500">* Actuales</small>
         
@@ -89,7 +89,7 @@
             {{-- call vacancy --}}
             @foreach ($userTecno as $tec )
             <div class="flex w-auto max-w-sm mx-4 my-2 overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
-              <div class="flex items-center justify-center w-12 bg-green-500">
+              <div class="flex items-center justify-center w-12 bg-blue-500">
                   <svg class="w-6 h-6 text-white fill-current" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
                       <path d="M20 3.33331C10.8 3.33331 3.33337 10.8 3.33337 20C3.33337 29.2 10.8 36.6666 20 36.6666C29.2 36.6666 36.6667 29.2 36.6667 20C36.6667 10.8 29.2 3.33331 20 3.33331ZM16.6667 28.3333L8.33337 20L10.6834 17.65L16.6667 23.6166L29.3167 10.9666L31.6667 13.3333L16.6667 28.3333Z"/>
                   </svg>
@@ -97,7 +97,7 @@
               
               <div class="px-4 py-2 -mx-3">
                   <div class="mx-3">
-                      <span class="font-semibold text-green-500 dark:text-green-400">
+                      <span class="font-semibold text-blue-500 dark:text-blue-400">
                         {{ $tec->tecno}}</span>
                   </div>
               </div>
@@ -107,7 +107,7 @@
     </div>
 
     <div >
-        <small class="p-2 text-xl text-blue-500">* Tecnologias requeridas</small>
+        <small class="p-2 text-xl text-blue-500">*Editar</small>
       <style>
           [x-cloak] {
               display: none;
@@ -119,7 +119,7 @@
           @endforeach
       </select>
       <div x-data="dropdown()" x-init="loadOptions()" class="flex flex-col w-full h-64 mx-auto md:w-1/2">
-        <input name="values" type="hidden" x-bind:value="selectedValues()">
+        <input name="values" type="hidden" x-bind:value="selectedValues()" required>
         <div class="relative inline-block w-full">
             <div class="relative flex flex-col items-center">
                 <div x-on:click="open" class="w-full svelte-1l8159u">
@@ -144,10 +144,10 @@
                                 </div>
                             </template>
                             <div x-show="selected.length    == 0" class="flex-1">
-                                <input placeholder="Select a option"
+                                <input placeholder="Selecciona tecnologias" autocomplete="off"
                                     class="w-full h-full p-1 px-2 text-gray-800 bg-transparent outline-none appearance-none"
                                     x-bind:value="selectedValues()"
-                                    name="userTecno" id="userTecno"
+                                    name="userTecno_up" id="userTecno_up" required
                                 >
                             </div>
                         </div>
@@ -203,9 +203,10 @@
    
 </div>
 
-
-    <a href="/vacante" class="btn btn-secondary" tabindex="">Cancelar</a>
-    <button type="submit" class="btn btn-primary">Guardar</button>
+<div class="mt-4 mb-32 text-center">
+  
+    <button type="submit" class="justify-center w-32 p-3 mx-6 text-white bg-green-600 rounded-lg shadow outline-none focus:bg-green-700 hover:bg-green-500" tabindex="4">Guardar</button>
+  </div>
 </form>
 
 

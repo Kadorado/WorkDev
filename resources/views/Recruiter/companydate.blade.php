@@ -3,7 +3,7 @@
 
 @section('title', 'Dashboard')
 
-@section('plugins.Sweetalert2', true)
+@section('plugins.Sweetalert2', false)
 
 @section('content')
 
@@ -14,23 +14,23 @@
     @csrf
     @method('PUT')
   <div class="relative w-full mb-3 text-xl">
-    <small class="text-center p-2 text-white">* Nombre compañia</small>    
-    <input id="namecompany" name="namecompany" type="text" class="form-control"¢ id="grid-first-name" type="text" placeholder="MisterSAS" tabindex="1" value ="{{$users[0]->NameCompany}}">    
+    <small class="text-center p-2 text-blue">* Nombre compañia</small>    
+    <input id="namecompany" name="namecompany" type="text" class="form-control"¢ id="grid-first-name" type="text" placeholder="Nombre de la compañia" tabindex="1" value ="{{$users[0]->NameCompany}}" required>    
   </div>
 
   <div class="relative w-full mb-3 text-xl">
-    <small class="p-2 text-white">* Descripción</small>
-    <input id="descripcion" name="descripcion" type="text" class="form-control" type="text" placeholder="Somos una empresa que busca" tabindex="2" value ="{{$users[0]->DescriptionCompany}}">
+    <small class="p-2 text-blue">* Descripción</small>
+    <input id="descripcion" name="descripcion" type="text" class="form-control" type="text" placeholder="Somos una empresa que busca" tabindex="2" value ="{{$users[0]->DescriptionCompany}}" required>
   </div>
 
   <div class="relative w-full mb-3 text-xl">
-    <small class="p-2 text-white">* Website</small>
-    <input id="website" name="website" type="url" class="form-control" id="grid-first-name" type="text" placeholder="www.mistersas.com" tabindex="3" value ="{{$users[0]->WebsiteCompany}}">
+    <small class="p-2 text-blue">* Website</small>
+    <input id="website" name="website" type="url" class="form-control" id="grid-first-name" type="text" placeholder="www.mistersas.com" tabindex="3" value ="{{$users[0]->WebsiteCompany}}" required>
   </div>
 
   <div class="relative w-full mb-3 text-xl">
-    <small class="p-2 text-white">* NIT</small>
-    <input id="nitcompany" name="nitcompany" type="text"  class="form-control" id="grid-first-name" type="text" placeholder="NIT OR ID" tabindex="3" value ="{{$users[0]->idCompany}}">
+    <small class="p-2 text-blue">* NIT</small>
+    <input id="nitcompany" name="nitcompany" type="text"  class="form-control" id="grid-first-name" type="text" placeholder="NIT OR ID" tabindex="3" value ="{{$users[0]->idCompany}}" required>
   </div>
 
   <button type="submit" class="btn btn-primary" tabindex="4">Actualizar</button>
@@ -41,19 +41,19 @@
   <form action="{{ route('companydata.store') }}" method="POST">
       @csrf
       <div class="relative w-full mb-3 text-xl">
-        <small class= "text-center p-2 text-white">* Nombre compañia</small>    
+        <small class= "text-center p-2 text-blue">* Nombre compañia</small>    
       <input id="namecompany" name="namecompany" type="text" class="form-control" tabindex="1">    
     </div>
     <div class="relative w-full mb-3 text-xl">
-      <small class="p-2 text-white">* Descripción</small>
+      <small class="p-2 text-blue">* Descripción</small>
       <input id="descripcion" name="descripcion" type="text" class="form-control" tabindex="2">
     </div>
     <div class="relative w-full mb-3 text-xl">
-      <small class="p-2 text-white">* Website</small>
+      <small class="p-2 text-blue">* Website</small>
       <input id="website" name="website" type="url" class="form-control" tabindex="3">
     </div>
     <div class="relative w-full mb-3 text-xl">
-      <small class="p-2 text-white">* NIT</small>
+      <small class="p-2 text-blue">* NIT</small>
       <input id="nitcompany" name="nitcompany" type="text"  class="form-control" tabindex="3">
     </div>
     <a href="/dashboard" class="btn btn-secondary" tabindex="5">Cancelar</a>
@@ -72,11 +72,6 @@
 @section('js')
 
 <script>
-Swal.fire(
-  'Good job!',
-  'You clicked the button!',
-  'success'
-)
 
 </script>
 @stop

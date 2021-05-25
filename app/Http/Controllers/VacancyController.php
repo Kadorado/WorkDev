@@ -170,7 +170,6 @@ class VacancyController extends Controller
            ->select('tecnologies.id')
            ->get();
 
-
         $this->Deletetecnologies($userTecno, $id);
         $userTecnoUp = explode(',',$request->get('userTecno_up'));
         $this->Addtecnologies($userTecnoUp, $id);
