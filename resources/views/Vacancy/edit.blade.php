@@ -5,35 +5,35 @@
 
 @section('content')
 
-<h2 class="text-xl text-center text-red-500">Editar Vacante</h2>
+<h2 class="text-xl text-center text-blue-500">Editar Vacante</h2>
 
 <form action="/vacante/{{$vacante->id}}" method="POST">
     @csrf
     @method('PUT')
     <div class="relative w-full mb-3 text-xl">
-        <small class="p-2 text-red-500">* Titulo</small>
+        <small class="p-2 text-blue-500">* Titulo</small>
         <input type="text" name="title" id="title" tabindex="1"  class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" value="{{$vacante->Title}}" style="transition: all 0.15s ease 0s;" required/>
     </div>
     <div class="relative w-full mb-3 text-xl">
-        <small class="p-2 text-red-500">* Experiencia requerida</small>
+        <small class="p-2 text-blue-500">* Experiencia requerida</small>
         <input  name="experience" id="title"  type="number" tabindex="1" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" value="{{$vacante->ExperienceRequire}}" style="transition: all 0.15s ease 0s;" required/>
     </div>
    
     <div class="relative w-full mb-3 text-xl">
-        <small class="p-2 text-red-500">* Salario</small>
+        <small class="p-2 text-blue-500">* Salario</small>
         <input  name="salary" id="title"  type="number" tabindex="1" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" value="{{$vacante->Salary}}" style="transition: all 0.15s ease 0s;" required />
     </div>
    
     <div class="relative w-full mb-3 text-xl">
-        <small class="p-2 text-red-500">* Lugar</small>
+        <small class="p-2 text-blue-500">* Lugar</small>
         <input   type="text" name="location" id="title"  tabindex="1" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" value="{{$vacante->Location}}" style="transition: all 0.15s ease 0s;" required/>
     </div>
     
     <div>
-        <small class="p-2 text-xl text-red-500">* Moneda</small>
+        <small class="p-2 text-xl text-blue-500">* Moneda</small>
         <div class="flex flex-col w-full h-64 mx-auto md:w-1/2">
             <select name="currency"   class="flex w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring">
-                <div class="w-full bg-red-400 border-b border-gray-100 rounded-t cursor-pointer hover:bg-teal-100">
+                <div class="w-full bg-blue-400 border-b border-gray-100 rounded-t cursor-pointer hover:bg-teal-100">
                     <option  class="relative flex items-center w-full p-2 pl-2 border-l-2 border-transparent">{{$vacante->currency}}</option>
                     <option value="USD" class="relative flex items-center w-full p-2 pl-2 border-l-2 border-transparent">USD</option>
                     <option value="COP" class="relative flex items-center w-full p-2 pl-2 border-l-2 border-transparent">COP</option>
@@ -58,21 +58,21 @@
     </div>
 
     <div class="relative w-full mb-3 text-xl">
-        <small class="p-2 text-red-500">* Descripcion de la vacante</small>
-        <textarea name="descriptionjob" id="title" value="{{$vacante->DescriptionVacancy}}" cols="30" rows="10" tabindex="1" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring"></textarea>
+        <small class="p-2 text-blue-500">* Descripcion de la vacante</small>
+        <textarea name="descriptionjob" id="title" value="{{$vacante->DescriptionVacancy}}" cols="30" rows="10" tabindex="1" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" required ></textarea>
     </div>
     
     <div>
-        <small class="p-2 text-xl text-red-500">* Estado</small>
+        <small class="p-2 text-xl text-blue-500">* Estado</small>
         <div class="flex flex-col w-full h-64 mx-auto md:w-1/2">
             <select name="currency"   class="flex w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring">
-                <div class="w-full bg-red-400 border-b border-gray-100 rounded-t cursor-pointer hover:bg-teal-100">
+                <div class="w-full bg-blue-400 border-b border-gray-100 rounded-t cursor-pointer hover:bg-teal-100">
                     @if ($vacante->state == 0)
-                    <option value="0" class="relative flex items-center w-full p-2 pl-2 border-l-2 border-transparent">Abierto</option>
-                    <option value="1" class="relative flex items-center w-full p-2 pl-2 border-l-2 border-transparent">Cerrado</option> 
+                    <option value="0" class="relative flex items-center w-full p-2 pl-2 border-l-2 border-transparent" required>Abierto</option>
+                    <option value="1" class="relative flex items-center w-full p-2 pl-2 border-l-2 border-transparent" required>Cerrado</option> 
                     @else
-                    <option value="1" class="relative flex items-center w-full p-2 pl-2 border-l-2 border-transparent">Cerrado</option> 
-                    <option value="0" class="relative flex items-center w-full p-2 pl-2 border-l-2 border-transparent">Abierto</option>
+                    <option value="1" class="relative flex items-center w-full p-2 pl-2 border-l-2 border-transparent" required >Cerrado</option> 
+                    <option value="0" class="relative flex items-center w-full p-2 pl-2 border-l-2 border-transparent" required>Abierto</option>
                     @endif 
                 </div>
             </select>
@@ -81,9 +81,9 @@
         
 
 
-    <small class="p-2 text-xl text-red-300">* Lenguajes de programación:</small>
+    <small class="p-2 text-xl text-blue-300">* Lenguajes de programación:</small>
     <div>
-        <small class="p-2 text-xl text-red-500">* Actuales</small>
+        <small class="p-2 text-xl text-blue-500">* Actuales</small>
         
         <div class="flex flex-wrap">
             {{-- call vacancy --}}
@@ -107,7 +107,7 @@
     </div>
 
     <div >
-        <small class="p-2 text-xl text-red-500">* Tecnologias requeridas</small>
+        <small class="p-2 text-xl text-blue-500">* Tecnologias requeridas</small>
       <style>
           [x-cloak] {
               display: none;
@@ -132,7 +132,7 @@
                                         options[option]" x-text="options[option].text"></div>
                                     <div class="flex flex-row-reverse flex-auto">
                                         <div x-on:click="remove(index,option)">
-                                            <svg class="w-6 h-6 rounded-full fill-current hover:bg-red-200 " role="button" viewBox="0 0 20 20">
+                                            <svg class="w-6 h-6 rounded-full fill-current hover:bg-blue-200 " role="button" viewBox="0 0 20 20">
                                                 <path style="fill:#D1403F;" d="M14.348,14.849c-0.469,0.469-1.229,0.469-1.697,0L10,11.819l-2.651,3.029c-0.469,0.469-1.229,0.469-1.697,0
                                            c-0.469-0.469-0.469-1.229,0-1.697l2.758-3.15L5.651,6.849c-0.469-0.469-0.469-1.228,0-1.697s1.228-0.469,1.697,0L10,8.183
                                            l2.651-3.031c0.469-0.469,1.228-0.469,1.697,0s0.469,1.229,0,1.697l-2.758,3.152l2.758,3.15

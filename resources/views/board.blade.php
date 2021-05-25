@@ -5,9 +5,12 @@
 
 @section('content')
 
-@section('plugins.Datatables' , true)
+@section('plugins.Datatables', true)
 
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+    <script>
+        console.log('Hi!');
+
+    </script>
 @stop

@@ -50,7 +50,11 @@
 @endforeach
     </tbody>
 </table>
-<a href="skills/show">Editar</a>
+
+
+<button>
+    <a href="skills/show">Editar</a>
+</button>
 
 @endif
 

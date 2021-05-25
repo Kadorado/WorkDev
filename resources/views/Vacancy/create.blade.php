@@ -5,51 +5,51 @@
 
 @section('content')
 
-<h2 class="text-xl text-center text-red-500">Crear Vacante</h2>
+<h2 class="text-xl text-center text-blue-500">Crear Vacante</h2>
 
 
 <form action="/vacante" method="POST" autocomplete=”off”>
     @csrf
     <div class="relative w-full mb-3">
-        <label for="" class="p-2 text-red-500">Titulo</label>
+        <label for="" class="p-2 text-blue-500">Titulo</label>
         <input type="text" name="title" id="title" tabindex="1"  class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" placeholder="Titulo de la vacante" style="transition: all 0.15s ease 0s;" required/>
-        <small class="p-2 text-red-500">* Obligatorio</small>
+        <small class="p-2 text-blue-500">* Obligatorio</small>
     </div>
     <div class="relative w-full mb-3">
-        <label for="" class="p-2 text-red-500">Experiencia requerida</label>
+        <label for="" class="p-2 text-blue-500">Experiencia requerida</label>
         <input  name="experience" id="title"  type="number" tabindex="1" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" placeholder="Experiencia requerida en meses" style="transition: all 0.15s ease 0s;" required/>
-        <small class="p-2 text-red-500">* Obligatorio</small>
+        <small class="p-2 text-blue-500">* Obligatorio</small>
     </div>
     <div class="relative w-full mb-3">
-        <label for="" class="p-2 text-red-500">Salario</label>
+        <label for="" class="p-2 text-blue-500">Salario</label>
         <input  name="salary" id="title"  type="number" tabindex="1" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" placeholder="eje.200.000" style="transition: all 0.15s ease 0s;" required />
-        <small class="p-2 text-red-500">* Obligatorio</small>
+        <small class="p-2 text-blue-500">* Obligatorio</small>
     </div>
     <div class="relative w-full mb-3">
-        <label for="" class="p-2 text-red-500">Lugar</label>
+        <label for="" class="p-2 text-blue-500">Lugar</label>
         <input   type="text" name="location" id="title"  tabindex="1" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" placeholder="eje.Colombia" style="transition: all 0.15s ease 0s;" required/>
-        <small class="p-2 text-red-500">* Obligatorio</small>
+        <small class="p-2 text-blue-500">* Obligatorio</small>
     </div>
     <div>
-        <label for="" class="p-2 text-red-500">Moneda</label>
+        <label for="" class="p-2 text-blue-500">Moneda</label>
         <div class="flex flex-col w-full h-auto mx-auto md:w-1/2">
             <select name="currency" class="flex w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring">
-                <div class="w-full bg-red-400 border-b border-gray-100 rounded-t cursor-pointer hover:bg-teal-100">
+                <div class="w-full bg-blue-400 border-b border-gray-100 rounded-t cursor-pointer hover:bg-teal-100">
                     <option value="USD" class="relative flex items-center w-full p-2 pl-2 border-l-2 border-transparent">USD</option>
                     <option value="COP" class="relative flex items-center w-full p-2 pl-2 border-l-2 border-transparent">COP</option>
                     <option value="EUR" class="relative flex items-center w-full p-2 pl-2 border-l-2 border-transparent">EUR</option>
                 </div>
             </select>
         </div>
-        <small class="p-2 text-red-500">* Obligatorio</small>
+        <small class="p-2 text-blue-500">* Obligatorio</small>
     </div>
     <div class="relative w-full mb-3">
-        <label for="" class="p-2 text-red-500">Descripcion de la vacante</label>
+        <label for="" class="p-2 text-blue-500">Descripcion de la vacante</label>
         <textarea name="descriptionjob" id="title" placeholder="eje.Desarrollador" cols="30" rows="10" tabindex="1" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" required></textarea>
-        <small class="p-2 text-red-500">* Obligatorio</small>
+        <small class="p-2 text-blue-500">* Obligatorio</small>
     </div>
     <div >
-        <label for="" class="p-2 text-red-500">Experiencia requerida</label>
+        <label for="" class="p-2 text-blue-500">Tecnologias requeridas</label>
       <style>
           [x-cloak] {
               display: none;
@@ -74,7 +74,7 @@
                                         options[option]" x-text="options[option].text"></div>
                                     <div class="flex flex-row-reverse flex-auto">
                                         <div x-on:click="remove(index,option)">
-                                            <svg class="w-6 h-6 rounded-full fill-current hover:bg-red-200 " role="button" viewBox="0 0 20 20">
+                                            <svg class="w-6 h-6 rounded-full fill-current hover:bg-blue-200 " role="button" viewBox="0 0 20 20">
                                                 <path style="fill:#D1403F;" d="M14.348,14.849c-0.469,0.469-1.229,0.469-1.697,0L10,11.819l-2.651,3.029c-0.469,0.469-1.229,0.469-1.697,0
                                            c-0.469-0.469-0.469-1.229,0-1.697l2.758-3.15L5.651,6.849c-0.469-0.469-0.469-1.228,0-1.697s1.228-0.469,1.697,0L10,8.183
                                            l2.651-3.031c0.469-0.469,1.228-0.469,1.697,0s0.469,1.229,0,1.697l-2.758,3.152l2.758,3.15
@@ -139,23 +139,22 @@
                     </div>
                 </div>
             </div>
-        
         </div>
     </div>
-    <small class="p-2 text-red-500">* Obligatorio</small>
+    <small class="p-2 text-blue-500">* Obligatorio</small>
   
     {{-- estado --}}
     <div>
-        <label for="" class="p-2 text-red-500">Experiencia requerida</label>
+        <label for="" class="p-2 text-blue-500">Estado de la vacante</label>
         <div class="flex flex-col w-full h-auto mx-auto md:w-1/2">
             <select  name="state" class="flex w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring">
-                <div class="w-full bg-red-400 border-b border-gray-100 rounded-t cursor-pointer hover:bg-teal-100">
+                <div class="w-full bg-blue-400 border-b border-gray-100 rounded-t cursor-pointer hover:bg-teal-100">
                     <option value="0" class="relative flex items-center w-full p-2 pl-2 border-l-2 border-transparent">Abierto</option>
                     <option value="1" class="relative flex items-center w-full p-2 pl-2 border-l-2 border-transparent">Cerrado</option>
                 </div>
             </select>
         </div>
-        <small class="p-2 text-red-500">* Obligatorio</small>
+        <small class="p-2 text-blue-500">* Obligatorio</small>
     </div>
 
     <div class="mt-4 mb-32 text-center">

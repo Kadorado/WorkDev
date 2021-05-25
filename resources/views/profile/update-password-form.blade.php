@@ -12,7 +12,7 @@
         <!-- Start of component -->
         <div class="max-w-full p-5 tracking-wide bg-white border-2 border-gray-300 rounded-md shadow-lg">
             <div id="header" class="flex flex-col gap-12 sm:flex-row"> 
-            <img alt="mountain" class="border-2 border-gray-300 rounded-md w-45" src="https://picsum.photos/seed/picsum/200" />
+            <img alt="mountain" class="border-2 border-gray-300 rounded-md w-45" width="30%" src="https://i.ibb.co/0YrmBsv/Signing-contract-Official-document-agreement-deal-commitment-Businessmen-cartoon-characters-shaking.jpg" />
             <div id="body" class="flex flex-col ">
                 <div class="col-span-6 sm:col-span-4">
                     <x-jet-label for="current_password" value="{{ __('Contraseña actual') }}" />

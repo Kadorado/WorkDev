@@ -25,9 +25,7 @@
                 <p class="leading-normal text-2xl mb-8">
                     Somos la mejor plataforma para ofertar y aplicar a propuestas laborales del mundo del desarrollo
                 </p>
-                <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                    Subscribe
-                </button>
+     
             </div>
             <!--Right Col-->
             <div class="w-full md:w-3/5 py-6 text-center">
@@ -38,7 +36,7 @@
    
     <section class="bg-white border-b py-8 rounded-3xl" >
         <div class="container max-w-5xl mx-auto m-8">
-            <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+            <h1 class="w-full my-2 text-3xl font-bold leading-tight text-center text-gray-800">
                 ¿Como Funciona?
             </h1>
             <div class="w-full mb-4">
@@ -46,10 +44,10 @@
             </div>
             <div class="flex flex-wrap">
                 <div class="w-5/6 sm:w-1/2 p-6">
-                    <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3 ">
+                    <h3 class="text-2xl text-gray-800 font-bold leading-none mb-3 ">
                         Paso 1
                     </h3>
-                    <p class=" text-3xl text-gray-600 mb-8">
+                    <p class=" text-2xl text-gray-600 mb-8">
                         Reclutamiento
                         Usamos bots para automatizar el alcance de las ofertas laborales.
                         <br />
@@ -101,10 +99,10 @@
                 </div>
                 <div class="w-full sm:w-1/2 p-6 mt-6">
                     <div class="align-middle">
-                        <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+                        <h3 class="text-2xl text-gray-800 font-bold leading-none mb-3">
                             Paso 2 
                         </h3>
-                        <p   class=" text-3xl text-gray-600 mb-8">
+                        <p   class=" text-2xl text-gray-600 mb-8">
                             Selección
                         Clasificamos y perfilamos automáticamente candidatos/as que cumplan con tus requisitos.
                             <br />
@@ -115,10 +113,10 @@
                 </div>
                 <div class="w-full sm:w-1/2 p-6 mt-6">
                     <div class="align-middle">
-                        <h3 class=" text-3xl text-gray-800 font-bold leading-none mb-3">
+                        <h3 class=" text-2xl text-gray-800 font-bold leading-none mb-3">
                             Paso 3
                         </h3>
-                        <p class="  text-3xl  text-gray-600 mb-8">
+                        <p class="  text-2xl  text-gray-600 mb-8">
                             Contratación
                             Manejamos los temas legales y de nómina de tu nuevo empleado remoto, sin importar el país.
                             <br />
@@ -132,7 +130,7 @@
     </section>
     <section class="bg-white border-b py-8 rounded-3xl">
         <div class="container mx-auto flex flex-wrap pt-4 pb-12">
-            <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+            <h1 class="w-full my-2 text-3xl font-bold leading-tight text-center text-gray-800">
                 Nuestras cifras
             </h1>
             <div class="w-full mb-4">
@@ -188,14 +186,14 @@
             </g>
         </g>
     </svg>
-    <section class="container mx-auto text-center py-6 mb-12">
-        <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
-            Contactanos
+    <section class="container mx-auto text-center py-6 mb-12 rounded-3xl">
+        <h1 class="w-full my-2 text-3xl font-bold leading-tight text-center text-white">
+            Contáctanos
         </h1>
         <div class="w-full mb-4">
-            <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
+            <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 "></div>
         </div>
-        <h3 class="my-4 text-3xl leading-tight">
+        <h3 class="my-4 text-2xl leading-tight">
             Envianos un mensaje si quires saber mas
         </h3>
         <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">

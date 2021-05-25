@@ -14,11 +14,11 @@
     </a>
 </div>
 <div class=" content-center	 p-4 border-b">
-    <h2 class="text-2xl ">
+    <h2 class="text-2xl text-center">
         Tus Vacantes
     </h2>
     
-    <div class="items-center	">
+    <div class="text-center">
         <a href="vacante/create" class="btn btn-primary">Crear Vacante</a>
     </div>
   
