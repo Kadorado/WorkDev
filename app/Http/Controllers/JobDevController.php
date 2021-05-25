@@ -26,10 +26,24 @@ class JobDevController extends Controller
     }
 
 
-    public function jobdetail(Vacancy $vacancy)
-    { 
+    public function jobdetail($title, $id)
+    {  
+
+        $vacancy =DB::table('users')
+        ->join('recruiters', 'users.id', '=', 'recruiters.user_id')
+        ->join('vacancies', 'recruiters.id', '=', 'vacancies.recrutier_id')
+        ->where('vacancies.id','=',$id)
+        ->select('users.*', 'recruiters.*','vacancies.*')
+        ->get();
+
+        $userTecno = DB::table('tecnologies')
+        ->join('tecnology_vacancy', 'tecnologies.id','=','tecnology_vacancy.tecnology_id')
+        ->where('tecnology_vacancy.vacancy_id', '=', $id)
+           ->select('tecnologies.tecno')
+           ->get();
+
         
-        return view("jobDev.details", ['vacancy'=>$vacancy]);
+        return view("jobDev.details", ['userTecno'=>$userTecno, 'vacancy'=>$vacancy]);
     }
 
     /**

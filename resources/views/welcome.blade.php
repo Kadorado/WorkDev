@@ -13,7 +13,7 @@
                 <!--Left Col-->
                 <div
                     class="flex flex-col items-start justify-center w-full min-h-screen text-center md:w-2/5 md:text-left ml-6">
-                    <h2 class="w-full uppercase tracking-loose text-center font-bold">Sobre nosotros</h2>
+                    <h2 class="w-full tracking-loose text-center font-bold text-3xl">Sobre Nosotros</h2>
                     <h1 class="my-4 text-5xl font-bold leading-tight text-center">
                         <!-- cambiar por el nombre de la empresa -->
                         WorkDev
@@ -22,12 +22,7 @@
                         Somos una empresa colombiana que buscan conectar a los programadores de software con las empresas
                         lideres del sector
                     </p>
-                    <a href="">
-                        <button
-                            class="px-8 py-4 mx-auto my-6 font-bold text-gray-800 transition duration-300 ease-in-out transform bg-white rounded-full shadow-lg lg:mx-0 hover:no-underline focus:outline-none focus:shadow-outline hover:scale-105">
-                            Ver más
-                        </button>
-                    </a>
+                    
                 </div>
                 <!--Right Col-->
                 <div class="w-full py-16 m-auto text-center bg-white shadow-lg md:w-3/6 rounded-3xl ">
@@ -182,7 +177,7 @@
 
         {{-- Empresas --}}
         <section>
-            <div class="w-full my-2 text-3xl font-bold leading-tight text-center text-gray-800 ">
+            <div class="w-full my-2 text-4xl font-bold leading-tight text-center text-gray-800 ">
                 <h1 class="mt-4 text-center text-white">
                     Empresas que confían en nosotros
                 </h1>
@@ -197,8 +192,8 @@
 
         <section>
             <div class="container max-w-5xl m-8 mx-auto">
-                <h1 class="w-full my-6 mb-6 text-3xl font-bold leading-tight text-center text-white-800 ">
-                    ¿Como funcionamos?
+                <h1 class="w-full my-6 mb-6 text-4xl font-bold leading-tight text-center text-white-800 ">
+                  ¿Cómo funcionamos?
                 </h1>
                 <div class="w-full mb-4">
                     <div class="w-64 h-1 py-0 mx-auto my-0 rounded-t opacity-25 gradient"></div>
