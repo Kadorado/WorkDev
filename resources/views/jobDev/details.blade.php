@@ -82,9 +82,8 @@
             <h2 class="mb-5 text-2xl font-bold uppercase ">Empresa: {{ $vacancy[0]->NameCompany }}
             </h2>
             <div class="flex">
-                <img src={{ asset('favicons/logo.jpg') }} alt="logo de la empresa"
-                    class="flex-none object-cover w-16 h-16 m-4 rounded-full ">
                 <div class="items-center flex-1 m-auto">
+                    <i class="fa fa-calendar" aria-hidden="false"></i>
                     <p class="text-gray-600 ">{{ \Carbon\Carbon::parse($vacancy[0]->created_at)->diffForHumans() }}</p>
                 </div>
 
@@ -102,7 +101,7 @@
                 </div>
             </div>
             <div class="mt-6 ">
-                <a href="{{ route('register') }}"><button 
+                <a href=""><button 
                         class="px-20 py-3 mx-20 font-semibold text-white bg-blue-400 rounded-full opacity-75 hover:opacity-90 hover:text-blue-900 focus:outline-none"><i
                             class="mr-2 -ml-2 mdi mdi-cart "></i> Aplicar</button></a>
             </div>
