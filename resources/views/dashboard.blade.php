@@ -21,7 +21,7 @@
 		@if (Auth::user()->hasRole('Developer'))
 		
 		
-			<h1 class=  'text-center' >¡Hola Desarrollador!</h1>
+			<h1 class=  'text-center' >¡Bienvenido  Desarrollador!</h1>
 				<p class=" text-centerleading-normal text-2xl mb-8">
 				Bienvenido a la mejor plataforma para aplicar a propuestas laborales del mundo del desarrollo
 			</p>
@@ -52,7 +52,7 @@
 
 @elseif (Auth::user()->hasRole('Recruiter'))
 	
-			<h1>¡Hola Empresa!</h1>
+			<h1>¡Bienvenido Empresa!</h1>
 				<p class="leading-normal text-2xl mb-8">
 					Bienvenido a la mejor plataforma para ofertar  vacantes laborales del mundo del desarrollo	
 				</p>

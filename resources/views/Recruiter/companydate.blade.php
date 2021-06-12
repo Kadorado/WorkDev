@@ -3,13 +3,13 @@
 
 @section('title', 'Dashboard')
 
-@section('plugins.Sweetalert2', false)
+@section('plugins.Sweetalert2', true)
 
 @section('content')
 
 
 @if (sizeof($users) !== 0)
-  <h1 class="text-center">Editar Datos Empresa</h1>
+  <h1 class="text-center text-blue">Editar datos</h1>
   <form class="w-full max-w-lg" action="/companydata/{{$users[0]->id}}" method="POST">
     @csrf
     @method('PUT')

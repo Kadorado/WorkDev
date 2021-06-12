@@ -5,7 +5,7 @@
 
 @section('content')
 
-<h2 class="text-xl text-center text-blue-500">Crear Vacante</h2>
+<h2 class="text-xl text-center text-blue-500 mt-8">Crear Vacante</h2>
 
 
 <form action="/vacante" method="POST" autocomplete=”off”>
