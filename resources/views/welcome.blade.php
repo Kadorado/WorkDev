@@ -139,7 +139,7 @@
                                 Juliana Fajardo
                             </div>
                             <img class="w-2/4 mx-auto my-8 rounded-full shadow-lg"
-                                src="https://scontent.fbog15-1.fna.fbcdn.net/v/t1.6435-9/125563107_1288144128249985_2050419118621764369_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=174925&_nc_eui2=AeEwvFhX5wz_DUfsw522Lr1LawF7hhIJaLNrAXuGEglos2LVzdV2lIMlPegKnkvmGEacxyuCCPqhDCFoz92ExAzp&_nc_ohc=Irhxygevd6EAX_sq2V_&_nc_ht=scontent.fbog15-1.fna&oh=25f7c1fc0d76fd86e9588ff54d3da997&oe=60C21281"
+                                src="https://media-exp1.licdn.com/dms/image/C4D03AQGPEbNsb0aAyA/profile-displayphoto-shrink_800_800/0/1616090681447?e=1629331200&v=beta&t=Ff66kXb611DnzlZx_mD0Hy6A5WsH5Ux3PGxkKI-fXJU"
                                 alt="Juliana fajardo">
                             <br />
                             <br />

@@ -2,13 +2,12 @@
 
 @section('title', 'Dashboard')
 
+
 @section('content')
 
     <div class="min-h-screen bg-gray-200 flex justify-center items-center">
         <div class="max-w-2xl bg-blue border-2 border-gray-300 p-5 rounded-md tracking-wide shadow-lg">
             <div id="header" class="flex">
-
-
                 <form action="{{ route('recruiter.store') }}" method="POST">
                     @csrf
                     <div class="relative w-full mb-3 text-xl">
@@ -44,6 +43,7 @@
 @stop
 
 @section('js')
+
 
 @stop
 @stop
