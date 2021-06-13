@@ -27,7 +27,7 @@
                 <!--Right Col-->
                 <div class="w-full py-16 m-auto text-center bg-white shadow-lg md:w-3/6 rounded-3xl ">
                     <img class="object-cover w-full h-full"
-                        src="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
+                        src="https://i.ibb.co/6n52mxJ/recursosprogramadores-1024x512.png" />
 
                 </div>
             </div>
@@ -50,9 +50,9 @@
                             Encuentra tu oportunidad
                         </h3>
                         <!--una imagen de beneficios-->
-                        <img class="shadow-lg rounded-3xl"
-                            src="https://images.pexels.com/photos/374016/pexels-photo-374016.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                            alt="">
+                        <img class="shadow-lg rounded-3xl" width="100%"
+                            src="https://peaku.co/img/developer.svg"
+                            alt="contrata">
                         <p class="mb-8 text-gray-600">
                             <br />
                             <br />
@@ -76,8 +76,8 @@
                             Contrata talento
                         </h3>
                         <!--una imagen de beneficios-->
-                        <img class="shadow-lg rounded-3xl"
-                            src="https://images.pexels.com/photos/3760069/pexels-photo-3760069.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        <img class="shadow-lg rounded-3xl" width="100%"
+                            src="https://peaku.co/img/hiring.svg"
                             alt="">
                         <p class="mb-8 text-gray-600">
                             <br />

@@ -83,8 +83,8 @@
                                             @csrf
                                             @method('DELETE')
                                             <button type="button" onclick="DeleteVacancy()"
-                                                class="text-grey-lighter font-bold py-2 px-4 rounded text-xs bg-red hover:bg-red-dark"><i
-                                                    class="fas fa-trash"></i>
+                                                class="text-grey-lighter  font-bold py-2 px-4 rounded text-xs bg-red hover:bg-red-dark"><i
+                                                    class="fas fa-trash outline-none"></i>
                                                 </i></button>
                                         </form>
                                     </div>
@@ -110,7 +110,7 @@
                     <a class="text-pink-500 underline" href="https://undraw.co/"></a>
                 </p>
 
-                <img src="https://peaku.co/img/business/illustration9.svg" height="500px" width="60%" alt="panel-main"/>
+                <img src="https://peaku.co/img/business/illustration9.svg" height="500px" width="60%" alt="panel-main" />
 
 
             </div>
@@ -134,23 +134,28 @@
             var formulario = document.getElementById("deleteVacancy");
 
             Swal.fire({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
+                title: '¿Estas seguro de querer eliminar esta vacante?',
+                text: "¡No podras revertir esto!",
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes, delete it!'
+                confirmButtonText: 'Si,Eliminar!',
+                cancelButtonText: "Cancelar"
             }).then((result) => {
-                if (result.isConfirmed) {
-                    formulario.submit(),
+
+                    confirmation = result.value
+                    if (confirmation === true) {
+
                         swal.fire(
-                            'Deleted!',
-                            'Your file has been deleted.',
+                            'Eliminada!',
+                            'Tu vacante ha sido eliminada.',
                             'success'
-                        )
+                        ), formulario.submit()
+                    }
                 }
-            })
+
+            )
 
 
         }
