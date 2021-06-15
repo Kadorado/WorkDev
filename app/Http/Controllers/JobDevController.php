@@ -5,6 +5,7 @@ use App\Models\Developer;
 use App\Models\Vacancy;
 use App\Models\Tecnology;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 
 
 class JobDevController extends Controller
@@ -15,7 +16,7 @@ class JobDevController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    {     
         $jobsDevs =DB::table('users')
         ->join('recruiters', 'users.id', '=', 'recruiters.user_id')
         ->join('vacancies', 'recruiters.id', '=', 'vacancies.recrutier_id')
@@ -25,6 +26,8 @@ class JobDevController extends Controller
         ->get();
         return view("jobDev.index", ['jobsDevs'=>$jobsDevs]);
     }
+
+
 
 
     public function jobdetail($title, $id)

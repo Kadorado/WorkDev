@@ -9,6 +9,8 @@ use App\Http\Controllers\SkillController;
 use App\Http\Controllers\EducationController;
 use App\Http\Controllers\JobDevController;
 use App\Http\Controllers\TecnologyController;
+use App\Http\Controllers\FilterController;
+
 use App\Models\User;
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +33,8 @@ Route::resource('vacante', VacancyController::class);
 Route::get('/', [PageController::class, 'home'])->name('home');
 
 Route::resource('/ofertas', JobDevController::class);
+
+Route::get('/ofert/filterBy', [FilterController::class,'filterby'])->name('filterby');
 
 Route::get('/nosotros', [PageController::class, 'nosotros'])->name('nosotros');
 
