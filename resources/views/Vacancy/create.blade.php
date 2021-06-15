@@ -166,10 +166,10 @@
                     <select name="state" id="state"
                         class="flex w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring">
                         <div class="w-full bg-blue-400 border-b border-gray-100 rounded-t cursor-pointer hover:bg-teal-100">
-                            <option value="0"
+                            <option value="1"
                                 class="relative flex items-center w-full p-2 pl-2 border-l-2 border-transparent">Abierto
                             </option>
-                            <option value="1"
+                            <option value="0"
                                 class="relative flex items-center w-full p-2 pl-2 border-l-2 border-transparent">Cerrado
                             </option>
                         </div>
