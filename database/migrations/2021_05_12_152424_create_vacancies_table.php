@@ -17,7 +17,7 @@ class CreateVacanciesTable extends Migration
             $table->id();
             $table->string('Title');
             $table->integer('ExperienceRequire');
-            $table->float('Salary');
+            $table->double('Salary');
             $table->string('Location');
             $table->string('currency');
             $table->longText('DescriptionVacancy');

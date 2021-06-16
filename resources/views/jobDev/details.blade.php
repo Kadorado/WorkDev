@@ -108,7 +108,7 @@
 
                     <a href="/ofertas"><button
                             class="px-20 py-3 mt-4 mx-20 font-semibold text-white bg-blue-400 rounded-full opacity-75 hover:opacity-90 hover:text-blue-900 focus:outline-none"><i
-                                class="mr-2 -ml-2 mdi mdi-cart "></i> todas las ofertas</button></a>
+                                class="mr-2 -ml-2 mdi mdi-cart "></i>ofertas</button></a>
                 </div>
             </div>
 
