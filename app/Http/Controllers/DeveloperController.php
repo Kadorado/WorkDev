@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Developer;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 
 class DeveloperController extends Controller
@@ -56,9 +57,11 @@ class DeveloperController extends Controller
         $dataDev->about_me = $request->get('about_me');
         $dataDev->country = $request->get('country');
         $dataDev->githubProfile = $request->get('github');
-        $dataDev->curriculum = $route;
-    
+        $dataDev->curriculum = "curriculums/".$name;
+
         $dataDev->save();
+        $developer = Developer::where('user_id', $data['id'])->first();
+
 
         return redirect()->route('developerdata',['developer'=>$dataDev]);
 

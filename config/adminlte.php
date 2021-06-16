@@ -291,6 +291,13 @@ return [
             'can'  => 'developerdata',
 
         ],
+   
+        [
+        'text' => 'Aplicaciones',
+        'url'  => 'applications',
+        'icon' => 'fas fa-thumbtack',
+        'can'  => 'developerdata',
+        ],
         [    
             'text' => 'Tecnologias',
             'url'  => 'tecnologies',
