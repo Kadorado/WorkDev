@@ -51,7 +51,7 @@ Route::resource('tecnologies', TecnologyController::class);
 
 Route::get('/board', [RecruiterController::class, 'board'])->name('board');
 
-
+Route::get('/editDeveloper', [PageController::class, 'editDeveloper'])->name('editdeveloper');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

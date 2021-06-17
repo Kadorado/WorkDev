@@ -7,6 +7,7 @@
 <h2 class="text-xl text-center text-blue-500">Editar mis datos</h2></h2>
 
 <form action="{{ route('developer.edit/'.$developer->id) }}" method="POST" enctype="multipart/form-data" autocomplete=”off”>
+  {{-- {{ route('developer.edit/'.$developer->id) }} --}}
   @csrf
 <div class="relative w-full py-4 mb-3 text-lg">
   <label for="fullName" class="p-2 text-blue-500">Nombre Completo</label>
