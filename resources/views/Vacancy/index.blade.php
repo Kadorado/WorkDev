@@ -50,7 +50,7 @@
                                 </p>
                                 <p>
                                     @if ($vacante->state == 0)
-                                        Cerrad
+                                        Cerrada
                                     @else
                                         Abierta
                                     @endif
@@ -83,6 +83,7 @@
                                                     class="fas fa-trash"></i>
                                                 </i></button>
                                         </form>
+                                        <a href="/candidates/{{ $vacante->id }}">Candidatos</a>
                                     </div>
                                 </div>
                             </div>

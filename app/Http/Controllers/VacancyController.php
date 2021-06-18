@@ -116,6 +116,7 @@ class VacancyController extends Controller
     public function show($id)
     {
         //
+        
     }
 
     /**
@@ -194,4 +195,6 @@ class VacancyController extends Controller
 
         return redirect('/vacante');
     }
+
+
 }

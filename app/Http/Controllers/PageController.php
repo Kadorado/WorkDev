@@ -49,5 +49,14 @@ class PageController extends Controller
         return view("vacancy", ['vacancy'=>$vacancy , 'userTecno'=>$userTecno]);
     }
 
+    public function getCandidates($id){
+
+        $developers = DB::table('developers')
+        ->join('developer_vacancy', 'developers.user_id','=','developer_vacancy.developer_id')
+        ->where('developer_vacancy.vacancy_id', '=', $id)
+        ->get();
+        return view("Vacancy.candidatos", ['candidates'=>$developers]);
+    }
+
 
 }

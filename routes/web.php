@@ -10,6 +10,7 @@ use App\Http\Controllers\EducationController;
 use App\Http\Controllers\JobDevController;
 use App\Http\Controllers\TecnologyController;
 use App\Http\Controllers\ApplicationController;
+use App\Http\Controllers\CandidateController;
 use App\Models\User;
 /*
 |--------------------------------------------------------------------------
@@ -51,9 +52,13 @@ Route::resource('tecnologies', TecnologyController::class);
 
 Route::resource('applications', ApplicationController::class);
 
+//Route::resource('candidates', CandidateController::class);
+
 Route::get('/board', [RecruiterController::class, 'board'])->name('board');
 
 Route::get('/editDeveloper', [PageController::class, 'editDeveloper'])->name('editdeveloper');
+
+Route::get('/candidates/{id:id}', [PageController::class, 'getCandidates'])->name('candidates');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
