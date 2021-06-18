@@ -267,6 +267,12 @@ return [
             'can'  => 'companydata',
         ],
         [
+            'text' => 'Candidatos',
+            'url'  => 'vacante',
+            'icon' => 'fas fa-users',
+            'can'  => 'companydata',
+        ],
+        [
             'text' => 'Mis datos',
             'url'  => 'developerdata',
             'icon' => 'fas fa-fw fa-align-left',
@@ -288,6 +294,13 @@ return [
             'text' => 'Empleos',
             'url'  => 'ofertas',
             'icon' => 'fas fa-search',
+            'can'  => 'developerdata',
+
+        ],
+        [
+            'text' => 'Aplicaciones',
+            'url'  => 'applications',
+            'icon' => 'fas fa-thumbtack',
             'can'  => 'developerdata',
 
         ],

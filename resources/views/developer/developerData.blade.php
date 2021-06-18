@@ -4,8 +4,9 @@
 
 
 @section('content')
-
 <h2 class="text-xl text-center text-blue-500">Datos</h2></h2>
+@if(!isset($developer))
+
 
 <form action="{{ route('developer.store') }}" method="POST" enctype="multipart/form-data" autocomplete=”off”>
     @csrf
@@ -58,12 +59,40 @@
   </div>
 </form>
 
-
-
-@if($developer ?? '')
-<p>{{$developer ?? ''['fullName']}}</p>
 @else
-<p>NO hay desarrollador </p>
+<form action="" method="POST" enctype="multipart/form-data" autocomplete=”off”>
+  @csrf
+<div class="relative w-full py-4 mb-3 text-lg">
+  <label for="fullName" class="p-2 text-blue-500">Nombre Completo</label>
+  <input readonly value={{$developer->fullName}} id="fullName" name="fullName" type="text" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" placeholder="Nombre Completo" style="transition: all 0.15s ease 0s;" required tabindex="1">    
+
+</div>
+<div class="relative w-full py-4 mb-3 text-lg">
+  <label   for="experience" class="p-2 text-blue-500">Experiencia en meses</label>
+  <input readonly value={{$developer->experience}} id="experience" name="experience" type="number" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" placeholder="Experiencia en meses" style="transition: all 0.15s ease 0s;" required tabindex="2">
+
+</div>
+<div class="relative w-full py-4 mb-3 text-lg">
+  <label for="about_me" class="p-2 text-blue-500">Acerca de mí</label>
+  <textarea readonly placeholder={{$developer->about_me}} id="about_me" name="about_me" cols="30" rows="10" placeholder="cuentanos brevemente sobre ti" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" placeholder="Titulo de la vacante" required tabindex="3"></textarea>
+
+</div>
+<div class="relative w-full py-4 mb-3 text-lg">
+  <label for="curriculum" class="p-2 text-blue-500">curriculum</label>
+  <iframe width="700" height="400" src="{{asset($developer->curriculum)}}" frameborder="0"></iframe>
+</div>
+<div class="relative w-full py-4 mb-3 text-lg">
+  <label for="github" class="p-2 text-blue-500">Perfil de github</label>
+  <input readonly value={{$developer->githubProfile}} id="github" name="github" type="url" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" placeholder="Link al Perfil de Github" style="transition: all 0.15s ease 0s;" required tabindex="3">
+
+</div>
+<div class="mt-4 mb-32 text-center">
+  <a href="{{url('editDeveloper')}}">
+    <button type="button" class="justify-center w-32 p-3 mx-6 text-white bg-green-600 rounded-lg shadow outline-none focus:bg-green-700 hover:bg-green-500" tabindex="4">editar</button>
+  </a>
+</div>
+</form>
+
 @endif
 
 @stop

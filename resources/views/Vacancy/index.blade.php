@@ -87,6 +87,7 @@
                                                     class="fas fa-trash outline-none"></i>
                                                 </i></button>
                                         </form>
+                                        <a href="/candidates/{{ $vacante->id }}">Candidatos</a>
                                     </div>
                                 </div>
                             </div>

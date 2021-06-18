@@ -5,6 +5,7 @@ use App\Models\Developer;
 use App\Models\Vacancy;
 use App\Models\Tecnology;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 
 
@@ -22,8 +23,19 @@ class PageController extends Controller
         return view('companydate');
     }
 
-    public function developerdata(Developer $developer){
+    public function developerdata(){
+        $id = Auth::id();
+        $developer = $developer = Developer::where('user_id', $id)->first();
+        // dd($developer);
         return view('developer.developerData', [
+            'developer' => $developer]);
+    }
+
+    public function editDeveloper(){
+        $id = Auth::id();
+        $developer = $developer = Developer::where('user_id', $id)->first();
+        // dd($developer);
+        return view('developer.editDeveloper', [
             'developer' => $developer]);
     }
 
@@ -35,6 +47,15 @@ class PageController extends Controller
            ->select('tecnologies.tecno')
            ->get();
         return view("vacancy", ['vacancy'=>$vacancy , 'userTecno'=>$userTecno]);
+    }
+
+    public function getCandidates($id){
+
+        $developers = DB::table('developers')
+        ->join('developer_vacancy', 'developers.user_id','=','developer_vacancy.developer_id')
+        ->where('developer_vacancy.vacancy_id', '=', $id)
+        ->get();
+        return view("Vacancy.candidatos", ['candidates'=>$developers]);
     }
 
 

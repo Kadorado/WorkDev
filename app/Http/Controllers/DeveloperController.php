@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Developer;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 
 class DeveloperController extends Controller
@@ -56,9 +57,11 @@ class DeveloperController extends Controller
         $dataDev->about_me = $request->get('about_me');
         $dataDev->country = $request->get('country');
         $dataDev->githubProfile = $request->get('github');
-        $dataDev->curriculum = $route;
-    
+        $dataDev->curriculum = "curriculums/".$name;
+
         $dataDev->save();
+        $developer = Developer::where('user_id', $data['id'])->first();
+
 
         return redirect()->route('developerdata',['developer'=>$dataDev]);
 
@@ -83,7 +86,7 @@ class DeveloperController extends Controller
      */
     public function edit($id)
     {
-        //
+
     }
 
     /**
@@ -95,7 +98,42 @@ class DeveloperController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
+        //verifies the fields that has information to update
+
+        if($request->file('curriculum'!==null)){
+            $file=$request->file('curriculum');
+            //nombra el archivo con la fecha la hora y la extension
+            $name = "pdf_".time().".".$file->guessExtension();
+            //asigna la ruta para guardarlo
+            $route = public_path("curriculums/".$name);
+            //guarda el archivo en la ruta especificada
+            copy($file, $route);
+            $developer->curriculum = "curriculums/".$name;
+        }
+
+        $developer = Developer::find($id);
+        if($request->get('fullName')!== null){
+            $developer->fullName = $request->get('fullName');
+        }
+        if($request->get('experience')!== null){
+            $developer->experience = $request->get('experience');
+        }
+        if($request->get('about_me')!== null){
+            $developer->about_me = $request->get('about_me');
+        }
+        if($request->get('country') !== null){
+            $developer->country = $request->get('country');
+        }
+        if($request->get('github')!== null){
+            $developer->githubProfile = $request->get('github');
+        }
+ 
+        $developer->save();
+
+        $editedDeveloper = Developer::find($id);
+        
+        return redirect()->route('developerdata');
     }
 
     /**

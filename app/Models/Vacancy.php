@@ -16,5 +16,8 @@ class Vacancy extends Model
     public function tecno(){
         return $this->hasMany(Tecnology::class);
     }
+    public function developers(){
+        return $this->belongsToMany(Developer::class);
+    }
 
 }

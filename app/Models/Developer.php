@@ -25,4 +25,8 @@ class Developer extends Model
     public function tecnologies(){
         return $this->belongsToMany(Tecnology::class);
     }
+    //vacancies
+    public function vacancies(){
+        return $this->belongsToMany(Vacancy::class);
+    }
 }
