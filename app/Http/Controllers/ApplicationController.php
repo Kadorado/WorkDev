@@ -33,11 +33,12 @@ class ApplicationController extends Controller
             $userApplication = DB::table('vacancies')
                 ->join('developer_vacancy', 'vacancies.id','=','developer_vacancy.vacancy_id')
                 ->join('recruiters', 'vacancies.recrutier_id', '=', 'vacancies.recrutier_id')
+                ->join('users','recruiters.user_id','=','users.id')
                 ->where('developer_vacancy.developer_id', '=', $userId)
                 ->where('state','=',1)
-                ->select('vacancies.*', 'recruiters.NameCompany')
+                ->select('vacancies.*', 'recruiters.*', 'users.profile_photo_path')
                 ->get();
-                dd($userApplication);
+                
         }
         else{
             $userApplication="mensaje de error";             
@@ -71,8 +72,14 @@ class ApplicationController extends Controller
         $vacancy = Vacancy::find($vacancyId);
         $developer = Developer::where('user_id',$userId)->firstOrFail();
 
-        $vacancy->developers()->attach($userId);
-        return "ok";
+        try{
+            $vacancy->developers()->attach($userId);
+        }
+        catch(Exception $e){
+            throw $e;
+        }
+        
+        return redirect()->action([ApplicationController::class, 'index']);
 
     }
 
