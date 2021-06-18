@@ -15,13 +15,15 @@ class CreateTableDeveloperVacancy extends Migration
     {
         //
         Schema::create('developer_vacancy', function (Blueprint $table) {
-            $table->id();
+            
+            $table->unsignedBigInteger('vacancy_id');
+            $table->unsignedBigInteger('developer_id');
+
             $table->timestamps();
 
-            $table->bigInteger('id_vacancy')->unsigned();
-            $table->bigInteger('developer_id')->unsigned();
-       
-            $table->foreign('id_vacancy')->references('id')->on("vacancies")
+            $table->primary(['vacancy_id', 'developer_id']);
+
+            $table->foreign('vacancy_id')->references('id')->on("vacancies")
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 

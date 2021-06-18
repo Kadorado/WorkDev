@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Application;
+use App\Models\Vacancy;
+use App\Models\Developer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -29,16 +31,19 @@ class ApplicationController extends Controller
         if(!empty($id_developer[0]->id)){
             //get actual user applications
             $userApplication = DB::table('vacancies')
-                ->join('developer_vacancy', 'vacancies.id','=','developer_vacancy.id_vacancy')
+                ->join('developer_vacancy', 'vacancies.id','=','developer_vacancy.vacancy_id')
+                ->join('recruiters', 'vacancies.recrutier_id', '=', 'vacancies.recrutier_id')
                 ->where('developer_vacancy.developer_id', '=', $userId)
-                // ->select('skills.skillName', 'developer_skill.skill_id')
+                ->where('state','=',1)
+                ->select('vacancies.*', 'recruiters.NameCompany')
                 ->get();
+                dd($userApplication);
         }
         else{
-            $userApplication="mensaje de error";
-                return view('developer.applications', [
-                'userApplication' => $userApplication]);
+            $userApplication="mensaje de error";             
             };
+            
+        return view('developer.applications', ['userApplication' => $userApplication]);
     }
 
     /**
@@ -59,7 +64,16 @@ class ApplicationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //saves the application
+        //obtiene el id del usuario actual
+        $userId = Auth::id();
+        $vacancyId =  $request->get('vacancy_id');
+        $vacancy = Vacancy::find($vacancyId);
+        $developer = Developer::where('user_id',$userId)->firstOrFail();
+
+        $vacancy->developers()->attach($userId);
+        return "ok";
+
     }
 
     /**

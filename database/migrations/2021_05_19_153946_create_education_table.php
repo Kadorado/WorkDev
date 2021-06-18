@@ -38,7 +38,8 @@ class CreateEducationTable extends Migration
             $table->foreign('developer_id')
                 ->references('user_id')
                 ->on('developers')
-                ->onDelete('cascade');
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
         });
     }
 

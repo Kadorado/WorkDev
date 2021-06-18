@@ -64,7 +64,7 @@
   @csrf
 <div class="relative w-full py-4 mb-3 text-lg">
   <label for="fullName" class="p-2 text-blue-500">Nombre Completo</label>
-  <input readonly value={{$developer->fullName}}id="fullName" name="fullName" type="text" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" placeholder="Nombre Completo" style="transition: all 0.15s ease 0s;" required tabindex="1">    
+  <input readonly value={{$developer->fullName}} id="fullName" name="fullName" type="text" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" placeholder="Nombre Completo" style="transition: all 0.15s ease 0s;" required tabindex="1">    
 
 </div>
 <div class="relative w-full py-4 mb-3 text-lg">
