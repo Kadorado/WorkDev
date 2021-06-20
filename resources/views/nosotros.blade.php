@@ -19,7 +19,7 @@
                 <!--Left Col-->
                 <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
                     <p class=" tracking-loose w-full ml-6">WorkDev</p>
-                    <h1 class="my-4 text-5xl font-bold ml-6 leading-tight">
+                    <h1 class="my-4 text-xl font-bold ml-6 leading-tight">
                         Es ideal para empresas y desarrollador@s!
                     </h1>
                     <p class="leading-normal text-2xl mb-8 ml-6">
@@ -229,7 +229,7 @@
             <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
                 <!--Left Col-->
                 <div class="flex flex-col  w-full md:w-2/5 justify-center items-start text-center md:text-left">
-                    <h3 class="my-4  text-5xl font-bold ml-12 leading-tight">
+                    <h3 class="my-4  text-2xl font-bold ml-12 leading-tight">
                         Contrata talento tecnológico calificado
                     </h3>
                     <p class="leading-normal text-2xl mb-8 ml-12 mr-4">

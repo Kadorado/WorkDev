@@ -35,18 +35,16 @@
                 </div>
             </td>
             <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
-                <form action="{{route('skills.destroy', $userSkill->skill_id)}}" method="POST">
+                <form action="{{route('skills.destroy', $userSkill->skill_id)}}" method="POST" id={{$userSkill->skill_id}}>
                     @csrf
                     @method('DELETE')
-                    <button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded">
+                    <button  type="button" class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded" onclick="deleteSkills({{$userSkill->skill_id}})">
                         eliminar
                     </button>
-                </a>
+                {{-- </a> --}}
             </form>
-                
             </td>
               </tr>
-    
 @endforeach
     </tbody>
 </table>
@@ -63,9 +61,6 @@
 
 
 
-
-
-
 @stop
 
 @section('css')
@@ -73,5 +68,45 @@
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+
+
+<script>
+
+
+function deleteSkills(id) {
+
+var formulario = document.getElementById(id);
+
+Swal.fire({
+    title: '¿Estas seguro de querer eliminar esta habilidad?',
+    text: "¡No podras revertir esto!",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Si,Eliminar!',
+    cancelButtonText: "Cancelar"
+}).then((result) => {
+
+        confirmation = result.value
+        if (confirmation === true) {
+
+            swal.fire(
+                'Eliminada!',
+                'Esta habilidad ha sido eliminada.',
+                'success'
+            ), formulario.submit()
+        }
+    }
+
+)
+
+
+}
+
+</script>
+
+
+
+
 @stop

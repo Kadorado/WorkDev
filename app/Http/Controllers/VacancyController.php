@@ -190,6 +190,8 @@ class VacancyController extends Controller
      */
     public function destroy($id)
     {
+
+        var_dump($id) ;
         $vacancy = Vacancy::find($id);
         $vacancy->delete();
 

@@ -76,13 +76,13 @@
                                 <div class="space-y-2">
                                     <div class="border-2 flex items-center p-2 rounded justify-between space-x-2">
                                         <form action="{{ route('vacante.destroy', $vacante->id) }}" method="POST"
-                                            id="deleteVacancy">
+                                            id={{$vacante->id}}>
                                             <a href="/vacante/{{ $vacante->id }}/edit"
                                                 class="text-grey-lighter font-bold py-2 px-4 rounded text-xs bg-green hover:bg-green-dark"><i
                                                     class="fas fa-pencil-alt"></i></a>
                                             @csrf
                                             @method('DELETE')
-                                            <button type="button" onclick="DeleteVacancy()"
+                                            <button type="button" onclick="DeleteVacancy({{$vacante->id}})"
                                                 class="text-grey-lighter  font-bold py-2 px-4 rounded text-xs bg-red hover:bg-red-dark"><i
                                                     class="fas fa-trash outline-none"></i>
                                                 </i></button>
@@ -130,10 +130,8 @@
 
 @section('js')
     <script>
-        function DeleteVacancy() {
-
-            var formulario = document.getElementById("deleteVacancy");
-
+        function DeleteVacancy(id) {
+        var formulario = document.getElementById(id);
             Swal.fire({
                 title: '¿Estas seguro de querer eliminar esta vacante?',
                 text: "¡No podras revertir esto!",
@@ -152,7 +150,10 @@
                             'Eliminada!',
                             'Tu vacante ha sido eliminada.',
                             'success'
-                        ), formulario.submit()
+                        )   
+                        formulario.submit();
+
+
                     }
                 }
 
