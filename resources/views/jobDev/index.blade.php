@@ -7,13 +7,13 @@
     <!-- This is an example component -->
 
 
-    <section class="bg-indigo-dark h-50 p-8">
-        <h1 class="text-center text-blue  text-bold">Ofertas disponibles</h1>
-        <form class="container mx-auto py-8" action="/ofert/filterBy" id="searchForm">
+    <section class="p-8 bg-indigo-dark h-50">
+        <h1 class="text-center text-blue text-bold">Ofertas disponibles</h1>
+        <form class="container flex justify-center py-8 mx-auto" action="/ofert/filterBy" id="searchForm">
             <input name="searchby" id="search"
-                class="w-full h-12 px-3 rounded mb-8 focus:outline-none focus:shadow-outline text-s   px-8 shadow-lg"
+                class="w-2/3 h-12 px-3 mx-4 mb-8 rounded shadow-lg focus:outline-none focus:shadow-outline text-s"
                 type="search" placeholder="Buscar por palabra clave">
-            <button class="btn btn-primary" type="button" onclick="SearchVerifed()">Buscar</button>
+            <button class="flex items-center justify-center w-10 h-10 px-4 py-4 mb-8 font-bold text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-105" type="button" onclick="SearchVerifed()"><i class="fas fa-search"></i></button>
         </form>
     </section>
 
@@ -26,9 +26,9 @@
         @foreach ($jobsDevs as $jobDev)
 
             <a href="{{ route('jobdetail', [$jobDev->Title, $jobDev->id]) }}">
-                <div class="lg:flex shadow rounded-lg border  border-gray-400 mb-2">
-                    <div class="bg-blue-600 rounded-lg lg:w-2/12 py-1 block h-full shadow-inner">
-                        <div class="text-center tracking-wide">
+                <div class="mb-2 border border-gray-400 rounded-lg shadow lg:flex">
+                    <div class="block h-full py-1 bg-blue-600 rounded-lg shadow-inner lg:w-2/12">
+                        <div class="tracking-wide text-center">
                             @if ($jobDev->profile_photo_path !== null)
                                 @php
                                     $path_photo_2 = 'storage/' . $jobDev->profile_photo_path;
@@ -42,20 +42,20 @@
                                 alt="logo de la empresa">
                         </div>
                     </div>
-                    <div class="w-full  lg:w-11/12 xl:w-full px-1 bg-white py-5 lg:px-2 lg:py-2 tracking-wide">
-                        <div class="flex flex-row lg:justify-start justify-center">
-                            <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
+                    <div class="w-full px-1 py-5 tracking-wide bg-white lg:w-11/12 xl:w-full lg:px-2 lg:py-2">
+                        <div class="flex flex-row justify-center lg:justify-start">
+                            <div class="px-2 text-sm font-medium text-center text-gray-700 lg:text-left">
                                 <i class="far fa-clock"></i>
                                 {{ \Carbon\Carbon::parse($jobDev->created_at)->diffForHumans() }}
                             </div>
-                            <div class="text-gray-700 font-bold font-medium text-sm text-center lg:text-left px-2">
+                            <div class="px-2 text-sm font-medium font-bold text-center text-gray-700 lg:text-left">
                                 Compañia : {{ $jobDev->NameCompany }}
                             </div>
                         </div>
-                        <div class=" uppercase font-semibold text-gray-800 text-l text-center lg:text-left px-2">
+                        <div class="px-2 font-semibold text-center text-gray-800 uppercase text-l lg:text-left">
                             {{ $jobDev->Title }}
                         </div>
-                        <div class="text-gray-600 font-medium text-sm pt-1 text-center lg:text-left px-2 uppercase">
+                        <div class="px-2 pt-1 text-sm font-medium text-center text-gray-600 uppercase lg:text-left">
                             {{ $jobDev->Salary }} {{ $jobDev->currency }}, {{ $jobDev->Location }}
                         </div>
                     </div>
@@ -72,7 +72,12 @@
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
     <link href="https://unpkg.com/tailwindcss@1.3.4/dist/tailwind.min.css" rel="stylesheet">
-
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
 @stop
 
 @section('js')

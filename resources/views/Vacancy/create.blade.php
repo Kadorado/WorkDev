@@ -105,7 +105,7 @@
                                     <div x-show="selected.length    == 0" class="flex-1">
                                         <input placeholder="Select a option" 
                                             class="w-full h-full p-1 px-2 text-gray-800 bg-transparent outline-none appearance-none"
-                                            x-bind:value="selectedValues()" name="userTecno" id="userTecno">
+                                            x-bind:value="selectedValues()" name="userTecno" id="userTecno" required>
                                     </div>
                                 </div>
                                 <div
