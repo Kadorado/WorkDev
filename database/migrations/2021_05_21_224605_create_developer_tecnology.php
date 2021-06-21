@@ -14,9 +14,9 @@ class CreateDeveloperTecnology extends Migration
     public function up()
     {
         Schema::create('developer_tecnology', function (Blueprint $table) {
-            $table->id();
+            // $table->id();
             $table->timestamps();
-
+            $table->primary(['tecnology_id','developer_id']);
             $table->bigInteger('tecnology_id')->unsigned();
             $table->bigInteger('developer_id')->unsigned();
        

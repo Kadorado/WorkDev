@@ -81,6 +81,10 @@
                 <!-- info empresa -->
                 <h2 class="mb-5 text-2xl font-bold uppercase ">Empresa: {{ $vacancy[0]->NameCompany }}
                 </h2>
+
+                <a class="mb-5 text-2xl font-bold uppercase " href= {{ $vacancy[0]->WebsiteCompany }} target="_blank">Sitio web compañia
+                </a>
+
                 <div class="flex">
                     <div class="items-center flex-1 m-auto">
                         <i class="fa fa-calendar" aria-hidden="false"></i>

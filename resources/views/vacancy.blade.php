@@ -80,6 +80,8 @@
                 <!-- info empresa -->
                 <h2 class="mb-5 text-2xl font-bold uppercase ">Empresa: {{ $vacancy->recrutier->NameCompany }}
                 </h2>
+                <a class="mb-5 text-2xl font-bold uppercase " href= {{ $vacancy->recrutier->WebsiteCompany }} target="_blank">Sitio web compañia
+                </a>
                 <div class="flex">
                     <img src={{ asset('favicons/logo.jpg') }} alt="logo de la empresa"
                         class="flex-none object-cover w-16 h-16 m-4 rounded-full ">

@@ -121,15 +121,12 @@ class EducationController extends Controller
             ]);
         }
         catch(Exception $e){
-            throw $e;   
+            throw $e;
             $msg = "no puedes agregar dos veces la misma carrera";
         }
         finally{
             return redirect()->action([EducationController::class, 'index']); 
         }
-
-
-         
     }
 
     /**

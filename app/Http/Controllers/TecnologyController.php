@@ -72,9 +72,55 @@ class TecnologyController extends Controller
         $userId = Auth::user();
         $tec = $request->get('tech');
         $tecno = Tecnology::find($tec);
-        $tecno->developer()->attach($userId);
+        // $tecno->developer()->attach($userId);
 
-        return redirect()->action([TecnologyController::class, 'index']);
+        // //get
+        $TecnoId = DB::table('tecnologies')
+            ->where('tecno','=',$tecno->tecno)
+            ->select('id')
+            ->get()
+            ;
+
+
+        // // //inserts the data in table
+        $msg = NULL;
+
+        // $ExistTecnology = DB::table('developer_tecnology')
+        // ->where('tecnology_id','=',$TecnoId[0]->id ,'and')->where('developer_id','=',$userId->id)
+        // ->select("id")
+        // ->get();
+
+        // echo $ExistTecnology;
+
+        // if(sizeof($ExistTecnology)==1){
+        //     $msg = "Ya agregaste esta tecnologia";
+        //    return redirect()->action([TecnologyController::class, 'index']);
+        // }
+        // else{
+        //     DB::table('developer_tecnology')->insert([
+        //                  'tecnology_id' => $TecnoId[0]->id,
+        //                  'developer_id' => $userId->id,
+        //              ]);
+
+        //     return redirect()->action([TecnologyController::class, 'index']);
+
+        // }
+
+        try{
+            DB::table('developer_tecnology')->insert([
+                'tecnology_id' => $TecnoId[0]->id,
+                'developer_id' => $userId->id,
+            ]);
+        }
+
+        catch(\Exception $e){
+            throw $e;
+            $msg ="ya agregaste esa tecnologia";
+        
+        }
+        finally{
+            return redirect()->action([TecnologyController::class, 'index']);
+        }
 
 
     }
@@ -121,6 +167,11 @@ class TecnologyController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('developer_tecnology')
+            ->where('tecnology_id', '=', $id)
+            ->where('developer_id','=',Auth::id() )
+            ->delete();
+
+        return redirect()->action([TecnologyController::class, 'index']);
     }
 }
