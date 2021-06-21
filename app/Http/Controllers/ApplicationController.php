@@ -70,15 +70,20 @@ class ApplicationController extends Controller
         $userId = Auth::id();
         $vacancyId =  $request->get('vacancy_id');
         $vacancy = Vacancy::find($vacancyId);
-        $developer = Developer::where('user_id',$userId)->firstOrFail();
+        $developer = Developer::where('user_id',$userId)->first();
 
-        try{
+        if($developer == null){
+            return redirect()->route('developerdata',['developer'=>$developer]);
+        }
+        //verifies if the user has applied to the vancacy 
+        $applicationOnDb = DB::table('developer_vacancy')
+        ->where('developer_vacancy.vacancy_id', $vacancyId)
+        ->where('developer_vacancy.developer_id',$userId)
+        ->first();
+
+        if($applicationOnDb == null){
             $vacancy->developers()->attach($userId);
         }
-        catch(Exception $e){
-            throw $e;
-        }
-        
         return redirect()->action([ApplicationController::class, 'index']);
 
     }
