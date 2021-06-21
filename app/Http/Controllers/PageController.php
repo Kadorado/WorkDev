@@ -6,6 +6,7 @@ use App\Models\Vacancy;
 use App\Models\Tecnology;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\DeveloperController;
 
 
 
