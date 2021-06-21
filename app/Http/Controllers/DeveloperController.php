@@ -39,7 +39,7 @@ class DeveloperController extends Controller
     public function store(Request $request)
     {
  
-       //obtiene el archivo que se ha subido
+        //obtiene el archivo que se ha subido
         $file=$request->file('curriculum');
         //nombra el archivo con la fecha la hora y la extension
         $name = "pdf_".time().".".$file->guessExtension();
@@ -99,8 +99,8 @@ class DeveloperController extends Controller
     public function update(Request $request, $id)
     {
         
+        $developer = Developer::find($id);
         //verifies the fields that has information to update
-
         if($request->file('curriculum'!==null)){
             $file=$request->file('curriculum');
             //nombra el archivo con la fecha la hora y la extension
@@ -111,8 +111,6 @@ class DeveloperController extends Controller
             copy($file, $route);
             $developer->curriculum = "curriculums/".$name;
         }
-
-        $developer = Developer::find($id);
         if($request->get('fullName')!== null){
             $developer->fullName = $request->get('fullName');
         }
@@ -131,8 +129,6 @@ class DeveloperController extends Controller
  
         $developer->save();
 
-        $editedDeveloper = Developer::find($id);
-        
         return redirect()->route('developerdata');
     }
 
