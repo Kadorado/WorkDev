@@ -16,8 +16,8 @@ class TecnologyController extends Controller
      */
     public function index()
     {
-         //obtiene el id del usuario actual
-         $userId = Auth::id();
+        //obtiene el id del usuario actual
+        $userId = Auth::id();
         //obtiene la lista de tecnologias
         $tecnologies = DB::table('tecnologies')
             ->select('tecnologies.tecno', 'tecnologies.id')
@@ -29,6 +29,8 @@ class TecnologyController extends Controller
             ->select('developers.id')
             ->get();
 
+        
+
         if(!empty($id_developer[0]->id)){
             //obtiene las tecnologias del usuario actual
              $userTecno = DB::table('tecnologies')
@@ -39,6 +41,7 @@ class TecnologyController extends Controller
                  return view('developer.tech', [
                      'userTecno' => $userTecno,
                      'tecnologies' => $tecnologies,
+                     
                     ]);
                  }
          else{
@@ -46,6 +49,7 @@ class TecnologyController extends Controller
                  return view('developer.tech', [
                     'userTecno' => $userTecno,
                     'tecnologies' => $tecnologies,
+                    
                  ]);
              };
     }
@@ -85,27 +89,6 @@ class TecnologyController extends Controller
         // // //inserts the data in table
         $msg = NULL;
 
-        // $ExistTecnology = DB::table('developer_tecnology')
-        // ->where('tecnology_id','=',$TecnoId[0]->id ,'and')->where('developer_id','=',$userId->id)
-        // ->select("id")
-        // ->get();
-
-        // echo $ExistTecnology;
-
-        // if(sizeof($ExistTecnology)==1){
-        //     $msg = "Ya agregaste esta tecnologia";
-        //    return redirect()->action([TecnologyController::class, 'index']);
-        // }
-        // else{
-        //     DB::table('developer_tecnology')->insert([
-        //                  'tecnology_id' => $TecnoId[0]->id,
-        //                  'developer_id' => $userId->id,
-        //              ]);
-
-        //     return redirect()->action([TecnologyController::class, 'index']);
-
-        // }
-
         try{
             DB::table('developer_tecnology')->insert([
                 'tecnology_id' => $TecnoId[0]->id,
@@ -119,7 +102,7 @@ class TecnologyController extends Controller
         
         }
         finally{
-            return redirect()->action([TecnologyController::class, 'index']);
+            return redirect()->action([TecnologyController::class, 'index'],array('msg'=>$msg));
         }
 
 

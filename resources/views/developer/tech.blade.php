@@ -44,6 +44,23 @@
         </div>
 
     @else
+       
+        {{-- form añadir educacion --}}
+        <form action={{ route('tecnologies.store') }} method="POST" class="w-2/3 mx-auto mb-4">
+            @csrf
+            <div class="flex flex-row flex-wrap justify-center mt-6">
+                <select id="tech" name="tech" required
+                    class="flex-1 block w-2/3 p-2 mx-2 mt-1 bg-white border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                    @foreach ($tecnologies as $tecno)
+                        <option value="{{ $tecno->id }}">{{ $tecno->tecno }}</option>
+                    @endforeach
+
+                </select>
+
+                <input type="submit" value="guardar"
+                    class="flex-0.5 px-4 py-2 m-auto mx-6 font-bold text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-105">
+            </div>
+        </form>
 
         <body class="flex items-center justify-center">
             <div class="container">
@@ -65,10 +82,13 @@
 
                                 <td
                                     class="p-3 text-red-400 border cursor-pointer lg:w-1/5 sm:w-1/5 border-grey-light hover:bg-gray-100 hover:text-red-600 hover:font-medium">
-                                    <form action="{{ route('tecnologies.destroy', $tec->tecnology_id) }}" method="POST" id={{ $tec->tecnology_id}}>
+                                    <form action="{{ route('tecnologies.destroy', $tec->tecnology_id) }}" method="POST"
+                                        id={{ $tec->tecnology_id }}>
                                         @csrf
                                         @method('DELETE')
-                                        <button type="button" class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded" onclick="deleteTecnology({{$tec->tecnology_id}})" > 
+                                        <button type="button"
+                                            class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded"
+                                            onclick="deleteTecnology({{ $tec->tecnology_id }})">
                                             Eliminar
                                         </button>
                                         </a>
@@ -108,23 +128,6 @@
 
         </style>
 
-        {{-- form añadir educacion --}}
-        <form action={{ route('tecnologies.store') }} method="POST" class="w-2/3 mx-auto">
-            @csrf
-            <div class="flex flex-row flex-wrap justify-center mt-6">
-                <select id="tech" name="tech" required
-                    class="flex-1 block w-2/3 p-2 mx-2 mt-1 bg-white border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
-                    @foreach ($tecnologies as $tecno)
-                        <option value="{{ $tecno->id }}">{{ $tecno->tecno }}</option>
-                    @endforeach
-
-                </select>
-
-                <input type="submit" value="guardar"
-                    class="flex-0.5 px-4 py-2 m-auto mx-6 font-bold text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-105">
-            </div>
-        </form>
-
     @endif
 
 @stop
@@ -134,40 +137,38 @@
 @stop
 
 @section('js')
- 
-        <script>
 
+    <script>
+        function deleteTecnology(id) {
 
-            function deleteTecnology(id) {
+            var formulario = document.getElementById(id);
 
-                var formulario = document.getElementById(id);
+            Swal.fire({
+                title: '¿Estas seguro de querer eliminar esta Tecnologia?',
+                text: "¡No podras revertir esto!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Si,Eliminar!',
+                cancelButtonText: "Cancelar"
+            }).then((result) => {
 
-                Swal.fire({
-                    title: '¿Estas seguro de querer eliminar esta Tecnologia?',
-                    text: "¡No podras revertir esto!",
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: 'Si,Eliminar!',
-                    cancelButtonText: "Cancelar"
-                }).then((result) => {
+                    confirmation = result.value
+                    if (confirmation === true) {
 
-                        confirmation = result.value
-                        if (confirmation === true) {
-
-                            swal.fire(
-                                'Eliminada!',
-                                'Esta habilidad ha sido eliminada.',
-                                'success'
-                            ), formulario.submit()
-                        }
+                        swal.fire(
+                            'Eliminada!',
+                            'Esta habilidad ha sido eliminada.',
+                            'success'
+                        ), formulario.submit()
                     }
+                }
 
-                )
+            )
 
 
-            }
+        }
 
     </script>
 @stop
