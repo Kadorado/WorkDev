@@ -2,11 +2,11 @@
 
 
 
+
 @section('content')
 
 
-
-    <div class="relative w-full max-w-2xl p-10 mx-auto text-gray-800 bg-white rounded shadow-xl lg:p-20 md:text-left">
+ <div class="relative w-full max-w-2xl p-10 mx-auto text-gray-800 bg-white rounded shadow-xl lg:p-20 md:text-left">
         <!-- candado de solo para usuarios -->
         <p class="flex items-center text-sm text-gray-600">
             <svg class="w-3 h-3 mr-2 text-gray-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
