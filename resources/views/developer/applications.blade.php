@@ -10,6 +10,7 @@
 @elseif($userApplication->count()==0)
     <h6>Aún no has aplicado a ninguna oferta</h6>
 @else
+{{-- @dd($userApplication) --}}
     @foreach ($userApplication as $ap )
         <div class="lg:flex shadow rounded-lg border  border-gray-400 mb-2">
             <div class="bg-blue-600 rounded-lg lg:w-2/12 py-1 block h-full shadow-inner">
@@ -41,6 +42,16 @@
               <div class="text-gray-600 font-medium text-sm pt-1 text-center lg:text-left px-2 uppercase">
                 {{$ap->Salary}} {{$ap->currency}}, {{$ap->Location}}
               </div>
+              <form action="{{ route('applications.destroy', $ap->vacancy_id) }}" method="POST" id={{$ap->vacancy_id}}>
+                @csrf
+                @method('DELETE')
+                <div class="text-right">
+                  <button type="button" onclick="DeleteApplication({{$ap->vacancy_id}})" class="justify-center w-auto p-1 mx-6 text-white bg-green-600 rounded-lg shadow outline-none focus:bg-green-700 hover:bg-green-500">
+                    eliminar aplicacíon
+                  </button>
+              </div>
+              </form>
+              
             </div>
           </div>
     @endforeach
@@ -55,6 +66,39 @@
 
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+    <script>
+        function DeleteApplication(id) {
+        var formulario = document.getElementById(id);
+            Swal.fire({
+                title: '¿Estas seguro de querer eliminar tu aplicación?',
+                text: "¡No podras revertir esto!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Si,Eliminar!',
+                cancelButtonText: "Cancelar"
+            }).then((result) => {
+
+                    confirmation = result.value
+                    if (confirmation === true) {
+
+                        swal.fire(
+                            '',
+                            'ya no estas aplicando a la vacante',
+                            'success'
+                        )   
+                        formulario.submit();
+
+
+                    }
+                }
+
+            )
+
+
+        }
+
+    </script>
 @stop
 

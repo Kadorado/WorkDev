@@ -36,7 +36,7 @@ class ApplicationController extends Controller
                 ->join('users','recruiters.user_id','=','users.id')
                 ->where('developer_vacancy.developer_id', '=', $userId)
                 ->where('state','=',1)
-                ->select('vacancies.*', 'recruiters.*', 'users.profile_photo_path')
+                ->select('vacancies.*', 'recruiters.*', 'users.profile_photo_path','developer_vacancy.*')
                 ->get();
                 
         }
@@ -102,12 +102,13 @@ class ApplicationController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Application  $application
+     * @param $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Application $application)
+    public function edit($id)
     {
         //
+
     }
 
     /**
@@ -125,11 +126,19 @@ class ApplicationController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Application  $application
+     *      * @param $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Application $application)
+    public function destroy($id)
     {
-        //
+        //obtiene el id del usuario actual
+        $userId = Auth::id();
+        $application = DB::table('developer_vacancy')
+                        ->where('developer_vacancy.developer_id', $userId)
+                        ->where('developer_vacancy.vacancy_id', $id)
+                        ->delete();
+        return redirect()->action([ApplicationController::class, 'index']);
+
+  
     }
 }
