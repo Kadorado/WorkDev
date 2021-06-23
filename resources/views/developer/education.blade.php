@@ -12,7 +12,7 @@
 
     @if ($userEducation === 'mensaje de error')
         <div class="flex flex-col items-center justify-center w-full text-center md:w-4/5 md:text-center">
-            <h1 class="mb-10 text-xl text-center text-blue-500">por favor primero completa tus datos</h1>
+            <h1 class="mb-10 text-xl text-center text-bold text-blue-500">por favor primero completa tus datos</h1>
 
             <a href="/developerdata">
                 <button

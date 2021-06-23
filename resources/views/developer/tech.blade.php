@@ -12,7 +12,7 @@
 
     @if ($userTecno === 'mensaje de error')
         <div class="flex flex-col items-center justify-center w-full text-center md:w-4/5 md:text-center">
-            <h1 class="mb-10 text-xl text-center text-blue-500">Por favor primero completa tus datos</h1>
+            <h1 class="mb-10 text-xl text-center text-bold text-blue-500">Por favor primero completa tus datos</h1>
 
             <a href="/developerdata">
                 <button
@@ -21,7 +21,7 @@
         </div>
     @elseif(count($userTecno)== 0 )
         <div class="flex flex-col items-center justify-center w-full text-center md:text-center">
-            <h1 class="mb-10 text-xl text-center text-blue-500">no haz registrado tus tecnologias</h1>
+            <h1 class="mb-10 text-xl text-center text-blue-500">no has registrado tus tecnologias</h1>
             <form action={{ route('tecnologies.store') }} method="POST" class="w-2/3">
                 @csrf
                 <div class="flex flex-row flex-wrap">
@@ -131,47 +131,6 @@
         </body>
 
 
-        {{-- <body class="flex items-center justify-center">
-                                <div class="container">
-                                    @foreach ($userTecno as $tec)
-                                        <table
-                                            class="flex flex-row flex-wrap w-full my-2 overflow-hidden rounded-lg sm:bg-white sm:shadow-lg">
-
-                                            <thead class="text-white">
-                                                <tr
-                                                    class="flex flex-col flex-wrap mb-2 bg-blue-400 rounded-l-lg sm:table-row sm:rounded-none sm:mb-0">
-                                                    <th class="h-20 p-3 text-left">Tecnología</th>
-                                                    <th class="p-3 text-left" width="110px">Acciones</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody class="flex-1 sm:flex-none">
-                                                <tr class="flex flex-col mb-2 flex-no wrap sm:table-row sm:mb-0">
-                                                    <td
-                                                        class="h-20 p-3 text-xs border border-grey-light lg:w-2/5 lg:text-xl sm:w-2/5 sm:text-xl hover:bg-gray-100">
-                                                        {{ $tec->tecno }}</td>
-
-                                                    <td
-                                                        class="p-3 text-red-400 border cursor-pointer lg:w-1/5 sm:w-1/5 border-grey-light hover:bg-gray-100 hover:text-red-600 hover:font-medium">
-                                                        <form
-                                                            action="{{ route('tecnologies.destroy', $tec->tecnology_id) }}"
-                                                            method="POST" id={{ $tec->tecnology_id }}>
-                                                            @csrf
-                                                            @method('DELETE')
-                                                            <button type="button"
-                                                                class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded"
-                                                                onclick="deleteTecnology({{ $tec->tecnology_id }})">
-                                                                Eliminar
-                                                            </button>
-                                                            </a>
-                                                        </form>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-
-                                        </table>
-                                    @endforeach
-                                </div>
-                            </body> --}}
 
         <style>
             html,

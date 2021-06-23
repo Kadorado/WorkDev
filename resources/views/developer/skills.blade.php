@@ -11,11 +11,11 @@
 
     @if ($userSkills === 'mensaje de error')
         <div class="flex flex-col items-center justify-center w-full text-center md:w-4/5 md:text-center">
-            <h1 class="mb-10 text-xl text-center text-blue-500">Por favor primero completa tus datos</h1>
+            <h1 class="mb-10 text-xl text-center text-blue-500 text-bold">Por favor primero completa tus datos</h1>
 
             <a href="/developerdata">
                 <button
-                    class="px-8 py-2 mb-8 font-bold text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-105">Completar
+                    class="px-8 py-2 mb-8 font-bold text-center text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-105">Completar
                     perfil</button> </a>
         </div>
 
@@ -41,9 +41,9 @@
                             class="min-w-screen bg-white flex items-center justify-center bg-gray-100 font-sans overflow-hidden">
                             <div class="w-full lg:w-5/6">
                                 <div class="bg-white shadow-md rounded my-6">
-                                    <table class="min-w-max w-full table-auto">
+                                    <table class=" min-w-max w-full table-auto">
                                         <thead>
-                                            <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
+                                            <tr class="bg-blue-400 text-white uppercase text-sm leading-normal">
                                                 <th class="py-3 px-6 text-left">habilidad</th>
                                                 <th class="py-3 px-6 text-left"></th>
                                                 <th class="py-3 px-6 text-center"></th>

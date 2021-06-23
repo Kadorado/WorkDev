@@ -4,7 +4,7 @@
 
 
 @section('content')
-<h2 class="text-xl text-center text-blue-500">Editar mis datos</h2></h2>
+<h2 class="text-xl text-center text-bold text-blue-500">Editar mis datos</h2></h2>
 
 <form action="/developer/{{$developer->id}}" method="POST" enctype="multipart/form-data" autocomplete=”off”>
 @csrf
@@ -21,7 +21,7 @@
 </div>
 <div class="relative w-full py-4 mb-3 text-lg">
   <label for="about_me" class="p-2 text-blue-500">Acerca de mí</label>
-  <textarea placeholder={{$developer->about_me}} id="about_me" name="about_me" cols="30" rows="10" placeholder="cuentanos brevemente sobre ti" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" placeholder="Titulo de la vacante"  tabindex="3"></textarea>
+  <textarea id="about_me" name="about_me" cols="30" rows="10" placeholder="cuentanos brevemente sobre ti" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" placeholder="Titulo de la vacante"  tabindex="3">{{$developer->about_me}}  </textarea>
 
 </div>
 <div class="relative w-full py-4 mb-3 text-lg">
@@ -42,11 +42,15 @@
 </div>
 <div class="mt-4 mb-32 text-center">
   <a href="/developerdata">
-  <button type="submit" class="justify-center w-32 p-3 mx-6 text-white bg-green-600 rounded-lg shadow outline-none focus:bg-green-700 hover:bg-green-500" tabindex="4">cancelar</button>
+    <button type="button" 
+    class="px-8 py-2 mb-8 font-bold text-center text-blue-600 transition duration-300 ease-in-out transform bg-blue-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-105">
+    cancelar</button>
   </a>
     
 
-    <button type="submit" class="justify-center w-32 p-3 mx-6 text-white bg-green-600 rounded-lg shadow outline-none focus:bg-green-700 hover:bg-green-500" tabindex="4">editar</button>
+  <button type="submit" onclick="saveDataDeveloper()"
+  class="px-8 py-2 mb-8 font-bold text-center text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-105">
+  Editar</button>
   
 </div>
 </form>
@@ -59,5 +63,31 @@
     <link href="https://unpkg.com/tailwindcss@1.3.4/dist/tailwind.min.css" rel="stylesheet">
 @stop
 
+
+
+@section('js')
+    <script>
+         var fullName = document.getElementById("fullName")
+        var experience = document.getElementById("experience")
+        var about_me = document.getElementById("about_me")
+        var country = document.getElementById("country")
+        var curriculum = document.getElementById("curriculum")
+        var github = document.getElementById("github")
+        
+
+        function saveDataDeveloper() {
+
+            if (fullName.value !== "" & experience.value !== "" & about_me.value !== ""  & country
+                .value !== "" & curriculum.value !== "" & github.value !== "" ) {
+                swal.fire('¡Tus datos han sido guardados!')
+            } else {
+                swal.fire("¡Llena todos los campos!")
+            }
+
+        }
+
+
+    </script>
+@stop
 
 
