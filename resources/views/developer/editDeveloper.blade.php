@@ -21,7 +21,7 @@
 </div>
 <div class="relative w-full py-4 mb-3 text-lg">
   <label for="about_me" class="p-2 text-blue-500">Acerca de mí</label>
-  <textarea placeholder={{$developer->about_me}} id="about_me" name="about_me" cols="30" rows="10" placeholder="cuentanos brevemente sobre ti" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" placeholder="Titulo de la vacante"  tabindex="3"></textarea>
+  <textarea  id="about_me" name="about_me" cols="30" rows="10" placeholder="cuentanos brevemente sobre ti" class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" placeholder="Titulo de la vacante"  tabindex="3">{{$developer->about_me}}</textarea>
 
 </div>
 <div class="relative w-full py-4 mb-3 text-lg">

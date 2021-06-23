@@ -101,7 +101,8 @@ class DeveloperController extends Controller
         
         $developer = Developer::find($id);
         //verifies the fields that has information to update
-        if($request->file('curriculum'!==null)){
+        
+        if($request->file('curriculum')!==null){
             $file=$request->file('curriculum');
             //nombra el archivo con la fecha la hora y la extension
             $name = "pdf_".time().".".$file->guessExtension();
