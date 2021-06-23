@@ -22,7 +22,7 @@
 
     @elseif(count($userEducation)== 0 )
         <div class="flex flex-col items-center justify-center w-full text-center md:w-4/5 md:text-center">
-            <h1 class="mb-10 text-xl text-center text-blue-500">no has registrado tu formación académica</h1>
+            <h1 class="mb-10 text-xl text-center text-blue-500 text-bold ">no has registrado tu formación académica</h1>
            
         </div>
 

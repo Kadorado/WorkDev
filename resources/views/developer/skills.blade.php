@@ -21,7 +21,7 @@
 
     @elseif(count($userSkills)== 0 )
         <div class="flex flex-col items-center justify-center w-full text-center md:w-4/5 md:text-center">
-            <h1 class="mb-10 text-xl text-center text-blue-500">no haz registrado tu formación acádemica</h1>
+            <h1 class="mb-10 text-xl text-center text-blue-500">no has registrado tu formación acádemica</h1>
             <a href="skills/show">
                 <button
                     class="px-8 py-2 mb-8 font-bold text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-105">

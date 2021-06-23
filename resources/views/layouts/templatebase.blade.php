@@ -47,6 +47,8 @@
                         id="nav-content">
                         <ul class="list-reset lg:flex justify-end flex-1 items-center mr-6">
                             <li class="mr-3">
+
+                                
                                 <a href="{{ url('/') }}"
                                     class="ml-4 text-l text-black-700 font-blod no-underline hover:no-underline">Inicio</a>
                             </li>

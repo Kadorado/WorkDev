@@ -42,6 +42,11 @@
                             Primero debes completar tu perfil
                         </h3>
 
+                        <div class="w-full object-center text-center">
+                            <img src="{{ asset('favicons/illustration9.svg') }}"  height="410px" alt="panel-main">
+                        </div>
+
+
 
 
                     @elseif (Auth::user()->hasRole('Recruiter'))
@@ -55,6 +60,11 @@
                             <p>Antes de avanzar por favor completa tu perfil</p>
                         </div>
 
+                        <div class="w-full object-center text-center">
+                            <img src="https://peaku.co/img/business/illustration7.svg" height="410px" alt="panel-main">
+                        </div>
+
+
                     </div>
 
                 </div>
@@ -66,9 +76,7 @@
         <h1>¡Hola Querido admin!</h1>
         @endif<a class="text-pink-500 underline" href="https://undraw.co/"></a>
 
-        <div class="w-full object-center text-center">
-            <img src="https://peaku.co/img/business/illustration9.svg" height="410px" alt="panel-main">
-        </div>
+
 
     </body>
 
@@ -78,6 +86,8 @@
 
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
+
+    
 
 
 @stop

@@ -8,37 +8,40 @@
 
 
     @if (sizeof($users) !== 0)
-        <h1 class="text-center text-blue">Editar datos</h1>
+    <link href="https://unpkg.com/tailwindcss@1.3.4/dist/tailwind.min.css" rel="stylesheet">
+
+        <h1 class="text-center text-green text-bold">Editar datos</h1>
         <form class="w-full max-w-lg" action="/companydata/{{ $users[0]->id }}" method="POST">
             @csrf
             @method('PUT')
             <div class="relative w-full mb-3 text-xl">
-                <small class="text-center p-2 text-blue">* Nombre compañia</small>
+                <small class="text-center p-2 text-green text-bold">* Nombre compañia</small>
                 <input id="namecompany" name="namecompany" type="text" class="form-control" ¢ id="grid-first-name"
                     type="text" placeholder="Nombre de la compañia" tabindex="1" value="{{ $users[0]->NameCompany }}"
                     required>
             </div>
 
             <div class="relative w-full mb-3 text-xl">
-                <small class="p-2 text-blue">* Descripción</small>
+                <small class="p-2 text-green text-bold">* Descripción</small>
                 <input id="descripcion" name="descripcion" type="text" class="form-control" type="text"
                     placeholder="Somos una empresa que busca" tabindex="2" value="{{ $users[0]->DescriptionCompany }}"
                     required>
             </div>
 
             <div class="relative w-full mb-3 text-xl">
-                <small class="p-2 text-blue">* Website</small>
+                <small class="p-2 text-green text-bold">* Website</small>
                 <input id="website" name="website" type="url" class="form-control" id="grid-first-name" type="text"
                     placeholder="www.mistersas.com" tabindex="3" value="{{ $users[0]->WebsiteCompany }}" required>
             </div>
 
             <div class="relative w-full mb-3 text-xl">
-                <small class="p-2 text-blue">* NIT</small>
+                <small class="p-2 text-green text-bold">* NIT</small>
                 <input id="nitcompany" name="nitcompany" type="text" class="form-control" id="grid-first-name" type="text"
                     placeholder="NIT OR ID" tabindex="3" value="{{ $users[0]->idCompany }}" required>
             </div>
-
-            <button type="submit" class="btn btn-primary" tabindex="4" id="update" onclick="Update()">Actualizar</button>
+            <button type="submit"
+                class="flex-0.5 px-4 py-2 m-auto mx-6 font-bold text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-100"
+                type="submit" id="update" onclick="Update()"> Actualizar</button>
         </form>
 
     @else
@@ -51,7 +54,7 @@
             </div>
             <div class="relative w-full mb-3 text-xl">
                 <small class="p-2 text-blue">* Descripción</small>
-                <input id="descripcion_1" name="descripcion" type="text" class="form-control" tabindex="2"  required>
+                <input id="descripcion_1" name="descripcion" type="text" class="form-control" tabindex="2" required>
             </div>
             <div class="relative w-full mb-3 text-xl">
                 <small class="p-2 text-blue">* Website</small>
@@ -59,8 +62,9 @@
             </div>
             <div class="relative w-full mb-3 text-xl">
                 <small class="p-2 text-blue">* NIT</small>
-                <input id="nitcompany_1" name="nitcompany" type="text" class="form-control" tabindex="3"  required>
+                <input id="nitcompany_1" name="nitcompany" type="text" class="form-control" tabindex="3" required>
             </div>
+
             <a href="/dashboard" class="btn btn-secondary" tabindex="5">Cancelar</a>
             <button type="submit" class="btn btn-primary" onclick="createDateCompany()" tabindex="4">Guardar</button>
         </form>
@@ -101,8 +105,9 @@
 
         }
 
-        function createDateCompany(){
-            if (namecompany_1.value !== "" & descripcion_1.value !== "" & website_1.value !== "" & nitcompany_1.value !== "") {
+        function createDateCompany() {
+            if (namecompany_1.value !== "" & descripcion_1.value !== "" & website_1.value !== "" & nitcompany_1.value !==
+                "") {
                 swal.fire('¡Tus datos han sido guardados!')
             } else {
                 swal.fire("¡Llena todos los campos!")
