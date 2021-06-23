@@ -44,63 +44,134 @@
         </div>
 
     @else
-       
+
         {{-- form añadir educacion --}}
-        <form action={{ route('tecnologies.store') }} method="POST" class="w-2/3 mx-auto mb-4">
-            @csrf
-            <div class="flex flex-row flex-wrap justify-center mt-6">
-                <select id="tech" name="tech" required
-                    class="flex-1 block w-2/3 p-2 mx-2 mt-1 bg-white border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
-                    @foreach ($tecnologies as $tecno)
-                        <option value="{{ $tecno->id }}">{{ $tecno->tecno }}</option>
-                    @endforeach
+  
+        <body class="flex items-center justify-center overflow-hidden">
+            <form action={{ route('tecnologies.store') }} method="POST" class="w-2/3 mx-auto mb-4">
+                @csrf
+                <div class="flex flex-row flex-wrap justify-center mt-6">
+                    <select id="tech" name="tech" required
+                        class="flex-1 block w-2/3 p-2 mx-2 mt-1 bg-white border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                        @foreach ($tecnologies as $tecno)
+                            <option value="{{ $tecno->id }}">{{ $tecno->tecno }}</option>
+                        @endforeach
+    
+                    </select>
+    
+                    <input type="submit" value="guardar"
+                        class="flex-0.5 px-4 py-2 m-auto mx-6 font-bold text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-105">
+                </div>
+            </form>
+    
 
-                </select>
+            <div class="overflow-x-none">
+                <div
+                    class="min-w-screen min-h-screen bg-white-100 flex items-center justify-center bg-white-100 font-sans overflow-hidden">
+                    <div class="w-full lg:w-5/6">
+                        <div class="bg-white shadow-md rounded my-6">
+                            <table class="min-w-max w-full table-auto">
+                                <thead>
+                                    <tr class="bg-blue-400 text-white uppercase text-sm leading-normal">
+                                        <th class="py-3 px-6 text-left">Tecnologías</th>
+                                        <th class="py-3 px-6 text-left"></th>
+                                        <th class="py-3 px-6 text-center"></th>
+                                        <th class="py-3 px-6 text-center"></th>
+                                        <th class="py-3 px-6 text-center">Acciones</th>
+                                    </tr>
+                                </thead>
+                                @foreach ($userTecno as $tec)
+                                    <tbody class="text-gray-600 text-sm font-light">
+                                        <tr class="border-b border-gray-200 hover:bg-gray-100">
+                                            <td class="py-3 px-6 text-left whitespace-nowrap">
+                                                <div class="flex items-center">
+                                                    <div class="mr-2">
+                                                        
+                                                    </div>
+                                                    <span class="font-medium"> {{ $tec->tecno }}</span>
+                                                </div>
+                                            </td>
+                                            <td class="py-3 px-6 text-left">
 
-                <input type="submit" value="guardar"
-                    class="flex-0.5 px-4 py-2 m-auto mx-6 font-bold text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-105">
-            </div>
-        </form>
+                                            </td>
+                                            <td class="py-3 px-6 text-center">
 
-        <body class="flex items-center justify-center">
-            <div class="container">
-                @foreach ($userTecno as $tec)
-                    <table class="flex flex-row flex-wrap w-full my-2 overflow-hidden rounded-lg sm:bg-white sm:shadow-lg">
+                                            </td>
+                                            <td class="py-3 px-6 text-center">
+                                            </td>
+                                            <td class="py-3 px-6 text-center">
+                                                <div class="flex item-center justify-center">
+                                                     <form action="{{ route('tecnologies.destroy', $tec->tecnology_id) }}"
+                                                        method="POST" id={{ $tec->tecnology_id }}>
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="button" class="outline-none"
+                                                            onclick="deleteTecnology({{ $tec->tecnology_id }})">
+                                                            <div
+                                                                class="w-5 mr-4 transform hover:text-red-500 hover:scale-150">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                                    viewBox="0 0 24 24" stroke="currentColor">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                                        stroke-width="2"
+                                                                        d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                                                </svg>
+                                                            </div>
+                                                        </button>
+                                                        </a>
+                                                    </form>
 
-                        <thead class="text-white">
-                            <tr
-                                class="flex flex-col flex-wrap mb-2 bg-blue-400 rounded-l-lg sm:table-row sm:rounded-none sm:mb-0">
-                                <th class="h-20 p-3 text-left">Tecnología</th>
-                                <th class="p-3 text-left" width="110px">Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody class="flex-1 sm:flex-none">
-                            <tr class="flex flex-col mb-2 flex-no wrap sm:table-row sm:mb-0">
-                                <td
-                                    class="h-20 p-3 text-xs border border-grey-light lg:w-2/5 lg:text-xl sm:w-2/5 sm:text-xl hover:bg-gray-100">
-                                    {{ $tec->tecno }}</td>
 
-                                <td
-                                    class="p-3 text-red-400 border cursor-pointer lg:w-1/5 sm:w-1/5 border-grey-light hover:bg-gray-100 hover:text-red-600 hover:font-medium">
-                                    <form action="{{ route('tecnologies.destroy', $tec->tecnology_id) }}" method="POST"
-                                        id={{ $tec->tecnology_id }}>
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="button"
-                                            class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded"
-                                            onclick="deleteTecnology({{ $tec->tecnology_id }})">
-                                            Eliminar
-                                        </button>
-                                        </a>
-                                    </form>
-                                </td>
-                            </tr>
-                        </tbody>
+                                                </div>
+                                            </td>
+                                        </tr>
 
-                    </table>
-                @endforeach
-            </div>
+                                    </tbody>
+                                @endforeach
+
         </body>
+
+
+        {{-- <body class="flex items-center justify-center">
+                                <div class="container">
+                                    @foreach ($userTecno as $tec)
+                                        <table
+                                            class="flex flex-row flex-wrap w-full my-2 overflow-hidden rounded-lg sm:bg-white sm:shadow-lg">
+
+                                            <thead class="text-white">
+                                                <tr
+                                                    class="flex flex-col flex-wrap mb-2 bg-blue-400 rounded-l-lg sm:table-row sm:rounded-none sm:mb-0">
+                                                    <th class="h-20 p-3 text-left">Tecnología</th>
+                                                    <th class="p-3 text-left" width="110px">Acciones</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="flex-1 sm:flex-none">
+                                                <tr class="flex flex-col mb-2 flex-no wrap sm:table-row sm:mb-0">
+                                                    <td
+                                                        class="h-20 p-3 text-xs border border-grey-light lg:w-2/5 lg:text-xl sm:w-2/5 sm:text-xl hover:bg-gray-100">
+                                                        {{ $tec->tecno }}</td>
+
+                                                    <td
+                                                        class="p-3 text-red-400 border cursor-pointer lg:w-1/5 sm:w-1/5 border-grey-light hover:bg-gray-100 hover:text-red-600 hover:font-medium">
+                                                        <form
+                                                            action="{{ route('tecnologies.destroy', $tec->tecnology_id) }}"
+                                                            method="POST" id={{ $tec->tecnology_id }}>
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button type="button"
+                                                                class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded"
+                                                                onclick="deleteTecnology({{ $tec->tecnology_id }})">
+                                                                Eliminar
+                                                            </button>
+                                                            </a>
+                                                        </form>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+
+                                        </table>
+                                    @endforeach
+                                </div>
+                            </body> --}}
 
         <style>
             html,

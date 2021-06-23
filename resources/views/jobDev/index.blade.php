@@ -7,7 +7,7 @@
     <!-- This is an example component -->
 
 
-    <section class="p-8 bg-indigo-dark h-50 mb-0">
+    <section class="p-8 bg-white h-20">
         <h1 class="text-center text-blue text-bold">Ofertas disponibles</h1>
         <form class="container flex justify-center py-8 mx-auto" action="/ofert/filterBy" id="searchForm">
             <input name="searchby" id="search"
@@ -19,21 +19,22 @@
         </form>
     </section>
 
-    <section class="p-8 bg-indigo-dark h-50">
+    <section class="p-2 bg-white h-30 mt-4 ">
         <form class="container flex justify-center py-8 mx-auto" action="/ofert/filterByCurrency" id="searchForm_currency">
-            <select name="currency" id="currency_id"  class="w-2/3 h-12 px-3 mx-4 mb-8 rounded shadow-lg focus:outline-none focus:shadow-outline text-s">
-                <div class="w-full bg-blue-400 border-b border-white-100 rounded-t cursor-pointer hover:bg-teal-100">
-                    <option value="USD" class="relative flex items-center w-full p-2 pl-2 border-l-2 border-transparent">USD
+            <select name="currency" id="currency_id"  class="w-1/3 h-12 px-3 mx-4 mb-8 rounded  text-s">
+                <div class="w-full">
+                    <option value="USD" class="relative flex items-center w-full p-2 pl-2 border-l-2 border">USD
                     </option>
-                    <option value="COP" class="relative flex items-center w-full p-2 pl-2 border-l-2 border-transparent">COP
+                    <option value="COP" class="relative flex items-center w-full p-2 pl-2 border-l-2 border">COP
                     </option>
-                    <option value="EUR" class="relative flex items-center w-full p-2 pl-2 border-l-2 border-transparent">EUR
+                    <option value="EUR" class="relative flex items-center w-full p-2 pl-2 border-l-2 border">EUR
                     </option>
                 </div>
             </select>
                 <button class="flex items-center justify-center w-10 h-10 px-4 py-4 mb-8 font-bold text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-105" type="submit" ><i class="fas fa-filter"></i></button>
         </form>
-    </section>
+
+    </section>  
 
 
 
