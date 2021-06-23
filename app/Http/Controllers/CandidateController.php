@@ -13,8 +13,7 @@ class CandidateController extends Controller
      */
     public function index()
     {
-        //
-        return "hola";
+
     }
 
     /**
@@ -46,8 +45,7 @@ class CandidateController extends Controller
      */
     public function show($id)
     {
-        //get developers that aplies to vacancy
-        return 'holis';
+
     }
 
     /**

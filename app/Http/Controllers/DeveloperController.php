@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Developer;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -17,7 +18,13 @@ class DeveloperController extends Controller
      */
     public function index()
     {
-        //
+        $developers = DB::table('developers')
+                        ->join('users','users.id', 'developers.user_id')
+                        ->select('developers.*','users.profile_photo_path')               
+                        ->get();
+    
+        // dd($developers);
+        return view("developer.index", ['developers'=>$developers]);
     }
 
     /**

@@ -268,7 +268,7 @@ return [
         ],
         [
             'text' => 'Candidatos',
-            'url'  => 'vacante',
+            'url'  => 'developer',
             'icon' => 'fas fa-users',
             'can'  => 'companydata',
         ],
