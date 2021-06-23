@@ -51,7 +51,7 @@
                         <p class="text-gray-600">
                             Perfil de github
                         </p>
-                        <a href="{{ $candidate->githubProfile }}">
+                        <a href="{{ $candidate->githubProfile }}" target="blank">
                             {{ $candidate->githubProfile }}
                         </a>
                     </div>
@@ -63,7 +63,7 @@
                         </p>
                         <div class="space-y-2">
                             <div class="border-2 flex items-center p-2 rounded justify-between space-x-2">
-                                <a href="/curriculums/{{$candidate->curriculum}}" target="blank">
+                                <a href="/{{$candidate->curriculum}}" target="blank">
                                     <button>
                                         ver curriculum
                                     </button>
