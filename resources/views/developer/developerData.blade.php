@@ -4,7 +4,7 @@
 
 
 @section('content')
-<h2 class="text-xl text-center text-blue-500">Datos</h2></h2>
+<h2 class="text-xl text-center text-blue-500 text-bold mb-2">Datos</h2></h2>
 @if(!isset($developer))
 
 

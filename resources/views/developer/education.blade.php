@@ -56,7 +56,7 @@
             <div class="overflow-x-auto">
                 {{-- form añadir educacion --}}
                 <form action="{{ route('education.store') }}" method="POST" class="my-6">
-                    <h1 class="flex justify-center py-4 text-2xl text-blue-500">Agrega más contendio a tu perfil
+                    <h1 class="text-xl text-center text-blue-500 text-bold mb-2">Agrega contenido a tu perfil
                     </h1>
                     @csrf
                     <div class="flex flex-row flex-wrap">
@@ -74,13 +74,13 @@
                             @endforeach
                         </select>
                         <button
-                            class="flex-0.5 px-4 py-2 m-auto mx-6 font-bold text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-105"
+                            class="flex-0.5 px-4 py-2 m-auto mx-6 font-bold text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-100"
                             type="submit"> Agregar</button>
                     </div>
                 </form>
 
                 <div
-                    class="min-w-screen min-h-screen bg-gray-100 flex items-center justify-center bg-gray-100 font-sans overflow-hidden">
+                    class=" bg-white min-w-screen   flex items-center justify-center font-sans overflow-hidden">
                     <div class="w-full lg:w-5/6">
                         <div class="bg-white shadow-md rounded my-6">
                             <table class="min-w-max w-full table-auto">

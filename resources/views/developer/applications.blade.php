@@ -4,7 +4,7 @@
 
 
 @section('content')
-<h2 class="text-xl text-center text-blue-500">Tus Aplicaciones</h2></h2>
+<h2 class="text-xl text-center text-blue-500 text-bold mb-2">Tus postulaciones</h2></h2>
 @if($userApplication=="mensaje de error")
     <h6>Primero debes completar tus datos</h6>
 @elseif($userApplication->count()==0)

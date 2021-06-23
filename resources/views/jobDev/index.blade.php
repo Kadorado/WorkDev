@@ -8,7 +8,7 @@
 
 
     <section class="p-8 bg-white h-20">
-        <h1 class="text-center text-blue text-bold">Ofertas disponibles</h1>
+        <h1 class="text-xl text-center text-blue-500 text-bold ">Ofertas disponibles</h1>
         <form class="container flex justify-center py-8 mx-auto" action="/ofert/filterBy" id="searchForm">
             <input name="searchby" id="search"
                 class="w-2/3 h-12 px-3 mx-4 mb-8 rounded shadow-lg focus:outline-none focus:shadow-outline text-s"
@@ -19,7 +19,7 @@
         </form>
     </section>
 
-    <section class="p-2 bg-white h-30 mt-4 ">
+    <section class="p-2 bg-white h-30 mt-5">
         <form class="container flex justify-center py-8 mx-auto" action="/ofert/filterByCurrency" id="searchForm_currency">
             <select name="currency" id="currency_id"  class="w-1/3 h-12 px-3 mx-4 mb-8 rounded  text-s">
                 <div class="w-full">

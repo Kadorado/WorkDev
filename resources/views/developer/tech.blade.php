@@ -48,7 +48,7 @@
         {{-- form añadir educacion --}}
   
         <body class="flex items-center justify-center overflow-hidden">
-            <form action={{ route('tecnologies.store') }} method="POST" class="w-2/3 mx-auto mb-4">
+            <form action={{ route('tecnologies.store') }} method="POST" class="w-2/3 mx-auto mb-4 ">
                 @csrf
                 <div class="flex flex-row flex-wrap justify-center mt-6">
                     <select id="tech" name="tech" required
@@ -67,9 +67,9 @@
 
             <div class="overflow-x-none">
                 <div
-                    class="min-w-screen min-h-screen bg-white-100 flex items-center justify-center bg-white-100 font-sans overflow-hidden">
+                    class=" bg-white min-w-screen   flex items-center justify-center font-sans overflow-hidden">
                     <div class="w-full lg:w-5/6">
-                        <div class="bg-white shadow-md rounded my-6">
+                        <div class="bg-white shadow-md rounded my-2">
                             <table class="min-w-max w-full table-auto">
                                 <thead>
                                     <tr class="bg-blue-400 text-white uppercase text-sm leading-normal">
