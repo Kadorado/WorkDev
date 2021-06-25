@@ -13,7 +13,7 @@
 {{-- @dd($userApplication) --}}
     @foreach ($userApplication as $ap )
         <div class="lg:flex shadow rounded-lg border  border-gray-400 mb-2">
-            <div class="bg-blue-600 rounded-lg lg:w-2/12 py-1 block h-full shadow-inner">
+            {{-- <div class="bg-blue-600 rounded-lg lg:w-2/12 py-1 block h-full shadow-inner">
               <div class="text-center tracking-wide">
                 @if ($ap->profile_photo_path !== NULL)
                 @php
@@ -26,7 +26,7 @@
                 @endif
                 <img src="{{ asset($path_photo_2) }}" class="relative z-10 object-cover m-auto w-96 h-96" alt="logo de la empresa">
               </div>
-            </div>
+            </div> --}}
             <div class="w-full  lg:w-11/12 xl:w-full px-1 bg-white py-5 lg:px-2 lg:py-2 tracking-wide">
               <div class="flex flex-row lg:justify-start justify-center">
                 <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
