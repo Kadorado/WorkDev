@@ -32,12 +32,14 @@ class ApplicationController extends Controller
             //get actual user applications
             $userApplication = DB::table('vacancies')
                 ->join('developer_vacancy', 'vacancies.id','=','developer_vacancy.vacancy_id')
-                ->join('recruiters', 'vacancies.recrutier_id', '=', 'vacancies.recrutier_id')
-                ->join('users','recruiters.user_id','=','users.id')
                 ->where('developer_vacancy.developer_id', '=', $userId)
+                ->join('recruiters', 'vacancies.recrutier_id', 'recruiters.id')
+                ->join('users','recruiters.user_id','=','users.id')
                 ->where('state','=',1)
-                ->select('vacancies.*', 'recruiters.*', 'users.profile_photo_path','developer_vacancy.*')
+                // ->select('vacancies.*', 'recruiters.*', 'users.profile_photo_path','developer_vacancy.*')
                 ->get();
+
+                // dd($userApplication);
                 
         }
         else{
