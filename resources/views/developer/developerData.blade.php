@@ -114,7 +114,7 @@
             <div class="mt-4 mb-32 text-center">
                 <a href="{{ url('editDeveloper') }}">
                   <button type="button" onclick="saveDataDeveloper()"
-                  class="px-8 py-2 mb-8 font-bold text-center text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-105">
+                  class="px-8 py-2 mb-8 font-bold text-center text-blue-600 transition duration-300 ease-in-out transform bg-blue-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-105">
                   Editar</button>
                 </a>  
             </div>

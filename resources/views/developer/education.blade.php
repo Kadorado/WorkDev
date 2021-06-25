@@ -74,7 +74,7 @@
                             @endforeach
                         </select>
                         <button
-                            class="flex-0.5 px-4 py-2 m-auto mx-6 font-bold text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-100"
+                            class="flex-0.5 px-4 py-2 m-auto mx-6 font-bold text-blue-600 transition duration-300 ease-in-out transform bg-blue-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-blue-400 hover:text-white hover:scale-100"
                             type="submit"> Agregar</button>
                     </div>
                 </form>

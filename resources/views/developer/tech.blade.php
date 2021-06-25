@@ -37,10 +37,7 @@
                         class="flex-0.5 px-4 py-2 m-auto mx-6 font-bold text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-105">
                 </div>
             </form>
-            {{-- <a href="skills/show">
-        <button class="px-8 py-2 mb-8 font-bold text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-105">
-            registrar
-        </button> </a> --}}
+            
         </div>
 
     @else
@@ -60,7 +57,7 @@
                     </select>
     
                     <input type="submit" value="guardar"
-                        class="flex-0.5 px-4 py-2 m-auto mx-6 font-bold text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-105">
+                        class="flex-0.5 px-4 py-2 m-auto mx-6 font-bold text-blue-600 transition duration-300 ease-in-out transform bg-blue-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-blue-400 hover:text-white hover:scale-105">
                 </div>
             </form>
     

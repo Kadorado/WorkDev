@@ -111,7 +111,7 @@
                     <div class="flex flex-row justify-center  mt-4">
                         <a href="skills/show">
                             <button
-                                class=" px-4 py-2 mb-2 font-bold  text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-100">Editar</button>
+                                class=" px-4 py-2 mb-1 font-bold  text-blue-600 transition duration-300 ease-in-out transform bg-blue-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-blue-400 hover:text-white hover:scale-80">Editar</button>
                         </a>
                     </div>
         </body>

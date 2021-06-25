@@ -19,8 +19,8 @@
                     @if (Auth::user()->hasRole('Developer'))
 
 
-                        <h1 class='text-center'>¡Bienvenido Desarrollador!</h1>
-                        <p class=" text-centerleading-normal text-2xl mb-8">
+                        <h1 class='text-center text-blue text-bold '>¡Bienvenido Desarrollador!</h1>
+                        <p class=" text-bold text-blue text-center leading-normal text-2xl mb-8">
                             Bienvenido a la mejor plataforma para aplicar a propuestas laborales del mundo del desarrollo
                         </p>
 
@@ -38,7 +38,7 @@
                 </div>
                 <div class="flex flex-wrap">
                     <div class="w-5/6 sm:w-1/2 p-6">
-                        <h3 class="text-center text-3xl text-gray-800 font-bold leading-none mb-3">
+                        <h3 class=" text-blue text-center text-3xl text-gray-800 font-bold leading-none mb-3">
                             Primero debes completar tu perfil
                         </h3>
 
