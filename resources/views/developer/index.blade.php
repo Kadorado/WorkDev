@@ -10,21 +10,21 @@
         <h6>por ahora no tenemos candidatos para mostrar</h6>
         
     @else
-        @foreach ($developers as $dev  )
+        @foreach ($developers as $dev )
         
         <div class="mb-2 shadow borderrounded-lg lg:flex">
             <div class="block h-full py-1 rounded-lg shadow-inner lg:w-2/12">
-                <div class="tracking-wide text-center ">
+                <div class="h-full tracking-wide text-center ">
                       @if ($dev->profile_photo_path !== null)
                           @php
                               $path_photo_2 = 'storage/' . $dev->profile_photo_path;
                           @endphp
                       @else
                           @php
-                              $path_photo_2 = 'favicons/favicon.png';
+                              $path_photo_2 = 'favicons/favicon_user.jpg';
                           @endphp
                       @endif
-                      <img src="{{ asset($path_photo_2) }}" class="relative z-10 object-cover h-full w-96"
+                      <img src="{{ asset($path_photo_2) }}" class="relative z-10 object-cover w-96 h-96 "
                           alt="logo de la empresa">
                 </div>
             </div>
@@ -39,7 +39,7 @@
                         {{ $dev->about_me }}
                   </div>
                   <div class="px-2 pt-1 text-sm font-medium text-center text-gray-600 uppercase lg:text-left">
-                        {{ $dev->country }} 
+                        {{ $dev->country }}
                   </div>
                 </div>
                 <div class="flex flex-col">
@@ -70,5 +70,3 @@
       crossorigin="anonymous"
     />
 @stop
-
-

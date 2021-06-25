@@ -43,7 +43,9 @@ class ApplicationController extends Controller
         else{
             $userApplication="mensaje de error";             
             };
-            
+        
+
+        
         return view('developer.applications', ['userApplication' => $userApplication]);
     }
 
