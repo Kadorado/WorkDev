@@ -53,11 +53,11 @@
 
                         <div class="overflow-y-hidden">
 
-                            <h1>¡Bienvenido Empresa!</h1>
-                            <p class="leading-normal text-3xl mb-8 ">
+                            <h1 class="text-green text-bold">¡Bienvenido Empresa!</h1>
+                            <p class="leading-normal text-3xl mb-8 text-green text-bold">
                                 Bienvenido a la mejor plataforma para ofertar vacantes laborales del mundo del desarrollo
                             </p>
-                            <p>Antes de avanzar por favor completa tu perfil</p>
+                            <p class="text-green text-bold">Antes de avanzar por favor completa tu perfil</p>
                         </div>
 
                         <div class="w-full object-center text-center">

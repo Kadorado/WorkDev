@@ -5,7 +5,7 @@
 
 @section('content')
     @if ($candidates->count()==0)
-        <h3>Aún no hay candidatos para esta vacante</h3>
+        <h3 class="text-center text-green text-bold text-xl" >Aún no hay candidatos para esta vacante</h3>
     @else
         {{-- @dd($candidates) --}}
         @foreach ($candidates as $candidate )

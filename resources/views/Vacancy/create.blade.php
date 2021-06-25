@@ -5,41 +5,41 @@
 
 @section('content')
 
-    <h2 class="text-xl text-center text-blue-500 mt-8">Crear Vacante</h2>
+    <h2 class="text-xl text-center text-green text-bold mt-8">Crear Vacante</h2>
 
 
     <form action="/vacante" method="POST" autocomplete=”off”>
         @csrf
         <div class="relative w-full mb-3">
-            <label for="" class="p-2 text-blue-500">Titulo</label>
+            <label for="" class="p-2 text-bold text-2xl text-green">Titulo</label>
             <input type="text" name="title" id="title" tabindex="1"
                 class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring"
                 placeholder="Titulo de la vacante" style="transition: all 0.15s ease 0s;" required />
-            <small class="p-2 text-blue-500">* Obligatorio</small>
+            <small class="p-2 text-green ">* Obligatorio</small>
         </div>
         <div class="relative w-full mb-3">
-            <label for="" class="p-2 text-blue-500">Experiencia requerida</label>
+            <label for="" class="p-2 text-green text-2xl text-bold">Experiencia requerida</label>
             <input name="experience" id="experience" type="number" tabindex="1"
                 class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring"
                 placeholder="Experiencia requerida en meses" style="transition: all 0.15s ease 0s;" required />
-            <small class="p-2 text-blue-500">* Obligatorio</small>
+            <small class="p-2 text-green">* Obligatorio</small>
         </div>
         <div class="relative w-full mb-3">
-            <label for="" class="p-2 text-blue-500">Salario</label>
+            <label for="" class="p-2 text-green text-2xl text-bold">Salario</label>
             <input name="salary" id="salary" type="number" tabindex="1"
                 class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring"
                 placeholder="eje.200.000" style="transition: all 0.15s ease 0s;" required />
-            <small class="p-2 text-blue-500">* Obligatorio</small>
+            <small class="p-2 text-green">* Obligatorio</small>
         </div>
         <div class="relative w-full mb-3">
-            <label for="" class="p-2 text-blue-500">Lugar</label>
+            <label for="" class="p-2 text-green text-2xl text-bold">Lugar</label>
             <input type="text" name="location" id="lugar" tabindex="1"
                 class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring"
                 placeholder="eje.Colombia" style="transition: all 0.15s ease 0s;" required />
-            <small class="p-2 text-blue-500">* Obligatorio</small>
+            <small class="p-2 text-green">* Obligatorio</small>
         </div>
         <div>
-            <label for="" class="p-2 text-blue-500">Moneda</label>
+            <label for="" class="p-2 text-green text-2xl text-bold">Moneda</label>
             <div class="flex flex-col w-full h-auto mx-auto md:w-1/2">
                 <select name="currency" id="currency"
                     class="flex w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring">
@@ -53,17 +53,17 @@
                     </div>
                 </select>
             </div>
-            <small class="p-2 text-blue-500">* Obligatorio</small>
+            <small class="p-2 text-green">* Obligatorio</small>
         </div>
         <div class="relative w-full mb-3">
-            <label for="" class="p-2 text-blue-500">Descripcion de la vacante</label>
+            <label for="" class="p-2 text-green text-2xl text-bold">Descripcion de la vacante</label>
             <textarea name="descriptionjob" id="descriptionjob" placeholder="eje.Desarrollador" cols="30" rows="10" tabindex="1"
                 class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring"
                 required></textarea>
-            <small class="p-2 text-blue-500">* Obligatorio</small>
+            <small class="p-2 text-green">* Obligatorio</small>
         </div>
         <div>
-            <label for="" class="p-2 text-blue-500">Tecnologias requeridas</label>
+            <label for="" class="p-2 text-green text-2xl text-bold">Tecnologias requeridas</label>
             <style>
                 [x-cloak] {
                     display: none;
@@ -157,11 +157,11 @@
                     </div>
                 </div>
             </div>
-            <small class="p-2 text-blue-500">* Obligatorio</small>
+            <small class="p-2 text-green">* Obligatorio</small>
 
             {{-- estado --}}
             <div>
-                <label for="" class="p-2 text-blue-500">Estado de la vacante</label>
+                <label for="" class="p-2 text-green text-2xl text-bold ">Estado de la vacante</label>
                 <div class="flex flex-col w-full h-auto mx-auto md:w-1/2">
                     <select name="state" id="state"
                         class="flex w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring">
@@ -175,12 +175,18 @@
                         </div>
                     </select>
                 </div>
-                <small class="p-2 text-blue-500">* Obligatorio</small>
+                <small class="p-2 text-green">* Obligatorio</small>
             </div>
 
+           
+
+
             <div class="mt-4 mb-32 text-center">
-                <button type="submit" onclick="createVacancy()"
-                    class="justify-center w-32 p-3 text-white bg-green-600 rounded-lg shadow outline-none focus:bg-green-700 hover:bg-green-500">Guardar</button>
+
+                <button type="submit"
+                class="flex-0.5 px-4 py-2 m-auto mx-6 font-bold text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-100"
+                type="submit" id="update" onclick="createVacancy()"> Guardar</button>
+
             </div>
     </form>
 

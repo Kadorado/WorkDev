@@ -5,44 +5,44 @@
 
 @section('content')
 
-    <h2 class="text-xl text-center text-blue-500">Editar Vacante</h2>
+    <h2 class="text-xl text-center text-green text-bold">Editar Vacante</h2>
 
     <form action="/vacante/{{ $vacante->id }}" method="POST">
         @csrf
         @method('PUT')
         <div class="relative w-full mb-3 text-xl">
-            <small class="p-2 text-blue-500">* Titulo</small>
+            <small class="text-bold p-2 text-green rounded-lg">* Titulo</small>
             <input type="text" name="title" id="title" tabindex="1"
-                class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring"
+                class=" w-full rounded-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring"
                 value="{{ $vacante->Title }}" style="transition: all 0.15s ease 0s;" required />
         </div>
         <div class="relative w-full mb-3 text-xl">
-            <small class="p-2 text-blue-500">* Experiencia requerida</small>
+            <small class="text-bold  p-2 text-green">* Experiencia requerida</small>
             <input name="experience" id="experience" type="number" tabindex="1"
                 class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring"
                 value="{{ $vacante->ExperienceRequire }}" style="transition: all 0.15s ease 0s;" required />
         </div>
 
         <div class="relative w-full mb-3 text-xl">
-            <small class="p-2 text-blue-500">* Salario</small>
+            <small class= " text-bold p-2 text-green">* Salario</small>
             <input name="salary" id="salary" type="number" tabindex="1"
                 class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring"
                 value="{{ $vacante->Salary }}" style="transition: all 0.15s ease 0s;" required />
         </div>
 
         <div class="relative w-full mb-3 text-xl">
-            <small class="p-2 text-blue-500">* Lugar</small>
+            <small class= " text-bold  p-2 text-green">* Lugar</small>
             <input type="text" name="location" id="lugar"
                 class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring"
                 value="{{ $vacante->Location }}" style="transition: all 0.15s ease 0s;" required />
         </div>
 
         <div>
-            <small class="p-2 text-xl text-blue-500">* Moneda</small>
+            <small class=" text-bold  p-2 text-xl text-green">* Moneda</small>
             <div class="flex flex-col w-full h-64 mx-auto md:w-1/2">
                 <select name="currency" id="currency"
                     class="flex w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring">
-                    <div class="w-full bg-blue-400 border-b border-gray-100 rounded-t cursor-pointer hover:bg-teal-100">
+                    <div class=" w-full bg-blue-400 border-b border-gray-100 rounded-t cursor-pointer hover:bg-teal-100">
                         <option class="relative flex items-center w-full p-2 pl-2 border-l-2 border-transparent">
                             {{ $vacante->currency }}</option>
                         <option value="USD"
@@ -71,14 +71,14 @@
         </div>
 
         <div class="relative w-full mb-3 text-xl">
-            <small class="p-2 text-blue-500">* Descripcion de la vacante</small>
+            <small class=" text-bold p-2 text-green">* Descripcion de la vacante</small>
             <textarea name="descriptionjob" id="descriptionjob" cols="30" rows="10" tabindex="1"
                 class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring"
                 required>{{ $vacante->DescriptionVacancy }}</textarea>
         </div>
 
         <div>
-            <small class="p-2 text-xl text-blue-500">* Estado</small>
+            <small class= " text-bold p-2 text-xl text-green">* Estado</small>
             <div class="flex flex-col w-full h-64 mx-auto md:w-1/2">
                 <select name="state" id="state"
                     class="flex w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring">
@@ -98,16 +98,16 @@
 
 
 
-        <small class="p-2 text-xl text-blue-300">*Tecnologías Requeridas para la vacante:</small>
+        <small class=" text-bold p-2 text-xl text-green">*Tecnologías Requeridas para la vacante:</small>
         <div>
-            <small class="p-2 text-xl text-blue-500">* Actuales</small>
+            <small class="text-bold  p-2 text-xl text-green">* Actuales</small>
 
             <div class="flex flex-wrap">
                 {{-- call vacancy --}}
                 @foreach ($userTecno as $tec)
                     <div
                         class="flex w-auto max-w-sm mx-4 my-2 overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
-                        <div class="flex items-center justify-center w-12 bg-blue-500">
+                        <div class="flex items-center justify-center w-12 bg-green">
                             <svg class="w-6 h-6 text-white fill-current" viewBox="0 0 40 40"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -117,7 +117,7 @@
 
                         <div class="px-4 py-2 -mx-3">
                             <div class="mx-3">
-                                <span class="font-semibold text-blue-500 dark:text-blue-400">
+                                <span class="font-semibold text-green dark:text-blue-400">
                                     {{ $tec->tecno }}</span>
                             </div>
                         </div>
@@ -127,7 +127,7 @@
         </div>
 
         <div>
-            <small class="p-2 text-xl text-blue-500">*Editar</small>
+            <small class="p-2 text-xl text-green">*Editar</small>
             <style>
                 [x-cloak] {
                     display: none;
@@ -228,7 +228,7 @@
         <div class="mt-4 mb-32 text-center">
 
             <button type="submit" onclick="Update()"
-                class="justify-center w-32 p-3 mx-6 text-white bg-green-600 rounded-lg shadow outline-none focus:bg-green-700 hover:bg-green-500"
+            class="flex-0.5 px-4 py-2 m-auto mx-6 font-bold text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-100"
                 tabindex="4">Guardar</button>
         </div>
     </form>

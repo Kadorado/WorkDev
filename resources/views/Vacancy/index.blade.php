@@ -12,7 +12,7 @@
             <div class="text-center">
                 <a href="vacante/create">
                     <button
-                        class="flex-0.5 px-4 py-2 m-auto mx-6 font-bold text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-100"
+                        class=" flex-0.5 px-4 py-2 m-auto mx-6 font-bold text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-100"
                         type="button"> Crear vacante</button></a>
             </div>
 
@@ -20,40 +20,40 @@
             <!-- Start of component -->
             @foreach ($vacantes as $vacante)
 
-                <div class="min-h-screen flex items-center justify-center px-4 mb-4 mt-4">
+                <div class="min-h-screen flex items-center justify-center px-4 mb-4 mt-4 bg-green-400 rounded-lg"> 
 
-                    <div class="max-w-4xl  bg-white w-full rounded-lg shadow-xl">
+                    <div class="max-w-4xl w-full rounded-lg shadow-xl bg-green-400">
 
                         <div>
-                            <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
-                                <p class="text-gray-600">
+                            <div class="  text-bold md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b bg-green-400">
+                                <p class="text-white">
                                     Titulo
                                 </p>
-                                <p>
+                                <p class="text-white text-bold">
                                     {{ $vacante->Title }}
                                 </p>
                             </div>
-                            <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
-                                <p class="text-gray-600">
+                            <div class=" text-bold md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
+                                <p class="text-white">
                                     Experiencia requerida (meses)
                                 </p>
-                                <p>
+                                <p class="text-white text-bold">
                                     {{ $vacante->ExperienceRequire }} meses
                                 </p>
                             </div>
-                            <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
-                                <p class="text-gray-600">
+                            <div class=" text-bold md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
+                                <p class="text-white">
                                     Salario
                                 </p>
-                                <p>
+                                <p class="text-white text-bold">
                                     {{ $vacante->Salary }} {{ $vacante->currency }}
                                 </p>
                             </div>
-                            <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
-                                <p class="text-gray-600">
+                            <div class=" text-bold md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
+                                <p class="text-white">
                                     Estado
                                 </p>
-                                <p>
+                                <p class="text-white text-bold">
                                     @if ($vacante->state == 0)
                                         Cerrada
                                     @else
@@ -61,18 +61,18 @@
                                     @endif
                                 </p>
                             </div>
-                            <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
-                                <p class="text-gray-600">
+                            <div class="text-bold md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
+                                <p class="text-white">
                                     Descripción de la vacante
                                 </p>
-                                <p>
+                                <p class="text-white text-bold">
                                     {{ $vacante->DescriptionVacancy }}
                                 </p>
                             </div>
 
 
-                            <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 ">
-                                <p class="text-gray-600">
+                            <div class=" text-bold md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 ">
+                                <p class="text-white text-bold">
                                     Acciones
                                 </p>
                                 <div class="space-y-2">
@@ -80,16 +80,19 @@
                                         <form action="{{ route('vacante.destroy', $vacante->id) }}" method="POST"
                                             id={{ $vacante->id }}>
                                             <a href="/vacante/{{ $vacante->id }}/edit"
-                                                class="text-grey-lighter font-bold py-2 px-4 rounded text-xs bg-green hover:bg-green-dark"><i
+                                                class="bg-blue text-white font-bold py-2 px-4 rounded opacity-50 cursor-not-allowed"><i
                                                     class="fas fa-pencil-alt"></i></a>
                                             @csrf
                                             @method('DELETE')
                                             <button type="button" onclick="DeleteVacancy({{ $vacante->id }})"
-                                                class="text-grey-lighter  font-bold py-2 px-4 rounded text-xs bg-red hover:bg-red-dark"><i
+                                                class="bg-red-500 text-white font-bold py-2 px-4 rounded  cursor-not-allowed"><i
                                                     class="fas fa-trash outline-none"></i>
                                                 </i></button>
                                         </form>
-                                        <a href="/candidates/{{ $vacante->id }}">Candidatos</a>
+
+                                        <button class="bg-blue text-white font-bold py-2 px-4 rounded opacity-50 cursor-not-allowed">
+                                            <a href="/candidates/{{ $vacante->id }}">Candidatos</a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -102,18 +105,16 @@
             @endforeach
         @else
             <div class="text-center">
-                <h1 class="text-center text-black-600 mb-8">LLena tus datos antes de crear una vacante</h1>
-                <p class="text-center text-black-600 mb-8">
+                <h1 class="text-center text-green text-xl  text-bold mb-8">LLena tus datos antes de crear una vacante</h1>
+                <p class="text-center text-green text-xl text-bold mb-8">
                     Completa los datos para que puedas crear convocatorias y recibir los mejores perfiles
-                    en el slider del lado izquierdo podras encontrar el formulario para realizar este importante paso en el
-                    icono de edificio
-                    adelante genera empleo y construye el mejor equipo
+                    
                     <br />
                     <br />
                     <a class="text-pink-500 underline" href="https://undraw.co/"></a>
                 </p>
 
-                <img src="https://peaku.co/img/business/illustration9.svg" height="500px" width="60%" alt="panel-main" />
+
 
 
             </div>

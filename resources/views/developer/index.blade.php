@@ -5,16 +5,16 @@
     
 
 @section('content')
-    <h2 class="text-xl text-center text-bold text-green-500">Candidatos</h2></h2>
+    <h2 class="text-xl text-center text-bold text-green-500 mb-4">Candidatos</h2></h2>
     @if ($developers->count()==0)
         <h6>por ahora no tenemos candidatos para mostrar</h6>
         
     @else
         @foreach ($developers as $dev )
         
-        <div class="mb-2 shadow borderrounded-lg lg:flex">
-            <div class="block h-full py-1 rounded-lg shadow-inner lg:w-2/12">
-                <div class="h-full tracking-wide text-center ">
+        <div class="mb-2 shadow borderrounded-lg lg:flex bg-green-400 rounded-lg">
+            <div class="block h-full py-1 rounded-lg shadow-inner lg:w-2/12 bg-green-400">
+                <div class="h-full tracking-wide text-center bg-green-400">
                       @if ($dev->profile_photo_path !== null)
                           @php
                               $path_photo_2 = 'storage/' . $dev->profile_photo_path;
@@ -24,21 +24,21 @@
                               $path_photo_2 = 'favicons/favicon_user.jpg';
                           @endphp
                       @endif
-                      <img src="{{ asset($path_photo_2) }}" class="relative z-10 object-cover w-96 h-96 "
+                      <img src="{{ asset($path_photo_2) }}" class="relative z-10 object-cover w-96 h-96 ml-4 mt-4 rounded-full"
                           alt="logo de la empresa">
                 </div>
             </div>
-            <div class="flex flex-row flex-wrap justify-around w-full px-1 py-5 tracking-wide bg-white lg:w-11/12 xl:w-full lg:px-2 lg:py-2">
+            <div class="flex flex-row flex-wrap justify-around w-full px-1 py-5 tracking-wide bg-green-400 lg:w-11/12 xl:w-full lg:px-2 lg:py-2">
                 <div class="flex flex-row justify-center lg:justify-start">
-                    <div class="px-2 text-sm font-bold text-center text-gray-700 lg:text-left">
+                    <div class="px-2 text-sm font-bold text-center text-white lg:text-left">
                           Nombre: {{ $dev->fullName}}
                     </div>
                 </div>
                 <div>
-                    <div class="px-2 font-semibold text-center text-gray-800 uppercase text-l lg:text-left">
+                    <div class="px-2 font-semibold text-center text-white uppercase text-l lg:text-left">
                         {{ $dev->about_me }}
                   </div>
-                  <div class="px-2 pt-1 text-sm font-medium text-center text-gray-600 uppercase lg:text-left">
+                  <div class="px-2 pt-1 text-sm font-medium text-center text-white uppercase lg:text-left">
                         {{ $dev->country }}
                   </div>
                 </div>

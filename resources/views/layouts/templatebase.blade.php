@@ -48,13 +48,21 @@
                         <ul class="list-reset lg:flex justify-end flex-1 items-center mr-6">
                             <li class="mr-3">
 
-                                
-                                <a href="{{ url('/') }}"
-                                    class="ml-4 text-l text-black-700 font-blod no-underline hover:no-underline">Inicio</a>
+
+                                <button
+                                    class="mx-auto lg:mx-0 hover:no-underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-2 px-4 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                                    <a href="{{ url('/') }}">Inicio</a>
+                                </button>
+
                             </li>
                             <li class="mr-3">
-                                <a href="{{ url('/nosotros') }}"
-                                    class="ml-4 text-l text-black-700 font-blod no-underline hover:no-underline">Nosotros</a>
+
+                                <button
+                                    class="mx-auto lg:mx-0 hover:no-underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-2 px-4 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                                    <a href="{{ url('/nosotros') }}"
+                                        class="ml-4 text-l text-black-700 font-blod no-underline hover:no-underline">Nosotros</a>
+                                </button>
+
                             </li>
                             <li>
                                 <a href="{{ url('login') }}"
