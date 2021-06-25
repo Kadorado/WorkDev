@@ -10,10 +10,12 @@
 
         <div class=" content-center	 p-4 border-b">
             <div class="text-center">
-                <a href="vacante/create"
-                    class="justify-center w-32 p-3 mx-6 text-white bg-green-600 rounded-lg shadow outline-none focus:bg-green-700 hover:bg-green-500">Crear
-                    Vacante</a>
+                <a href="vacante/create">
+                    <button
+                        class="flex-0.5 px-4 py-2 m-auto mx-6 font-bold text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-100"
+                        type="button"> Crear vacante</button></a>
             </div>
+
 
             <!-- Start of component -->
             @foreach ($vacantes as $vacante)
@@ -76,13 +78,13 @@
                                 <div class="space-y-2">
                                     <div class="border-2 flex items-center p-2 rounded justify-between space-x-2">
                                         <form action="{{ route('vacante.destroy', $vacante->id) }}" method="POST"
-                                            id={{$vacante->id}}>
+                                            id={{ $vacante->id }}>
                                             <a href="/vacante/{{ $vacante->id }}/edit"
                                                 class="text-grey-lighter font-bold py-2 px-4 rounded text-xs bg-green hover:bg-green-dark"><i
                                                     class="fas fa-pencil-alt"></i></a>
                                             @csrf
                                             @method('DELETE')
-                                            <button type="button" onclick="DeleteVacancy({{$vacante->id}})"
+                                            <button type="button" onclick="DeleteVacancy({{ $vacante->id }})"
                                                 class="text-grey-lighter  font-bold py-2 px-4 rounded text-xs bg-red hover:bg-red-dark"><i
                                                     class="fas fa-trash outline-none"></i>
                                                 </i></button>
@@ -131,7 +133,7 @@
 @section('js')
     <script>
         function DeleteVacancy(id) {
-        var formulario = document.getElementById(id);
+            var formulario = document.getElementById(id);
             Swal.fire({
                 title: '¿Estas seguro de querer eliminar esta vacante?',
                 text: "¡No podras revertir esto!",
@@ -150,7 +152,7 @@
                             'Eliminada!',
                             'Tu vacante ha sido eliminada.',
                             'success'
-                        )   
+                        )
                         formulario.submit();
 
 

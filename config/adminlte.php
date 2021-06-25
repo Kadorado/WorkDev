@@ -241,7 +241,7 @@ return [
             'can'  => 'manage-blog',
         ],
         
-        ['header' => 'Configuracion de cuenta'],
+        ['header' => ''],
         [
             'text' => 'Mi tablero',
             'url'  => 'dashboard',

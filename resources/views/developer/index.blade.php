@@ -5,7 +5,7 @@
     
 
 @section('content')
-    <h2 class="text-xl text-center text-blue-500">Candidatos</h2></h2>
+    <h2 class="text-xl text-center text-bold text-green-500">Candidatos</h2></h2>
     @if ($developers->count()==0)
         <h6>por ahora no tenemos candidatos para mostrar</h6>
         

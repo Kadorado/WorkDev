@@ -7,19 +7,13 @@
 
 
 
-    <div class="relative w-full max-w-2xl p-10 mx-auto text-gray-800 bg-white rounded shadow-xl lg:p-20 md:text-left">
+    <div class=" bg-blue-400 relative w-full max-w-2xl p-10 mx-auto text-white-800  rounded shadow-xl lg:p-20 md:text-left">
         <!-- candado de solo para usuarios -->
-        <p class="flex items-center text-sm text-gray-600">
-            <svg class="w-3 h-3 mr-2 text-gray-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                <path
-                    d="M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z" />
-            </svg>
-            solo usuarios
-        </p>
+     
         <!-- contenedor de imagen y descripción -->
-        <div class="items-center -mx-10 md:flex">
+        <div class="items-center -mx-10 md:flex bg-blue-400" >
             <!-- imagen principal -->
-            <div class="w-full px-10 mb-10 md:w-1/2 md:mb-0">
+            <div class="w-full px-10 mb-10 md:w-1/2 md:mb-0 bg-blue-400">
                 <div class="relative">
                     @if ($vacancy[0]->profile_photo_path !== null)
                         @php
@@ -36,11 +30,10 @@
                 </div>
             </div>
             <!-- info vacanet -->
-            <div class="w-full px-10 md:w-1/2">
-                <div class="mb-10">
-                    <p class="text-sm">Mejores Vacantes<br></p>
-                    <h1 class="mb-5 text-2xl font-bold uppercase">{{ $vacancy[0]->Title }}</h1>
-                    <p class="text-sm">{{ $vacancy[0]->DescriptionVacancy }}</p>
+            <div class="w-full px-10 md:w-1/2 bg-blue-400">
+                <div class="mb-10 bg-blue-400">
+                    <h1 class="mb-5  text-white text-2xl font-bold uppercase">{{ $vacancy[0]->Title }}</h1>
+                    <p class="text-sm text-white">{{ $vacancy[0]->DescriptionVacancy }}</p>
                     <br>
                     {{-- tnecnologias --}}
                     <div class="flex flex-wrap">
@@ -59,7 +52,7 @@
                                 <div class="px-4 py-2 -mx-3">
                                     <div class="mx-3">
                                         <span
-                                            class="font-semibold text-blue-400 dark:text-blue-400">{{ $tec->tecno }}</span>
+                                            class="font-semibold text-blue-400 dark:text-white-400">{{ $tec->tecno }}</span>
                                     </div>
                                 </div>
                             </div>
@@ -70,25 +63,25 @@
             </div>
         </div>
         <!-- otros datos como salirio lugar moneda -->
-        <div class="items-center px-10 -mx-10 md:flex ">
+        <div class="items-center px-10 -mx-10 md:flex bg-blue-400">
             <!-- colum1 -->
             <div class="flex-1">
                 <!-- Ubicación -->
-                <div class="flex">
-                    <h2 class="flex-1 mb-5 text-2xl font-bold uppercase">Ubicación: {{ $vacancy[0]->Location }}</h2>
+                <div class="flex bg-blue-400">
+                    <h2 class="flex-1 mb-5 text-2xl text-white font-bold uppercase">Ubicación: {{ $vacancy[0]->Location }}</h2>
 
                 </div>
                 <!-- info empresa -->
-                <h2 class="mb-5 text-2xl font-bold uppercase ">Empresa: {{ $vacancy[0]->NameCompany }}
+                <h2 class="bg-blue-400 mb-5 text-2xl font-bold text-white  uppercase ">Empresa: {{ $vacancy[0]->NameCompany }}
                 </h2>
 
-                <a class="mb-5 text-2xl font-bold uppercase " href= {{ $vacancy[0]->WebsiteCompany }} target="_blank">Sitio web compañia
+                <a class="mb-5 text-2xl font-bold uppercase text-white " href= {{ $vacancy[0]->WebsiteCompany }} target="_blank">Sitio web compañia
                 </a>
 
                 <div class="flex">
                     <div class="items-center flex-1 m-auto">
                         <i class="fa fa-calendar" aria-hidden="false"></i>
-                        <p class="text-gray-600 ">{{ \Carbon\Carbon::parse($vacancy[0]->created_at)->diffForHumans() }}
+                        <p class="text-white ">{{ \Carbon\Carbon::parse($vacancy[0]->created_at)->diffForHumans() }}
                         </p>
                     </div>
 
@@ -98,18 +91,18 @@
             <div class="flex-1">
                 <!-- salario -->
                 <div class="flex">
-                    <h2 class="flex-1 mb-5 text-2xl font-bold uppercase">Salario:</h2>
+                    <h2 class="flex-1 mb-5 text-2xl text-white font-bold uppercase">Salario:</h2>
                     <div class="flex-1 inline-block mr-5 align-bottom">
                         <span class="text-2xl leading-none align-baseline"></span>
-                        <span class="text-5xl font-bold leading-none align-baseline">{{ $vacancy[0]->Salary }}</span>
-                        <span class="text-2xl leading-none align-baseline">{{ $vacancy[0]->currency }}</span>
+                        <span class="text-5xl text-white font-bold leading-none align-baseline">{{ $vacancy[0]->Salary }}</span>
+                        <span class="text-2xl text-white leading-none align-baseline">{{ $vacancy[0]->currency }}</span>
                     </div>
                 </div>
                 <div class="mt-6 ">
                     
 
                     <a href="/ofertas"><button
-                            class="px-20 py-3 mt-4 mx-20 font-semibold text-white bg-blue-400 rounded-full opacity-75 hover:opacity-90 hover:text-blue-900 focus:outline-none"><i
+                            class="px-20 py-3 mt-4 mx-20 font-semibold text-white bg-white rounded-full opacity-75 hover:opacity-90 hover:text-white-900 focus:outline-none"><i
                                 class="mr-2 -ml-2 mdi mdi-cart "></i>ofertas</button></a>
                 </div>
             <div class="mt-6 ">
@@ -118,7 +111,7 @@
                     <input id="vacancy_id" name="vacancy_id" type="hidden" value={{ $vacancy[0]->id }}>
                     <button 
                         type=submit
-                        class="px-20 py-3 mx-20 font-semibold text-white bg-blue-400 rounded-full opacity-75 hover:opacity-90 hover:text-blue-900 focus:outline-none"><i
+                        class="px-20 py-3 mx-20 font-semibold text-white bg-white  rounded-full opacity-75 hover:opacity-90 hover:text-white-900 focus:outline-none"><i
                             class="mr-2 -ml-2 mdi mdi-cart "></i> Aplicar</button></a>
                 </form>
                 

@@ -38,6 +38,9 @@ Route::resource('/ofertas', JobDevController::class);
 
 Route::get('/ofert/filterBy', [FilterController::class,'filterby'])->name('filterby');
 
+Route::get('/ofert/filterByCurrency', [FilterController::class,'filterbyCurrency'])->name('filterbyCurrency');
+
+
 Route::get('/nosotros', [PageController::class, 'nosotros'])->name('nosotros');
 
 Route::resource('companydata', RecruiterController::class);
