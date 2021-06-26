@@ -26,46 +26,46 @@ use App\Models\User;
 */
 
 
-Route::get('/vacantes/{vacancy:Title}', [PageController::class, 'vacancy'])->name('vacancy');
+Route::middleware(['auth:sanctum', 'verified'])->get('/vacantes/{vacancy:Title}', [PageController::class, 'vacancy'])->name('vacancy');
 
-Route::get('/jobsdetails/{jobdetail:Title}/{id:id}', [JobDevController::class, 'jobdetail'])->name('jobdetail');
+Route::middleware(['auth:sanctum', 'verified'])->get('/jobsdetails/{jobdetail:Title}/{id:id}', [JobDevController::class, 'jobdetail'])->name('jobdetail');
 
-Route::resource('vacante', VacancyController::class);
+Route::middleware(['auth:sanctum', 'verified'])->resource('vacante', VacancyController::class);
 
 Route::get('/', [PageController::class, 'home'])->name('home');
 
-Route::resource('/ofertas', JobDevController::class);
+Route::middleware(['auth:sanctum', 'verified'])->resource('/ofertas', JobDevController::class);
 
-Route::get('/ofert/filterBy', [FilterController::class,'filterby'])->name('filterby');
+Route::middleware(['auth:sanctum', 'verified'])->get('/ofert/filterBy', [FilterController::class,'filterby'])->name('filterby');
 
-Route::get('/ofert/filterByCurrency', [FilterController::class,'filterbyCurrency'])->name('filterbyCurrency');
+Route::middleware(['auth:sanctum', 'verified'])->get('/ofert/filterByCurrency', [FilterController::class,'filterbyCurrency'])->name('filterbyCurrency');
 
 
 Route::get('/nosotros', [PageController::class, 'nosotros'])->name('nosotros');
 
-Route::resource('companydata', RecruiterController::class);
+Route::middleware(['auth:sanctum', 'verified'])->resource('companydata', RecruiterController::class);
 
-Route::get('/developerdata', [PageController::class, 'developerdata'])->name('developerdata');
+Route::middleware(['auth:sanctum', 'verified'])->get('/developerdata', [PageController::class, 'developerdata'])->name('developerdata');
 
-Route::resource('skills', SkillController::class);
+Route::middleware(['auth:sanctum', 'verified'])->resource('skills', SkillController::class);
 
-Route::resource('recruiter', RecruiterController::class);
+Route::middleware(['auth:sanctum', 'verified'])->resource('recruiter', RecruiterController::class);
 
-Route::resource('developer', DeveloperController::class);
+Route::middleware(['auth:sanctum', 'verified'])->resource('developer', DeveloperController::class);
 
-Route::resource('education', EducationController::class);
+Route::middleware(['auth:sanctum', 'verified'])->resource('education', EducationController::class);
 
-Route::resource('tecnologies', TecnologyController::class);
+Route::middleware(['auth:sanctum', 'verified'])->resource('tecnologies', TecnologyController::class);
 
-Route::resource('applications', ApplicationController::class);
+Route::middleware(['auth:sanctum', 'verified'])->resource('applications', ApplicationController::class);
 
 //Route::resource('candidates', CandidateController::class);
 
-Route::get('/board', [RecruiterController::class, 'board'])->name('board');
+Route::middleware(['auth:sanctum', 'verified'])->get('/board', [RecruiterController::class, 'board'])->name('board');
 
-Route::get('/editDeveloper', [PageController::class, 'editDeveloper'])->name('editdeveloper');
+Route::middleware(['auth:sanctum', 'verified'])->get('/editDeveloper', [PageController::class, 'editDeveloper'])->name('editdeveloper');
 
-Route::get('/candidates/{id:id}', [PageController::class, 'getCandidates'])->name('candidates');
+Route::middleware(['auth:sanctum', 'verified'])->get('/candidates/{id:id}', [PageController::class, 'getCandidates'])->name('candidates');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
