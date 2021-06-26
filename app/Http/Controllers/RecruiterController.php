@@ -25,20 +25,9 @@ class RecruiterController extends Controller
             ->select('recruiters.*')
             ->where('recruiters.user_id','=' ,$data['id'])
             ->get();
-
-            
             return view("Recruiter.companydate", ['users'=> $users]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -62,27 +51,7 @@ class RecruiterController extends Controller
         return redirect('companydata');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
@@ -103,16 +72,7 @@ class RecruiterController extends Controller
         return redirect('/companydata');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+
 
     public function board()
     {

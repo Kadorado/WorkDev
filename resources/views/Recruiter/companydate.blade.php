@@ -60,37 +60,30 @@
             @csrf
             <div class="relative w-full mb-3 text-xl">
                 <small class="text-center p-2 text-green text-bold">* Nombre compañia</small>
-                <input id="namecompany_1" name="namecompany" type="text" class="form-control" tabindex="1" required>
+                <input id="namecompany_1" name="namecompany" type="text"  class="w-full p-2 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" tabindex="1" required>
             </div>
             <div class="relative w-full mb-3 text-xl">
                 <small class="p-2 text-green text-bold">* Descripción</small>
-                <input id="descripcion_1" name="descripcion" type="text" class="form-control" tabindex="2" required>
+                <input id="descripcion_1" name="descripcion" type="text"  class="w-full p-4 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" tabindex="2" required>
             </div>
             <div class="relative w-full mb-3 text-xl">
                 <small class="p-2 text-green text-bold">* Website</small>
-                <input id="website_1" name="website" type="url" class="form-control" tabindex="3" required>
+                <input id="website_1" name="website" type="url"  class="w-full p-2 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" tabindex="3" required>
             </div>
             <div class="relative w-full mb-3 text-xl">
                 <small class="p-2 text-green text-bold">* NIT</small>
-                <input id="nitcompany_1" name="nitcompany" type="text" class="form-control" tabindex="3" required>
+                <input id="nitcompany_1" name="nitcompany" type="text"  class="w-full p-2 text-sm text-gray-700 placeholder-gray-400 bg-white border-0 rounded shadow focus:outline-none focus:ring" tabindex="3" required>
             </div>
 
 
-            <div class="mt-4 mb-32 text-center items-start	">
-                <div class="mt-4 mb-32 text-center">
+            <div class="inline-flex content-center  text-center">
                     <a href="/dashboard"
-                        class="flex-0.5 px-4 py-2 m-auto mx-6 font-bold text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-100"
+                        class="px-4 mr-4 py-2 m-auto mx-6 font-bold text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-100"
                         tabindex="5">Cancelar</a>
-                    </div>
-        
-                    <div class="mt-4 mb-32 text-center">
                         <button type="submit"
-                            class="flex-0.5 px-4 py-2 m-auto mx-6 font-bold text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-100"
+                            class="ml-4 mb-4 px-4 py-2 m-auto mx-6 font-bold text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-100"
                             onclick="createDateCompany()" tabindex="4">Guardar</button>
-        
-                    </div>    
             </div>
-            
         </form>
     @endif
 

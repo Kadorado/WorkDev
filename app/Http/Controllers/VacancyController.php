@@ -108,13 +108,6 @@ class VacancyController extends Controller
         }
     }
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-  
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
@@ -174,9 +167,6 @@ class VacancyController extends Controller
     }
 
 
-    public function UserTecnologies(){
-
-    }
     /**
      * Remove the specified resource from storage.
      *

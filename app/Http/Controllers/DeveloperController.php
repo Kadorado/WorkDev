@@ -20,9 +20,8 @@ class DeveloperController extends Controller
     {
         $developers = DB::table('developers')
                         ->join('users','users.id', 'developers.user_id')
-                        ->select('developers.*','users.profile_photo_path')               
+                        ->select('developers.*','users.profile_photo_path')
                         ->get();
-    
         // dd($developers);
         return view("developer.index", ['developers'=>$developers]);
     }
@@ -47,7 +46,6 @@ class DeveloperController extends Controller
      */
     public function store(Request $request)
     {
- 
         //obtiene el archivo que se ha subido
         $file=$request->file('curriculum');
         //nombra el archivo con la fecha la hora y la extension
@@ -56,8 +54,6 @@ class DeveloperController extends Controller
         $route = public_path("curriculums/".$name);
         //guarda el archivo en la ruta especificada
         copy($file, $route);
-             
-
         $dataDev = new Developer();
         $data = $request->user();
         $dataDev->user_id= $data['id'];
@@ -90,16 +86,6 @@ class DeveloperController extends Controller
             'developer' => $developer]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-
-    }
 
     /**
      * Update the specified resource in storage.
@@ -110,10 +96,8 @@ class DeveloperController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
         $developer = Developer::find($id);
         //verifies the fields that has information to update
-        
         if($request->file('curriculum')!==null){
             $file=$request->file('curriculum');
             //nombra el archivo con la fecha la hora y la extension
@@ -145,16 +129,7 @@ class DeveloperController extends Controller
         return redirect()->route('developerdata');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+   
 
 
 }

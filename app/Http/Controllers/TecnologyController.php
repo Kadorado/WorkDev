@@ -29,8 +29,6 @@ class TecnologyController extends Controller
             ->select('developers.id')
             ->get();
 
-        
-
         if(!empty($id_developer[0]->id)){
             //obtiene las tecnologias del usuario actual
              $userTecno = DB::table('tecnologies')
@@ -40,8 +38,7 @@ class TecnologyController extends Controller
                  ->get();
                  return view('developer.tech', [
                      'userTecno' => $userTecno,
-                     'tecnologies' => $tecnologies,
-                     
+                     'tecnologies' => $tecnologies, 
                     ]);
                  }
          else{
@@ -49,20 +46,10 @@ class TecnologyController extends Controller
                  return view('developer.tech', [
                     'userTecno' => $userTecno,
                     'tecnologies' => $tecnologies,
-                    
                  ]);
              };
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -99,47 +86,12 @@ class TecnologyController extends Controller
         catch(\Exception $e){
             throw $e;
             $msg ="ya agregaste esa tecnologia";
-        
         }
         finally{
             return redirect()->action([TecnologyController::class, 'index'],array('msg'=>$msg));
         }
 
 
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
     }
 
     /**

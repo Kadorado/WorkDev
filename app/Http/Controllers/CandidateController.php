@@ -20,6 +20,4 @@ class CandidateController extends Controller
         ->get();
         return view("Vacancy.candidatos", ['candidates'=>$developers]);
     }
-
-    
 }
