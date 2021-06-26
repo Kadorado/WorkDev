@@ -6,7 +6,7 @@
 @section('content')
 <h2 class="text-xl text-center text-bold text-blue-500 mb-4">Tus Aplicaciones</h2></h2>
 @if($userApplication=="mensaje de error")
-    <h6>Primero debes completar tus datos</h6>
+    <h6 class="text-center text-blue-500 text-bold text-xl">Primero debes completar tus datos</h6>
 @elseif($userApplication->count()==0)
     <h6>Aún no has aplicado a ninguna oferta</h6>
 @else

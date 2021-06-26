@@ -24,13 +24,13 @@
                               $path_photo_2 = 'favicons/favicon_user.jpg';
                           @endphp
                       @endif
-                      <img src="{{ asset($path_photo_2) }}" class="relative z-10 object-cover w-96 h-96 ml-4 mt-4 rounded-full"
+                      <img src="{{ asset($path_photo_2) }}" class="relative z-10 object-cover w-96 h-96  rounded-full"
                           alt="logo de la empresa">
                 </div>
             </div>
             <div class="flex flex-row flex-wrap justify-around w-full px-1 py-5 tracking-wide bg-green-400 lg:w-11/12 xl:w-full lg:px-2 lg:py-2">
                 <div class="flex flex-row justify-center lg:justify-start">
-                    <div class="px-2 text-sm font-bold text-center text-white lg:text-left">
+                    <div class="px-2 text-s font-bold text-center text-white lg:text-left">
                           Nombre: {{ $dev->fullName}}
                     </div>
                 </div>
@@ -38,15 +38,15 @@
                     <div class="px-2 font-semibold text-center text-white uppercase text-l lg:text-left">
                         {{ $dev->about_me }}
                   </div>
-                  <div class="px-2 pt-1 text-sm font-medium text-center text-white uppercase lg:text-left">
+                  <div class="px-2 font-bold pt-1 text-sm font-medium text-center text-white uppercase lg:text-left">
                         {{ $dev->country }}
                   </div>
                 </div>
                 <div class="flex flex-col">
-                    <a href="{{ $dev->curriculum }}" target="blank">
-                    <button class="p-2 my-3 text-green-500 bg-white rounded-lg shadow-sm hover:bg-green-500 hover:text-white">ver curriculum</button></a>
-                    <a href="{{ $dev->githubProfile }}" target="blank">
-                      <button class="p-2 text-green-500 bg-white rounded-lg shadow-sm hover:bg-green-500 hover:text-white">github</button>
+                    <a href="{{ $dev->curriculum }}" target="_blank">
+                    <button class="p-2 font-bold my-3 text-green-500 bg-green rounded-lg shadow-sm hover:bg-green-500 hover:text-white">ver curriculum</button></a>
+                    <a href="{{ $dev->githubProfile }}" target="_blank">
+                      <button class="p-2 font-bold text-green-500 bg-green rounded-lg shadow-sm hover:bg-green-500 hover:text-white">github</button>
                     </a>
                     
                 </div>

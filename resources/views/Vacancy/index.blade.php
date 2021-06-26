@@ -20,12 +20,12 @@
             <!-- Start of component -->
             @foreach ($vacantes as $vacante)
 
-                <div class="min-h-screen flex items-center justify-center px-4 mb-4 mt-4 bg-green-400 rounded-lg"> 
+                <div class="min-h-screen flex items-center justify-center px-4 mb-4 mt-4"> 
 
-                    <div class="max-w-4xl w-full rounded-lg shadow-xl bg-green-400">
+                    <div class="max-w-4xl w-full  shadow-xl bg-green-400">
 
                         <div>
-                            <div class="  text-bold md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b bg-green-400">
+                            <div class="  text-bold md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                                 <p class="text-white">
                                     Titulo
                                 </p>
@@ -75,26 +75,26 @@
                                 <p class="text-white text-bold">
                                     Acciones
                                 </p>
-                                <div class="space-y-2">
-                                    <div class="border-2 flex items-center p-2 rounded justify-between space-x-2">
+                                
+                                    <div class=" flex items-center p-2 rounded justify-between space-x-2">
                                         <form action="{{ route('vacante.destroy', $vacante->id) }}" method="POST"
                                             id={{ $vacante->id }}>
                                             <a href="/vacante/{{ $vacante->id }}/edit"
-                                                class="bg-blue text-white font-bold py-2 px-4 rounded opacity-50 cursor-not-allowed"><i
+                                                class="bg-green text-white font-bold py-2 px-4 rounded  cursor-not-allowed"><i
                                                     class="fas fa-pencil-alt"></i></a>
                                             @csrf
                                             @method('DELETE')
                                             <button type="button" onclick="DeleteVacancy({{ $vacante->id }})"
-                                                class="bg-red-500 text-white font-bold py-2 px-4 rounded  cursor-not-allowed"><i
+                                                class="bg-red text-white font-bold py-2 px-4 rounded  cursor-not-allowed"><i
                                                     class="fas fa-trash outline-none"></i>
                                                 </i></button>
                                         </form>
 
-                                        <button class="bg-blue text-white font-bold py-2 px-4 rounded opacity-50 cursor-not-allowed">
+                                        <button class="bg-green text-white font-bold py-2 px-4 rounded  cursor-not-allowed">
                                             <a href="/candidates/{{ $vacante->id }}">Candidatos</a>
                                         </button>
                                     </div>
-                                </div>
+                                
                             </div>
 
 

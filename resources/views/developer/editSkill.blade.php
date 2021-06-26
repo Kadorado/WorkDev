@@ -109,7 +109,7 @@
       </div>
           <!-- on tailwind components page will no work  -->
           <div class="flex items-center justify-center">
-            <button class="h-12 px-6 py-1 text-sm text-green-700 bg-green-300 rounded-full shadow-lg hover:bg-green-500 hover:text-white outline-none" type="submit">Agregar</button>
+            <button class="text-bold h-12 px-6 py-1 text-sm text-blue-700 bg-blue-300 rounded-full shadow-lg hover:bg-blue-500 hover:text-blue outline-none" type="submit">Agregar</button>
           </div>
       </form>
       </div>

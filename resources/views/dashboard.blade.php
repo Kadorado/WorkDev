@@ -53,7 +53,7 @@
 
                         <div class="overflow-y-hidden">
 
-                            <h1 class="text-green text-bold">¡Bienvenido Empresa!</h1>
+                            <h1 class="text-green text-bold">¡Bienvenido Reclutador!</h1>
                             <p class="leading-normal text-3xl mb-8 text-green text-bold">
                                 Bienvenido a la mejor plataforma para ofertar vacantes laborales del mundo del desarrollo
                             </p>

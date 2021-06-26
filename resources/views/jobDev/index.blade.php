@@ -13,8 +13,8 @@
             <input name="searchby" id="search"
                 class="w-2/3 h-12 px-3 mx-4 mb-8 rounded shadow-lg focus:outline-none focus:shadow-outline text-s"
                 type="search" placeholder="Buscar por palabra clave">
-            <button
-                class="flex items-center justify-center w-10 h-10 px-4 py-4 mb-8 font-bold text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-105"
+            <button autocomplete="off"
+                class="flex items-center justify-center w-10 h-10 px-4 py-4 mb-8 font-bold text-blue-600 transition duration-300 ease-in-out transform bg-blue-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-blue-500 hover:text-white hover:scale-105"
                 type="button" onclick="SearchVerifed()"><i class="fas fa-search"></i></button>
         </form>
     </section>
@@ -31,7 +31,7 @@
                     </option>
                 </div>
             </select>
-                <button class="flex items-center justify-center w-10 h-10 px-4 py-4 mb-8 font-bold text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-105" type="submit" ><i class="fas fa-filter"></i></button>
+                <button class="flex items-center justify-center w-10 h-10 px-4 py-4 mb-8 font-bold text-blue-600 transition duration-300 ease-in-out transform bg-blue-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-blue-500 hover:text-white hover:scale-105" type="submit" ><i class="fas fa-filter"></i></button>
         </form>
 
     </section>  
