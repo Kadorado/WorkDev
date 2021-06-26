@@ -58,9 +58,9 @@
                             <li class="mr-3">
 
                                 <button
-                                    class="mx-auto lg:mx-0 hover:no-underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-2 px-4 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                                    class="mx-auto lg:mx-0 hover:no-underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-2 px-5 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                                     <a href="{{ url('/nosotros') }}"
-                                        class="ml-4 text-l text-black-700 font-blod no-underline hover:no-underline">Nosotros</a>
+                                        class="mx-auto text-l text-black-700 font-blod no-underline hover:no-underline">Nosotros</a>
                                 </button>
 
                             </li>
@@ -68,7 +68,7 @@
                                 <a href="{{ url('login') }}"
                                     class="ml-4 text-ltext-black-700 font-blod no-underline hover:no-underline">
                                     <button id="navAction"
-                                        class="mx-auto lg:mx-0 hover:no-underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-2 px-4 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">Ingresa
+                                        class="mx-auto lg:mx-0 hover:no-underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-2 px-5 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">Ingresa
                                     </button>
                                 </a>
                             </li>

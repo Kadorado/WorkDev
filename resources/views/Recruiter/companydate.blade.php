@@ -46,13 +46,13 @@
                     value="{{ $users[0]->idCompany }}" required>
             </div>
 
-            <div class="mt-4  text-center">
+            <div class="mt-4 mb-32 text-center">
                 <button type="submit"
-                    class="flex-0.5 px-4 py-2  mx-6 font-bold text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-100"
-                    type="submit" id="update" onclick="Update()"> Actualizar</button>
-
+                class="flex-0.5 px-4 py-2  mx-6 font-bold text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-100"
+                type="submit" id="update" onclick="Update()"> Actualizar</button>
+        
             </div>
-        </form>
+            </form>
 
     @else
         <h1 class="text-center text-green text-xl text-bold">Completar datos de tu compañia</h1>
@@ -75,17 +75,22 @@
                 <input id="nitcompany_1" name="nitcompany" type="text" class="form-control" tabindex="3" required>
             </div>
 
-            <a href="/dashboard"
-                class="flex-0.5 px-4 py-2 m-auto mx-6 font-bold text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-100"
-                tabindex="5">Cancelar</a>
 
-
-            <div class="mt-4 mb-32 text-center">
-                <button type="submit"
-                    class="flex-0.5 px-4 py-2 m-auto mx-6 font-bold text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-100"
-                    onclick="createDateCompany()" tabindex="4">Guardar</button>
-
+            <div class="mt-4 mb-32 text-center items-start	">
+                <div class="mt-4 mb-32 text-center">
+                    <a href="/dashboard"
+                        class="flex-0.5 px-4 py-2 m-auto mx-6 font-bold text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-100"
+                        tabindex="5">Cancelar</a>
+                    </div>
+        
+                    <div class="mt-4 mb-32 text-center">
+                        <button type="submit"
+                            class="flex-0.5 px-4 py-2 m-auto mx-6 font-bold text-green-600 transition duration-300 ease-in-out transform bg-green-200 rounded-full shadow-lg lg:mx-0 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:text-white hover:scale-100"
+                            onclick="createDateCompany()" tabindex="4">Guardar</button>
+        
+                    </div>    
             </div>
+            
         </form>
     @endif
 
