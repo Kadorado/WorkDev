@@ -24,20 +24,8 @@ class PageController extends Controller
         return view('companydate');
     }
 
-    public function developerdata(){
-        $id = Auth::id();
-        $developer = $developer = Developer::where('user_id', $id)->first();
-        // dd($developer);
-        return view('developer.developerData', [
-            'developer' => $developer]);
-    }
-
-    public function editDeveloper(){
-        $id = Auth::id();
-        $developer = $developer = Developer::where('user_id', $id)->first();
-        // dd($developer);
-        return view('developer.editDeveloper', [
-            'developer' => $developer]);
+    public function dashboard(){
+        return view("dashboard");
     }
 
     public function vacancy(Vacancy $vacancy){
@@ -48,15 +36,6 @@ class PageController extends Controller
            ->select('tecnologies.tecno')
            ->get();
         return view("vacancy", ['vacancy'=>$vacancy , 'userTecno'=>$userTecno]);
-    }
-
-    public function getCandidates($id){
-
-        $developers = DB::table('developers')
-        ->join('developer_vacancy', 'developers.user_id','=','developer_vacancy.developer_id')
-        ->where('developer_vacancy.vacancy_id', '=', $id)
-        ->get();
-        return view("Vacancy.candidatos", ['candidates'=>$developers]);
     }
 
 

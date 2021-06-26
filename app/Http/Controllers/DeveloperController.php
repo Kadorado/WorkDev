@@ -32,11 +32,13 @@ class DeveloperController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+    public function editDeveloper(){
+        $id = Auth::id();
+        $developer = $developer = Developer::where('user_id', $id)->first();
+        // dd($developer);
+        return view('developer.editDeveloper', [
+            'developer' => $developer]);
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -80,9 +82,12 @@ class DeveloperController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
+    public function developerdata(){
+        $id = Auth::id();
+        $developer = $developer = Developer::where('user_id', $id)->first();
+        // dd($developer);
+        return view('developer.developerData', [
+            'developer' => $developer]);
     }
 
     /**
